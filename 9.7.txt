@@ -1,0 +1,29 @@
+marks = []
+for i in range(15):
+    row = []
+    for j in range(3):
+        mark = int(input("Введите оценку ученика №" + str(i+1) + " по предмету №" + str(j+1) + ": "))
+        row.append(mark)
+    marks.append(row)
+fives = 0
+for row in marks:
+    for mark in row:
+        if mark == 5:
+            fives += 1
+print("Общее количество пятерок:", fives)
+
+for i in range(len(marks)):
+    threes = 0
+    for mark in marks[i]:
+        if mark == 3:
+            threes += 1
+    print("Ученик №" + str(i+1) + " имеет " + str(threes) + " тройки")
+
+twos = [0, 0, 0]  # Суммарное количество двоек по каждому предмету
+for row in marks:
+    twos[0] += int(row[0] == 2)
+    twos[1] += int(row[1] == 2)
+    twos[2] += int(row[2] == 2)
+print("Количество двоек по первому предмету:", twos[0])
+print("Количество двоек по второму предмету:", twos[1])
+print("Количество двоек по третьему предмету:", twos[2])

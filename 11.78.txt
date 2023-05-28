@@ -1,0 +1,8 @@
+import numpy as np
+
+arr = np.array([22, 35, 48, 51, 62, 75, 88, 95, 102, 115, 128, 135])
+even_count = np.sum(arr % 2 == 0)
+ends_with_5_count = np.sum(arr % 10 == 5)
+
+print("Количество четных элементов:", even_count)
+print("Количество элементов, оканчивающихся на 5:", ends_with_5_count)

@@ -1,0 +1,16 @@
+t = int(input("Введите натуральное число t: "))
+d = list(map(int, input("Введите целые числа d через пробел: ").split()))
+
+sorted_d = sorted(d) # сортируем список
+max_index = d.index(sorted_d[-1]) # находим индекс максимального числа в исходном списке
+min_index = d.index(sorted_d[0]) # находим индекс минимального числа в исходном списке
+
+# проверяем, есть ли еще числа с максимальным или минимальным значением, и находим последний индекс
+for i in range(len(d)):
+    if d[i] == sorted_d[-1] and i > max_index:
+        max_index = i
+    if d[i] == sorted_d[0] and i > min_index:
+        min_index = i
+
+print("Номер максимального числа: ", max_index + 1)
+print("Номер минимального числа: ", min_index + 1)

@@ -1,0 +1,6 @@
+n = int(input("Введите натуральное число: "))
+digits = set()
+for digit in str(n):
+    digits.add(digit)
+count = len(digits)
+print(f"В числе {n} количество различных цифр равно {count}")

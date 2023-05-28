@@ -1,0 +1,10 @@
+n = int(input("Введите натуральное число: "))
+m = int(input("Введите число m: "))
+
+k = len(str(n))
+first_digit = n // (10 ** (k - 1))
+
+if first_digit > m:
+    print("Первая цифра превышает m")
+else:
+    print("Первая цифра не превышает m")

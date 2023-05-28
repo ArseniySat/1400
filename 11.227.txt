@@ -1,0 +1,12 @@
+lengths = [5, 7, 9, 3, 2, 8, 4, 6, 1, 10, 12, 11] # длины параллелепипедов
+widths = [4, 6, 2, 9, 8, 5, 3, 1, 12, 10, 11, 7] # ширины параллелепипедов
+heights = [3, 2, 8, 5, 12, 10, 11, 1, 6, 9, 7, 4] # высоты параллелепипедов
+
+volumes = [] # дополнительный массив для хранения объемов
+
+for i in range(len(lengths)):
+    volume = lengths[i] * widths[i] * heights[i]
+    volumes.append(volume)
+
+for i in range(len(volumes)):
+    print("Объем параллелепипеда", i+1, "составляет:", volumes[i])

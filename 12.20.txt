@@ -1,0 +1,3 @@
+word = "Python"
+print(word[:len(word)//2])
+

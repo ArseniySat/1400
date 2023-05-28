@@ -1,0 +1,9 @@
+sentence = input("Enter a sentence with commas: ")
+n_count = 0
+for i in sentence:
+    if i == 'n':
+        n_count += 1
+    if i == ',':
+        break
+print("Number of 'n' before first comma:", n_count)
+

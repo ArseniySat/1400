@@ -1,0 +1,13 @@
+num = int(input("Введите натуральное число: "))
+digits = []
+
+while num > 0:
+    digit = num % 10
+    digits.append(digit)
+    num //= 10
+
+max_digit = max(digits)
+min_digit = min(digits)
+
+print("Максимальная цифра:", max_digit)
+print("Минимальная цифра:", min_digit)

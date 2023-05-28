@@ -1,0 +1,3 @@
+word = "трос"
+new_words = [''.join([word[i] for i in [1,2,0,3]]), ''.join([word[i] for i in [2,3,1,0]]), word]
+print(new_words)

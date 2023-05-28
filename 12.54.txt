@@ -1,0 +1,6 @@
+sentence = input("Введите предложение: ")
+result = []
+for i in range(len(sentence)):
+    if i+1 < len(sentence) and sentence[i] == 'н' and sentence[i+1] == 'н':
+        result.append('нн')
+print(result)

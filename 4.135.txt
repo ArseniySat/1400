@@ -1,0 +1,14 @@
+months = {1: "Январь", 2: "Февраль", 3: "Март", 4: "Апрель", 5: "Май", 6: "Июнь", 7: "Июль", 8: "Август", 9: "Сентябрь", 10: "Октябрь", 11: "Ноябрь", 12: "Декабрь"}
+month = int(input("Введите порядковый номер месяца: "))
+if month >= 1 and month <= 12:
+    if month == 12 or month == 1 or month == 2:
+        season = "Зима"
+    elif month == 3 or month == 4 or month == 5:
+        season = "Весна"
+    elif month == 6 or month == 7 or month == 8:
+        season = "Лето"
+    elif month == 9 or month == 10 or month == 11:
+        season = "Осень"
+    print(months[month], "относится к времени года -", season)
+else:
+    print("Неверный ввод! Введите число от 1 до 12.")

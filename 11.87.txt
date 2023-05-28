@@ -1,0 +1,6 @@
+import numpy as np
+
+numbers = [5, 11, 4, 9, 14, 8, 7, 12, 6, 15]
+larger_than_10 = np.array(list(filter(lambda num: num > 10, numbers)))
+average = np.mean(larger_than_10)
+print("Среднее арифметическое элементов больше 10:", average)

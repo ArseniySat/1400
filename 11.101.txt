@@ -1,0 +1,16 @@
+
+import pandas as pd
+
+# Вводим данные в DataFrame
+df = pd.DataFrame({
+    'years': range(2001, 2016),
+    'precipitation': [665, 602, 680, 785, 642, 653, 696, 854, 725, 717, 694, 810, 641, 711, 635]
+})
+
+# Вычисляем среднее количество осадков и отклонение от среднего для каждого года
+mean_precipitation = df['precipitation'].mean()
+df['deviation'] = df['precipitation'] - mean_precipitation
+
+# Выводим результаты
+print("Среднее количество осадков:", mean_precipitation)
+print("Отклонения от среднего для каждого года:\n", df)

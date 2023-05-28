@@ -1,0 +1,17 @@
+def fermat_factorization(n):
+    a = int(n**0.5)
+    if a*a == n:
+        return a, a
+    b2 = a*a - n
+    while int(b2**0.5)**2 != b2:
+        a += 1
+        b2 = a*a - n
+    return a-int(b2**0.5), a+int(b2**0.5)
+
+n = int(input("Введите натуральное число: "))
+print("Простые делители числа", n, ":")
+a, b = fermat_factorization(n)
+if a == 1 or b == 1:
+    print(n)
+else:
+    print(a, b)

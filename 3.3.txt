@@ -1,0 +1,6 @@
+
+import math
+
+days = 234
+weeks = math.floor(days / 7)
+print("За", days, "дней прошло", weeks, "полных недель")

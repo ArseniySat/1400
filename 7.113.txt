@@ -1,0 +1,10 @@
+x = int(input("Введите число x: "))
+n = int(input("Введите число n: "))
+a_list = [int(input(f"Введите число a{i+1}: ")) for i in range(12)]
+a_array = np.array(a_list)
+a_filtered = a_array[a_array > n]
+if a_filtered.size != 0:
+    avg_a = np.mean(a_filtered)
+    print(f"Среднее арифметическое чисел a, больших {n}: {avg_a}")
+else:
+    print(f"Среднее арифметическое чисел a, больших {n}, не может быть вычислено")

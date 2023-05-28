@@ -1,0 +1,7 @@
+m = 0.6
+a = 0.5
+lst = [a]
+while a < m:
+    lst.append(a+1/(a+1))
+    a = lst[-1]
+print(*['{:.2f}'.format(i) for i in lst if i < m])

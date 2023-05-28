@@ -1,0 +1,8 @@
+sentence = "This is a sample sentence."
+n1 = 5
+n2 = 10
+new_sentence = ""
+for i in range(len(sentence)):
+    if i < n1 or i > n2:
+        new_sentence += sentence[i]
+print(new_sentence)

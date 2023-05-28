@@ -1,0 +1,6 @@
+def z(a):
+    t = 3*a
+    return 4.3*t**2 - 8*t + 13
+
+for a in range(2, 18):
+    print("a =", a, "\t z =", z(a))

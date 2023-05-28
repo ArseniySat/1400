@@ -1,0 +1,44 @@
+# a)
+
+a = False
+b = False
+print(not a or not b)
+a = False
+b = True
+print(not a or not b)
+a = True
+b = False
+print(not a or not b)
+a = True
+b = True
+print(not a or not b)
+
+# b)
+
+a = False
+b = False
+print((a or not b) and True)
+a = False
+b = True
+print((a or not b) and True)
+a = True
+b = False
+print((a or not b) and True)
+a = True
+b = True
+print((a or not b) and True)
+
+# d)
+
+a = False
+b = False
+print((not a or b) and b)
+a = False
+b = True
+print((not a or b) and b)
+a = True
+b = False
+print((not a or b) and b)
+a = True
+b = True
+print((not a or b) and b)

@@ -1,0 +1,5 @@
+club_name = input("Введите название футбольного клуба: ")
+count = 0
+for char in club_name:
+    count += 1
+print("Количество символов в названии клуба:", count)

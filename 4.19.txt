@@ -1,0 +1,27 @@
+
+import math
+from sympy.geometry import Point, Circle, Triangle
+
+S_circle = float(input("Введите площадь круга: "))
+S_triangle = float(input("Введите площадь треугольника: "))
+
+r_circle = math.sqrt(S_circle/math.pi)  # радиус круга
+a_triangle = math.sqrt(S_triangle*4/math.sqrt(3))  # длина стороны равностороннего треугольника
+
+A = Point(0, 0)
+B = Point(a_triangle/2, a_triangle*math.sqrt(3)/2)
+C = Point(a_triangle, 0)
+T = Triangle(A, B, C)  # построение треугольника
+
+O = Point(0, 0)
+C = Circle(O, r_circle)  # построение круга
+
+if T.encloses_point(O):  # проверка, вмещается ли круг в треугольник
+  print("Круг уместится в треугольнике")
+else:
+  print("Круг не уместится в треугольнике")
+
+if T.circumcenter.distance(O) <= r_circle:  # проверка, вмещается ли треугольник в круг
+  print("Треугольник уместится в круге")
+else:
+  print("Треугольник не уместится в круге")

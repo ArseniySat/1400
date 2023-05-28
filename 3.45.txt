@@ -1,0 +1,13 @@
+
+k = int(input("Введите число k: "))
+num_str = "".join([str(x) for x in range(10, 100)])
+pair_num = (k - 1) // 2 + 1
+pair_str = num_str[(pair_num - 1)*2:pair_num*2]
+if k % 2 == 0:
+    print("k-я цифра равна 1-й цифре в паре")
+    print(pair_str[0])
+else:
+    print("k-я цифра равна 2-й цифре в паре")
+    print(pair_str[1])
+print("Номер пары цифр:", pair_num)
+print("Двузначное число:", int(pair_str))

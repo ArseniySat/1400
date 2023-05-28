@@ -1,0 +1,12 @@
+from functools import reduce
+
+# Создаем список масс предметов
+masses = [5, 10, 15, 20, 25]
+
+# Используем функцию reduce для суммирования элементов списка
+total_mass = reduce(lambda x, y: x + y, masses)
+
+# Определяем среднюю массу путем деления суммы на количество элементов в списке
+average_mass = total_mass / len(masses)
+
+print("Средняя масса:", average_mass)

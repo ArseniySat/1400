@@ -1,0 +1,53 @@
+def contains_digit(num, digit):
+    if num == 0:
+        return False
+    elif num % 10 == digit:
+        return True
+    else:
+        return contains_digit(num // 10, digit)
+
+def count_digit(num, digit, count=0):
+    if num == 0:
+        return count
+    elif num % 10 == digit:
+        return count_digit(num // 10, digit, count + 1)
+    else:
+        return count_digit(num // 10, digit, count)
+
+def contains_a_and_b(num, a, b):
+    if num == 0:
+        return False
+    elif (num % 10 == a) and (num % 10 == b):
+        return True
+    else:
+        return contains_a_and_b(num // 10, a, b)
+
+a = int(input("Введите цифру a: "))
+b = int(input("Введите цифру b: "))
+n = int(input("Введите число: "))
+k = int(input("Введите количество повторений: "))
+
+# Проверка на наличие цифры а
+if contains_digit(n, a):
+    print("Цифра a есть в числе")
+else:
+    print("Цифры a нет в числе")
+
+# Проверка на отсутствие цифры b
+if not contains_digit(n, b):
+    print("Цифры b нет в числе")
+else:
+    print("Цифра b есть в числе")
+
+# Проверка на количество повторений цифры а
+count = count_digit(n, a)
+if count > k:
+    print(f"Цифра а встречается в числе более {k} раз")
+else:
+    print(f"Цифра а встречается в числе не более {k} раз")
+
+# Проверка на наличие цифр а и b
+if contains_a_and_b(n, a, b):
+    print("Цифры а и b есть в числе")
+else:
+    print("Цифры а и/или b нет в числе")

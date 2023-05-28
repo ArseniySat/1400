@@ -1,0 +1,15 @@
+x = float(input("Введите значение x: "))
+y = float(input("Введите значение y: "))
+
+areas = {
+    (1, float("inf")): "III",
+    (1, 5): "II",
+    (-float("inf"), 1): "I"
+}
+
+for key, value in areas.items():
+    if key[0] <= x < key[1] and y > 0:
+        print(f"Точка находится в области {value}")
+        break
+else:
+    print("Точка не попадает в заданные области")

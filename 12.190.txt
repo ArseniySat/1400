@@ -1,0 +1,19 @@
+
+sentence = input("Введите предложение: ")
+words = sentence.split()
+
+for i in range(len(words)):
+    words[i] = words[i].replace('a', 'o')
+    last_letter = words[i][-1]
+    words[i] = words[i].replace(last_letter, '', words[i].count(last_letter)-1)
+    unique = ''
+    for letter in words[i]:
+        if letter not in unique:
+            unique += letter
+    words[i] = unique
+    if len(words[i]) == max([len(w) for w in words]):
+        middle_index = len(words[i]) // 2
+        words[i] = words[i][:middle_index] + words[i][middle_index+1:]
+            
+print(words)
+

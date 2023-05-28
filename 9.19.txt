@@ -1,0 +1,21 @@
+def sieve(n):
+    is_prime = [True] * (n+1)
+    is_prime[0] = False
+    is_prime[1] = False
+    for i in range(2, int(sqrt(n))+1):
+        if is_prime[i]:
+            for j in range(i**2, n+1, i):
+                is_prime[j] = False
+    return is_prime
+
+primes = sieve(140)
+for i in range(120, 141):
+    divisor_count = 1
+    for j in range(2, i+1):
+        if primes[j]:
+            exponent = 0
+            while i % j == 0:
+                exponent += 1
+                i //= j
+            divisor_count *= (exponent + 1)
+    print(f"{i} - {divisor_count}")

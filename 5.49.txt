@@ -1,0 +1,19 @@
+import pandas as pd
+
+months = range(1, 11)
+data = {"Прирост вклада": [], "Остаток на счете": []}
+deposit = 1000
+for i in months:
+    increment = deposit * 0.02
+    deposit += increment
+    data["Прирост вклада"].append(increment)
+    data["Остаток на счете"].append(deposit)
+df1 = pd.DataFrame(data, index=months)
+print(df1)
+print()
+data = {"Сумма вклада": []}
+for i in range(3, 13):
+    future_deposit = 1000 * (1 + 0.02) ** i
+    data["Сумма вклада"].append(future_deposit)
+df2 = pd.DataFrame(data, index=range(3, 13))
+print(df2)

@@ -1,0 +1,30 @@
+import random
+
+# Список названий карт
+cards = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Валет', 'Дама', 'Король', 'Туз']
+
+# Список мастей
+suits = ['Пик', 'Треф', 'Бубен', 'Черви']
+
+# Выбираем случайную козырную масть
+trump_suit = random.choice(suits)
+
+# Выводим на экран название козырной масти
+print('Козырь:', trump_suit)
+
+# Создаем список всех карт и присваиваем каждой карте значение
+all_cards = []
+for suit in suits:
+    for card in cards:
+        if suit == trump_suit:
+            value = cards.index(card) + 14 # Козырные карты имеют значения 14-26
+        else:
+            value = cards.index(card) + 1 # Некозырные карты имеют значения 1-13
+        all_cards.append((card, suit, value))
+
+# Сортируем список карт по значению
+all_cards.sort(key=lambda x: x[2])
+
+# Выводим отсортированный список карт на экран
+for card in all_cards:
+    print(card[0], '(', card[1], ')')

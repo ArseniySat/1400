@@ -1,0 +1,12 @@
+def print_products(lst, product):
+    if not lst:
+        return
+    num = lst.pop(0)
+    print(num * product)
+    print_products(lst, num * product)
+
+lst = []
+for i in iter(int, 0):
+    lst.append(i)
+    
+print_products(lst, 1)

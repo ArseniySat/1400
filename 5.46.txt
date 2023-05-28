@@ -1,0 +1,33 @@
+# а) 
+
+def kth_fraction(k):
+    if k < 1:
+        return None
+    if k == 1:
+        return [1, 1]
+    if k == 2:
+        return [2, 1]
+    num1, den1, num2, den2 = 1, 1, 2, 1
+    i = 3
+    while i <= k:
+        num = num1 + num2
+        den = den1 + den2
+        num1, den1 = num2, den2
+        num2, den2 = num, den
+        i += 1
+    return [num, den]
+
+# б)
+
+def n_fractions(n):
+    res = [[1, 1], [2, 1]]
+    num1, den1, num2, den2 = 1, 1, 2, 1
+    i = 3
+    while i <= n:
+        num = num1 + num2
+        den = den1 + den2
+        num1, den1 = num2, den2
+        num2, den2 = num, den
+        res.append([num, den])
+        i += 1
+    return res

@@ -1,0 +1,6 @@
+
+import numpy as np
+numbers = [2, 4, 6, 8, 10]
+mean = np.mean(numbers)
+closest = min(numbers, key=lambda x: abs(x - mean))
+print(closest)

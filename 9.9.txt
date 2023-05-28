@@ -1,0 +1,16 @@
+import pandas as pd
+
+# создаем таблицу из введенных пользователем данных
+table = pd.DataFrame(index=range(1, 9), columns=["sport1", "sport2", "sport3", "sport4", "sport5"])
+for i in range(8):
+    for j in range(5):
+        score = int(input(f"Введите баллы игрока {i+1} за занятое место №{j+1}: "))
+        table.iloc[i, j] = score
+
+# находим максимальную оценку в таблице
+max_score = table.max().max()
+print(f"Максимальная оценка в таблице: {max_score}")
+
+# находим сумму баллов победителя
+winner_score = table.sum(axis=1).max()
+print(f"Победитель набрал {winner_score} баллов")

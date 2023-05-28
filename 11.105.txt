@@ -1,0 +1,14 @@
+arr = [1, 2, 3, 4, 5, 3]
+d = dict()
+for i in arr:
+    if i not in d:
+        d[i] = 1
+    else:
+        d[i] += 1
+        
+for k, v in d.items():
+    if v > 1:
+        print("В массиве есть повторяющиеся элементы")
+        break
+else:
+    print("В массиве нет повторяющихся элементов")

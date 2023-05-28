@@ -1,0 +1,6 @@
+sentence = "This is a sample sentence."
+new_sentence = ""
+for letter in sentence:
+    if letter != "c":
+        new_sentence += letter
+print(new_sentence)

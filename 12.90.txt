@@ -1,0 +1,9 @@
+sentence = input("Enter a sentence: ")
+pairs = [(sentence[i], sentence[i+1]) for i in range(len(sentence)-1)]
+for i, pair in enumerate(pairs):
+    if pair[0] == pair[1]:
+        print("Indexes of first pair of consecutive identical characters:", i, i+1)
+        break
+else:
+    print("No pair of consecutive identical characters found.")
+

@@ -1,0 +1,71 @@
+
+import random
+
+def can_move(piece, start, end):
+    if piece[start[0]-1][start[1]-1][end[0]-1][end[1]-1] == 1:
+        return True
+    else:
+        return False
+
+def generate_board():
+    board = []
+    for i in range(8):
+        row = []
+        for j in range(8):
+            cell = [[0]*8 for _ in range(8)]
+            for k in range(8):
+                for l in range(8):
+                    if k == i or l == j:
+                        cell[k][l] = 1
+            row.append(cell)
+        board.append(row)
+    return board
+
+def generate_pieces():
+    pieces = {'rook':[], 'knight':[], 'bishop':[], 'queen':[], 'king':[]}
+    for i in range(8):
+        row = []
+        for j in range(8):
+            rook = [[0]*8 for _ in range(8)]
+            bishop = [[0]*8 for _ in range(8)]
+            queen = [[0]*8 for _ in range(8)]
+            king = [[0]*8 for _ in range(8)]
+            knight = [[0]*8 for _ in range(8)]
+            for k in range(8):
+                for l in range(8):
+                    if k == i or l == j:
+                        rook[k][l] = 1
+                        queen[k][l] = 1
+                    if abs(i-k) == abs(j-l):
+                        bishop[k][l] = 1
+                        queen[k][l] = 1
+                    if (abs(i-k) == 1 and abs(j-l) == 2) or (abs(i-k) == 2 and abs(j-l) == 1):
+                        knight[k][l] = 1
+                    if abs(i-k) <= 1 and abs(j-l) <= 1:
+                        king[k][l] = 1
+            row.append({'rook':rook, 'knight':knight, 'bishop':bishop, 'queen':queen, 'king':king})
+        pieces['rook'].append(row)
+        pieces['knight'].append(row)
+        pieces['bishop'].append(row)
+        pieces['queen'].append(row)
+        pieces['king'].append(row)
+    return pieces
+
+board = generate_board()
+pieces = generate_pieces()
+
+piece1 = random.choice(list(pieces.keys()))
+start1 = (random.randint(1,8), random.randint(1,8))
+piece2 = random.choice(list(pieces.keys()))
+start2 = (random.randint(1,8), random.randint(1,8))
+end = (random.randint(1,8), random.randint(1,8))
+
+print('Piece 1: {}, Start 1: {}'.format(piece1, start1))
+print('Piece 2: {}, Start 2: {}'.format(piece2, start2))
+print('End: {}'.format(end))
+
+if can_move(pieces[piece1], start1, end) and not can_move(pieces[piece2], start2, end):
+    print('Piece {} at {} can move to {}'.format(piece1, start1, end))
+else:
+    print('Piece {} at {} cannot move to {}'.format(piece1, start1, end))
+

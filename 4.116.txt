@@ -1,0 +1,9 @@
+numbers = [int(input("Введите число: ")) for i in range(6)]
+positive_numbers = [number for number in numbers if number > 0]
+sum_pos = sum(positive_numbers)
+
+print("Сумма положительных чисел равна:", sum_pos)
+x = float(input("Введите x: "))
+y = {x < -1: -1, x > -1: x}.get(True, 1)
+print(y)
+

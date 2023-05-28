@@ -1,0 +1,15 @@
+first_sentence = input("Введите первое предложение: ")
+second_sentence = input("Введите второе предложение: ")
+
+first_words = set(first_sentence.split())
+second_words = set(second_sentence.split())
+
+common_words = (first_words & second_words) - set([word for word in first_words if first_sentence.count(word) > 1])
+
+unique_common_words = []
+
+for word in common_words:
+    if second_sentence.count(word) == 1:
+        unique_common_words.append(word)
+
+print(unique_common_words)

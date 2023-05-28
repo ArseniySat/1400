@@ -1,0 +1,7 @@
+import numpy as np
+nums = [3, 7, 8, 5, 10, 23, 14, 21, 16, 9, 2, 11, 4, 6]
+even_nums = np.array([num for num in nums if num % 2 == 0]) # массив четных чисел
+if len(even_nums) == 0:
+    print("Четных чисел нет в данной последовательности")
+else:
+    print("Среднее арифметическое четных чисел:", np.mean(even_nums))

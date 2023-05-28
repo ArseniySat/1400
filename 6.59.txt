@@ -1,0 +1,6 @@
+number = input("Введите натуральное число: ")
+
+min_digit = min([int(digit) for digit in list(number)])
+count_min = number.count(str(min_digit))
+
+print("Минимальная цифра встречается", count_min, "раз(а)")

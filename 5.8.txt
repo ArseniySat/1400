@@ -1,0 +1,5 @@
+print("| Funts |---|  KG  |")
+print("|-------|---|------|")
+for funts in range(1, 11):
+    kg = funts * 453 / 1000
+    print("| {:>5d} |---| {:>5.2f} |".format(funts, kg))

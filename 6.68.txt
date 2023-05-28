@@ -1,0 +1,11 @@
+import numpy as np
+
+a = int(input("Введите числитель: "))
+b = int(input("Введите знаменатель: "))
+
+c = np.gcd(a, b)
+
+p = a // c
+q = b // c
+
+print(f"{a}/{b} = {p}/{q}")

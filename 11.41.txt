@@ -1,0 +1,8 @@
+
+array = [2, -3, 5, 7, -1, 6, 0, -9]
+s = 2
+k = 5
+
+print("s-й элемент положительный" if all([array[s] > 0]) else "s-й элемент отрицательный")
+print("k-й элемент четный" if any([array[k] % 2 == 0]) else "k-й элемент нечетный")
+print("s-й элемент больше k-го" if max(array[s], array[k]) == array[s] else "k-й элемент больше s-го" if max(array[s], array[k]) == array[k] else "s-й и k-й элементы равны")

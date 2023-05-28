@@ -1,0 +1,10 @@
+
+word = "стекляный_"
+correct_word = ""
+for i in range(len(word)):
+    if i == 7:
+        correct_word += "й"
+    else:
+        correct_word += word[i]
+print(correct_word)
+

@@ -1,0 +1,12 @@
+rainfall = [5, 2, 7, 3, 8, 4, 1, 9, 6, 2, 7, 3, 8, 4, 1, 9, 6, 2, 7, 3, 8, 4, 1, 9, 6, 2, 7, 3, 8, 4]
+first_decade_days = [i for i in range(1, 11)]
+second_decade_days = [i for i in range(11, 21)]
+third_decade_days = [i for i in range(21, 31)] + [30]
+
+first_decade_avg = sum(x[0] for x in zip(rainfall, first_decade_days)) / 10
+second_decade_avg = sum(x[0] for x in zip(rainfall, second_decade_days)) / 10
+third_decade_avg = sum(x[0] for x in zip(rainfall, third_decade_days)) / 11
+
+print("Среднее количество осадков за первую декаду: " + str(first_decade_avg))
+print("Среднее количество осадков за вторую декаду: " + str(second_decade_avg))
+print("Среднее количество осадков за третью декаду: " + str(third_decade_avg))

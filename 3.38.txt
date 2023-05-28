@@ -1,0 +1,6 @@
+def find_x():
+    new_num = 456
+    x = int(str(new_num)[0] + str(new_num)[2])
+    return x
+        
+print(find_x())

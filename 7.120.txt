@@ -1,0 +1,12 @@
+def find_last_index(lst, elem):
+    try:
+        return len(lst) - lst[::-1].index(elem) - 1
+    except ValueError:
+        return -1
+
+n = int(input("Введите число n: "))
+c = []
+for i in range(n):
+    c.append(int(input("Введите число: ")))
+last_index = find_last_index(c, 25)
+print(f"Номер последнего числа, равного 25: {last_index}")

@@ -1,0 +1,4 @@
+x = float(input("Введите x: "))
+f = {x <= 0: 0, x <= 1: x}.get(False, x**2)
+print(f)
+

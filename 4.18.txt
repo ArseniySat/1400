@@ -1,0 +1,26 @@
+import math
+
+def diameter_from_area_circle(S):
+  d = math.sqrt(4 * S / math.pi)
+  return d
+
+def side_from_area_square(S):
+  a = math.sqrt(S)
+  return a
+
+S_circle = float(input("Введите площадь круга: "))
+S_square = float(input("Введите площадь квадрата: "))
+
+d = diameter_from_area_circle(S_circle)
+a = side_from_area_square(S_square)
+
+if d <= a:
+  print("Круг умещается в квадрате")
+else:
+  print("Круг не умещается в квадрате")
+
+if math.sqrt(2) * a <= d:
+  print("Квадрат умещается в круге")
+else:
+  print("Квадрат не умещается в круге")
+

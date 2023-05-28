@@ -1,0 +1,7 @@
+import statistics
+
+nums = [23, 16, 25, 10, 18, 30, 22, 17, 21, 19, 28, 26, 20, 27, 29, 15]
+greater_than_20 = list(filter(lambda x: x > 20, nums))
+average = statistics.mean(greater_than_20)
+
+print("Среднее арифметическое чисел больше 20: ", average)

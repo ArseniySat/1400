@@ -1,0 +1,40 @@
+def get_divisors(n):
+    divisors = []
+    for i in range(1, n+1):
+        if n % i == 0:
+            divisors.append(i)
+    return divisors
+
+def get_sum_of_divisors(n):
+    divisors = get_divisors(n)
+    return sum(divisors)
+
+def get_sum_of_even_divisors(n):
+    divisors = get_divisors(n)
+    return sum(filter(lambda x: x % 2 == 0, divisors))
+
+def get_count_of_divisors(n):
+    divisors = get_divisors(n)
+    return len(divisors)
+
+def get_count_of_odd_divisors(n):
+    divisors = get_divisors(n)
+    return len(list(filter(lambda x: x % 2 != 0, divisors)))
+
+def get_count_of_even_divisors(n):
+    divisors = get_divisors(n)
+    return len(list(filter(lambda x: x % 2 == 0, divisors)))
+
+def get_count_of_divisors_above_d(n, d):
+    divisors_above_d = list(filter(lambda x: x > d, get_divisors(n)))
+    return len(divisors_above_d)
+
+a = int(input("Введите число: "))
+d = int(input("Введите число d: "))
+print("Делители числа", a, ":", get_divisors(a))
+print("Сумма делителей числа", a, ":", get_sum_of_divisors(a))
+print("Сумма четных делителей числа", a, ":", get_sum_of_even_divisors(a))
+print("Количество делителей числа", a, ":", get_count_of_divisors(a))
+print("Количество нечетных делителей числа", a, ":", get_count_of_odd_divisors(a))
+print("Количество четных делителей числа", a, ":", get_count_of_even_divisors(a))
+print("Количество делителей числа", a, "больших", d, ":", get_count_of_divisors_above_d(a, d))

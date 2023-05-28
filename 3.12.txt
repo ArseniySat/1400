@@ -1,0 +1,8 @@
+num = int(input("Введите номер квартиры: "))
+
+floor = (num - 1) // 4 + 1
+num_order = (num - 1) % 4 + 1
+
+print("Квартира находится на {} этаже".format(floor))
+print("Это {} квартира на этом этаже".format(num_order))
+

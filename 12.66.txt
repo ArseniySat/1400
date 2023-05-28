@@ -1,0 +1,6 @@
+text = input("Введите текст: ")
+count = 0
+for s in text:
+    if s == '+' or s == '-':
+        count += 1
+print(f"Количество символов '+' и '-' в тексте: {count}")

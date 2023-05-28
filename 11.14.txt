@@ -1,0 +1,7 @@
+n = int(input("Введите натуральное число: "))
+lst = [int(x) for x in reversed(str(n))] # создаем список из цифр числа в обратном порядке, используя функцию reversed и генератор списков
+lst += [0] * (6 - len(lst)) # добавляем нули, чтобы получить список из 6 элементов
+print(lst)
+for j in range(len(lst)):
+    if lst[j] != 0:
+        print(lst[j])

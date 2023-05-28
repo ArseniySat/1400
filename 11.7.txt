@@ -1,0 +1,9 @@
+import random
+
+n = int(input("Введите размер массива: "))
+a = int(input("Введите значение начала интервала: "))
+b = int(input("Введите значение конца интервала: "))
+
+arr = random.sample(range(a, b+1), n)
+
+print(arr)

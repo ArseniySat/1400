@@ -1,0 +1,17 @@
+points = [(1,2), (3,4), (5,6), (7,8), (9,10), (11,12), (13,14), (15,16), (17,18), (19,20),
+          (2,1), (4,3), (6,5), (8,7), (10,9), (12,11), (14,13), (16,15), (18,17), (20,19)]
+
+x_values = []
+y_values = []
+
+for point in points:
+    x_values.append(point[0])
+    y_values.append(point[1])
+
+min_x = min(x_values)
+max_x = max(x_values)
+min_y = min(y_values)
+max_y = max(y_values)
+
+print("Координаты левого нижнего угла: ({}, {})".format(min_x, min_y))
+print("Координаты правого верхнего угла: ({}, {})".format(max_x, max_y))

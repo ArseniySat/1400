@@ -1,0 +1,13 @@
+def is_palindrome(num):
+    if len(num) <= 1:
+        return True
+    if num[0] != num[-1]:
+        return False
+    return is_palindrome(num[1:-1])
+
+num = input("Введите число: ")
+
+if is_palindrome(num):
+    print(f"{num} является палиндромом")
+else:
+    print(f"{num} не является палиндромом")

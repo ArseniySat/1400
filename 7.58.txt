@@ -1,0 +1,18 @@
+n = int(input("Введите количество домов на улице: "))
+population = []
+for i in range(n):
+    p = int(input("Введите количество жителей в доме №" + str(i+1) + ": "))
+    population.append(p)
+odd_sum = 0
+even_sum = 0
+for i, p in enumerate(population):
+    if i % 2 == 0:
+        even_sum += p
+    else:
+        odd_sum += p
+if odd_sum > even_sum:
+    print("Больше жителей проживает на стороне с нечетными домами")
+elif even_sum > odd_sum:
+    print("Больше жителей проживает на стороне с четными домами")
+else:
+    print("Жители равномерно распределены по обеим сторонам улицы")

@@ -1,0 +1,21 @@
+import math
+import random
+
+a = 0
+b = math.pi
+n = 10000
+
+def f(x):
+    return math.sin(x)
+
+s = 0
+
+for i in range(n):
+    x = random.uniform(a, b)
+    y = random.uniform(0, 1)
+    if y < f(x):
+        s += 1
+
+result = s/n * (b-a)
+
+print("Приближенная площадь арки синусоиды методом Монте-Карло: ", result)

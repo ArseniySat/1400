@@ -1,0 +1,11 @@
+text = input("Введите текст: ")
+letter_count = 0
+for sentence in text.split("."):
+    if sentence:
+        letter_count = sum(1 for char in sentence if char.isalpha())
+        break
+else:
+    print("В тексте нет предложений.")
+    exit()
+print("Количество букв в первом предложении:", letter_count)
+

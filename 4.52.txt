@@ -1,0 +1,6 @@
+number = int(input("Введите трехзначное число: "))
+digits = str(number)
+if digits.count("6") > 0:
+    print("Цифра 6 входит в число", number)
+else:
+    print("Цифра 6 не входит в число", number)

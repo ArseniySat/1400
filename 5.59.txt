@@ -1,0 +1,4 @@
+
+import math
+n = int(input("Введите натуральное число: "))
+print("Факториал числа", n, "равен", math.factorial(n))

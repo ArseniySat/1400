@@ -1,0 +1,4 @@
+n = int(input('Введите размер массива: '))
+arr = [int(input('Введите элемент массива: ')) for i in range(n)]
+arr.insert(n, arr.pop(0))
+print(arr)

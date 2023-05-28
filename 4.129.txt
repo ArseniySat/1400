@@ -1,0 +1,10 @@
+numbers = []
+for i in range(3):
+    num = int(input("Введите число: "))
+    numbers.append(num)
+
+max1 = max(numbers)
+numbers.remove(max1)
+max2 = max(numbers)
+
+print("Сумма двух максимальных чисел: ", max1 + max2)

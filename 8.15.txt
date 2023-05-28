@@ -1,0 +1,10 @@
+
+def calculate_y(x):
+    return (x**2 + 100) / (x + 200)
+
+m = float(input("Введите число m: "))
+
+y_list = [calculate_y(x) for x in range(1, 101)]
+for y in y_list:
+    if y < m:
+        print(y)

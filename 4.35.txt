@@ -1,0 +1,26 @@
+# а)
+num = input("Введите четырехзначное число: ")
+digits = [int(d) for d in num]
+if digits[0] + digits[1] == digits[2] + digits[3]:
+    print("Сумма двух первых цифр равна сумме двух последних цифр")
+else:
+    print("Сумма двух первых цифр не равна сумме двух последних цифр")
+
+# б)
+num = input("Введите четырехзначное число: ")
+digits = [int(d) for d in num]
+if sum(digits) % 3 == 0:
+    print("Сумма цифр кратна трем")
+else:
+    print("Сумма цифр не кратна трем")
+
+# в)
+num = input("Введите четырехзначное число: ")
+digits = [int(d) for d in num]
+digits_mul = 1
+for d in digits:
+    digits_mul *= d
+if digits_mul % 4 == 0:
+    print("Произведение цифр кратно четырем")
+else:
+    print("Произведение цифр не кратно четырем")

@@ -1,0 +1,4 @@
+rectangle_area = 543 * 130 # площадь прямоугольника
+square_area = 130 ** 2 # площадь квадрата
+number_of_squares = rectangle_area // square_area # количество квадратов
+print("Количество квадратов:", number_of_squares)

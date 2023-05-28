@@ -1,0 +1,13 @@
+arr = [1.2, -2.5, 3.3, -4.8, 5.1, -6.7]
+k1 = 3
+k2 = 4
+
+arr = list(map(lambda x: x - arr[k1] if x > 0 and arr.index(x) != k1 else x - arr[k2] if x <= 0 and arr.index(x) != k2 else x, arr))
+
+print(arr)
+
+arr = [1.2, -2.5, 3.3, -4.8, 5.1, -6.7]
+
+arr = list(map(lambda x: x+1 if arr.index(x)%2!=0 else x-1, arr))
+
+print(arr)

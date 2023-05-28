@@ -1,0 +1,14 @@
+a = 'this'
+b = 'is'
+c = 'python'
+
+# меняем значения переменных местами
+temp = a
+a = c
+c = b
+b = temp
+
+print(a) # 'python'
+print(b) # 'this'
+print(c) # 'is'
+

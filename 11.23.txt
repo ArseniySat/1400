@@ -1,0 +1,10 @@
+arr = [23, 44, 5, 6, 70, 81, 2, 12]
+
+# а) все чётные элементы
+even_nums = list(filter(lambda num: num % 2 == 0, arr))
+print("Чётные элементы массива: ", even_nums)
+
+# б) все элементы, оканчивающиеся на 0
+zero_ends = list(filter(lambda num: num % 10 == 0, arr))
+print("Элементы, оканчивающиеся на 0: ", zero_ends)
+

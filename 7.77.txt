@@ -1,0 +1,22 @@
+def hockey_game(time=0, penalty_time=0):
+    delete_time = int(input("Введите время удаления игрока (2, 5 или 10 минут): "))
+    if delete_time == 0:
+        print("Общее число удалений:", penalty_time)
+        print("Общее штрафное время:", time)
+    elif delete_time == 2:
+        time += 2
+        penalty_time += 2
+        hockey_game(time, penalty_time)
+    elif delete_time == 5:
+        time += 5
+        penalty_time += 5
+        hockey_game(time, penalty_time)
+    elif delete_time == 10:
+        time += 10
+        penalty_time += 10
+        hockey_game(time, penalty_time)
+    else:
+        print("Некорректный ввод. Попробуйте еще раз.")
+        hockey_game(time, penalty_time)
+
+hockey_game()

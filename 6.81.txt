@@ -1,0 +1,13 @@
+def is_monotonic(number):
+    if len(number) <= 1:
+        return True
+    elif number[0] < number[1]:
+        return is_monotonic(number[1:])
+    else:
+        return False
+
+number = input("Введите число: ")
+if is_monotonic(number):
+    print("Цифры введенного числа образуют монотонно возрастающую последовательность")
+else:
+    print("Цифры введенного числа не образуют монотонно возрастающую последовательность")

@@ -1,0 +1,6 @@
+from functools import reduce
+
+expression = [i**2 - (i-1)**2 for i in range(20,0,-1)]
+result = reduce(lambda a,b: b**2 - a, expression[::-1])
+
+print(result)

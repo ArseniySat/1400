@@ -1,0 +1,20 @@
+import numpy as np
+
+arr = np.array([3, 5, 2, 8, 4, 6, 1, 7])
+max_elem = np.max(arr)
+max_without = np.max(arr[arr != max_elem])
+min_elem = np.min(arr)
+min_without = np.min(arr[arr != min_elem])
+max_index = np.where(arr == max_elem)[0][0]
+max_without_index = np.where(arr == max_without)[0][0]
+min_index = np.where(arr == min_elem)[0][0]
+min_without_index = np.where(arr == min_without)[0][0]
+
+print("Максимальный элемент:", max_elem)
+print("Максимальный без учета этого элемента:", max_without)
+print("Минимальный элемент:", min_elem)
+print("Минимальный без учета этого элемента:", min_without)
+print("Номер максимального элемента:", max_index)
+print("Номер максимального без учета элемента:", max_without_index)
+print("Номер минимального элемента:", min_index)
+print("Номер минимального без учета элемента:", min_without_index)

@@ -1,0 +1,9 @@
+
+def change_word(word):
+    word_list = list(word)
+    word_list[2], word_list[3] = word_list[3], word_list[2]
+    new_word = "".join(word_list)
+    return new_word
+
+word = "килбайот"
+print(change_word(word))

@@ -1,0 +1,21 @@
+# a) максимальная нечетная цифра числа
+
+```python
+num = input("Введите число: ")
+digits = [int(digit) for digit in num]
+odd_digits = [digit for digit in digits if digit % 2 == 1]
+if len(odd_digits) == 0:
+    print("Нечетных цифр в числе нет")
+else:
+    max_odd = max(odd_digits)
+    print("Максимальная нечетная цифра числа:", max_odd)
+```
+
+# б) номер минимальной цифры числа при счете слева направо
+
+```python
+num = input("Введите число: ")
+digits = [int(digit) for digit in num]
+min_digit = min(digits)
+min_index = digits.index(min_digit)
+print("Номер минимальной цифры числа при счете слева направо:", min_index + 1)

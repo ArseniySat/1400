@@ -1,0 +1,6 @@
+words = input("Enter a sequence of words: ")
+if 'zhi' in words or 'shi' in words:
+    print("The word combinations 'zhi' or 'shi' were found.")
+else:
+    print("The word combinations 'zhi' or 'shi' were not found.")
+

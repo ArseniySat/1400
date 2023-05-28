@@ -1,0 +1,5 @@
+import math
+
+result = [math.sqrt(i/10) for i in range(10)]
+for i in result:
+    print(i)

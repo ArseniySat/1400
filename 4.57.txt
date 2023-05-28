@@ -1,0 +1,16 @@
+def check_remainder(a, b, c, d):
+    if a >= 0 and b > 0 and (a % b == c or a % b == d):
+        return True
+    else:
+        return False
+
+a = int(input("Введите неотрицательное целое число a: "))
+b = int(input("Введите положительное число b: "))
+c = int(input("Введите число c: "))
+d = int(input("Введите число d: "))
+
+if check_remainder(a, b, c, d):
+    print("Условие верно")
+else:
+    print("Условие неверно")
+

@@ -1,0 +1,6 @@
+import math
+
+sin_list = [math.sin(i) for i in range(2, 16)]
+
+for sin_val in sin_list:
+    print(sin_val)

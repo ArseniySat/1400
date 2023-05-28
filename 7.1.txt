@@ -1,0 +1,11 @@
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+def sum_recursion(a):
+   if len(a) == 1:
+      return a[0]
+   else:
+      return a[0] + sum_recursion(a[1:])
+
+sum_a = sum_recursion(a)
+
+print(sum_a)

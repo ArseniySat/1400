@@ -1,0 +1,7 @@
+arr = [-1, 2, -3, 4, 5, -6, 0, 7, -8, 9]
+# создаем два новых массива, куда будем записывать значения
+positive_arr = list(filter(lambda x: x > 0, arr))
+negative_arr = list(filter(lambda x: x <= 0, arr))
+# выводим новые массивы на экран
+print("Положительные элементы:", positive_arr)
+print("Отрицательные элементы:", negative_arr)

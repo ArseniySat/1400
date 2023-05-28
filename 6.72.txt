@@ -1,0 +1,5 @@
+def check_arithmetic_progression(n, f, s):
+    ap = [f]
+    while ap[-1] < n:
+        ap.append(ap[-1] + s)
+    return n in ap

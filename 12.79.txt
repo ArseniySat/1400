@@ -1,0 +1,3 @@
+sentence = input('Введите предложение (не менее 7 слов): ')
+words = sentence.split(' ')
+print(words[0], words[1], words[2], words[3], words[4], words[5])

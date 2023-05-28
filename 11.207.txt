@@ -1,0 +1,7 @@
+numbers = [2, 5, 7, 4, 9, 10, 12, 13, 17]
+
+try:
+    i = numbers.index(next(filter(lambda x: numbers[x]%2==1 and numbers[x+1]%2==1, range(len(numbers)-1))))
+    print(f"Первая пара соседних нечетных чисел: {i} и {i+1}")
+except StopIteration:
+    print("В массиве нет соседних нечетных чисел")

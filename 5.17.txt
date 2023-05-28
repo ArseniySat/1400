@@ -1,0 +1,8 @@
+def calculate_y(x):
+    t = x + 3
+    y = 3*t**2 + 4.87*t - 3
+    return y
+
+for x in range(4, 29):
+    y = calculate_y(x)
+    print(f"x={x}, y={y}")

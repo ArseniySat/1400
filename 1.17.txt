@@ -1,0 +1,12 @@
+a, b = 2, '13 17'
+print(a, 'кг')
+print(b)
+
+x, y = 'а', 1
+print(x, y)
+print('19 b')
+
+x, y = 'х', 'y'
+print(x, y)
+print('5', y)
+print('13 17')

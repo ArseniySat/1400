@@ -1,0 +1,11 @@
+n = int(input("Введите натуральное число: "))
+a = int(input("Введите число a: "))
+
+digits = [int(digit) for digit in str(n)]
+min_digit = min(digits)
+max_digit = max(digits)
+
+if (max_digit + min_digit) % a == 0:
+    print("Сумма максимальной и минимальной цифр числа", n, "кратна", a)
+else:
+    print("Сумма максимальной и минимальной цифр числа", n, "не кратна", a)

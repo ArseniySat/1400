@@ -1,0 +1,30 @@
+def get_month_name(month):
+    if month == 1:
+        return "январь"
+    elif month == 2:
+        return "февраль"
+    elif month == 3:
+        return "март"
+    elif month == 4:
+        return "апрель"
+    elif month == 5:
+        return "май"
+    elif month == 6:
+        return "июнь"
+    elif month == 7:
+        return "июль"
+    elif month == 8:
+        return "август"
+    elif month == 9:
+        return "сентябрь"
+    elif month == 10:
+        return "октябрь"
+    elif month == 11:
+        return "ноябрь"
+    elif month == 12:
+        return "декабрь"
+    else:
+        return "Некорректный номер месяца!"
+
+month_num = int(input("Введите номер месяца: "))
+print(get_month_name(month_num))

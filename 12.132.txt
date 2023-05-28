@@ -1,0 +1,14 @@
+from difflib import SequenceMatcher
+
+def match(s1, s2):
+    return SequenceMatcher(None, s1, s2).get_matching_blocks()
+
+word = "прроцесор"
+correct_word = "процессор"
+
+matching_blocks = match(word, correct_word)
+final_word = ""
+for i, j, k in matching_blocks:
+    final_word += word[i:i+k]
+
+print(final_word)

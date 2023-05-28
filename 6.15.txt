@@ -1,0 +1,5 @@
+def print_numbers(start, end, step):
+    for n in range(start, end, step):
+        print(n, 2 * n)
+
+print_numbers(21, 152, 10)

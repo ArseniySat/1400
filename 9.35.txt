@@ -1,0 +1,15 @@
+def min_num_of_bills(n):
+    bills = [64, 32, 16, 8, 4, 2, 1]
+    res = []
+    for i in range(11):
+        total_bills = 0
+        remaining = n + i
+        for bill in bills:
+            num_bills, remaining = divmod(remaining, bill)
+            total_bills += num_bills
+        res.append(total_bills)
+    return res
+
+n = int(input("Enter a natural number: "))
+result = min_num_of_bills(n)
+print(f"The minimum number of bills needed to pay from {n} to {n+10} are: {result}")

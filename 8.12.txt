@@ -1,0 +1,4 @@
+a = float(input("Введите число a: "))
+s = 0
+n = next(i for i in range(1, 100000) if (s := s + 1/i) > a)
+print(n)

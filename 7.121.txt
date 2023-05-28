@@ -1,0 +1,14 @@
+def find_last_negative_index(nums):
+    for i in range(len(nums) - 1, -1, -1):
+        if nums[i] < 0:
+            return i
+    return -1
+
+k = int(input("Введите количество чисел: "))
+nums = []
+for i in range(k):
+    num = int(input(f"Введите число b{i + 1}: "))
+    nums.append(num)
+
+last_negative_index = find_last_negative_index(nums)
+print(f"Номер последнего отрицательного числа: {last_negative_index + 1}")

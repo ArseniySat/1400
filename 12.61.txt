@@ -1,0 +1,9 @@
+text = input("Введите текст: ")
+count_plus = count_star = 0
+for s in text:
+    if s == '+':
+        count_plus += 1
+    elif s == '*':
+        count_star += 1
+print(f"Количество символов '+' в тексте: {count_plus}")
+print(f"Количество символов '*' в тексте: {count_star}")

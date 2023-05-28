@@ -1,0 +1,3 @@
+mass = float(input("Введите массу в килограммах: "))
+centners = int(mass // 0.1 / 100)
+print("Число полных центнеров:", centners)

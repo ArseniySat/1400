@@ -1,0 +1,15 @@
+def smallest_divisor(n):
+    def find_divisor(n, test_divisor):
+        if test_divisor**2 > n:
+            return n
+        elif n % test_divisor == 0:
+            return test_divisor
+        else:
+            return find_divisor(n, test_divisor + 1)
+    return find_divisor(n, 2)
+
+n = int(input("Введите натуральное число: "))
+if smallest_divisor(n) == n:
+    print("Делитель отличный от 1 не найден")
+else:
+    print(smallest_divisor(n))

@@ -1,0 +1,9 @@
+max_size = n + arr.count(-1) # максимальный размер исходного массива
+
+new_arr = arr.copy() # создаем копию исходного массива
+
+for i in range(n):
+    if new_arr[i] == -1: # если текущий элемент -1
+        new_arr.insert(i+1, p) # вставляем число p после него
+
+print(new_arr)

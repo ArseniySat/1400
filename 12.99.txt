@@ -1,0 +1,9 @@
+sentence = input("Enter a sentence: ")
+new_sentence = ''
+for char in sentence:
+    if char == ' ':
+        new_sentence += '_'
+    else:
+        new_sentence += char
+print("Converted sentence:", new_sentence)
+

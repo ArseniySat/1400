@@ -1,0 +1,22 @@
+def get_cubes(n):
+    cubes = []
+    for i in range(1, n+1):
+        cubes.append(i ** 3)
+    return cubes
+
+def find_min():
+    cubes = get_cubes(600)
+    for n in range(2, 600):
+        sums = set()
+        for i in range(len(cubes)):
+            for j in range(i, len(cubes)):
+                if cubes[i] + cubes[j] == n:
+                    sums.add((i, j))
+                if len(sums) > 1:
+                    break
+            if len(sums) > 1:
+                break
+        if len(sums) == 2:
+            return n
+            
+print(find_min())

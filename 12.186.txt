@@ -1,0 +1,4 @@
+
+sentence = input().split()
+sorted_sentence = sorted(sentence, key=lambda word: len(word))
+print(" ".join(sorted_sentence))

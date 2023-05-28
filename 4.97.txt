@@ -1,0 +1,10 @@
+k = int(input())
+if k <= 99:
+    num = (k+1)//2
+else:
+    k -= 99
+    num = (k//3) + 100
+    num += 1 if k%3 == 0 else 0
+ans = str(num)[(k-1)%2]
+print(ans)
+

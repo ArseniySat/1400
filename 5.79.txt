@@ -1,0 +1,10 @@
+from sympy import symbols, solve
+
+x = symbols('x')
+eq1 = x % 133 - 125
+eq2 = x % 134 - 111
+
+sol = solve((eq1, eq2), (x,))
+for num in sol:
+    if 1000 <= num <= 9999:
+        print(num)

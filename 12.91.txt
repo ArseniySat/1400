@@ -1,0 +1,10 @@
+
+sentence = input("Enter a sentence: ")
+if 'chu' in sentence or 'shu' in sentence:
+    print("Letters 'chu' or 'shu' were found.")
+    for i, word in enumerate(sentence.split()):
+        if 'chu' in word or 'shu' in word:
+            print("Index of first letter of first occurrence of 'chu' or 'shu':", sentence.find(word))
+            break
+else:
+    print("Letters 'chu' or 'shu' were not found.")

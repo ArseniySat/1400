@@ -1,0 +1,13 @@
+number = float(input('Введите число:'))
+count_integer = 0
+while number >= 1:
+    count_integer += 1
+    number //= 10
+count_fraction = 0
+while number != int(number):
+    count_fraction += 1
+    number *= 10
+    number -= int(number)
+print('Цифр в целой части:', count_integer)
+print('Цифр в дробной части:', count_fraction)
+

@@ -1,0 +1,12 @@
+
+import random
+
+arr = []
+while len(arr) < 20:
+    num = random.randint(1, 50)
+    arr_set = set(arr)
+    arr_set.add(num)
+    if len(arr_set) == len(arr) + 1:
+        arr.append(num)
+
+print(arr)

@@ -1,0 +1,9 @@
+def is_even(number):
+    return number % 2 == 0
+
+def ends_with_seven(number):
+    return number % 10 == 7
+
+number = int(input("Введите натуральное число: "))
+print("Число является четным" if is_even(number) else "Число не является четным")
+print("Число оканчивается на 7" if ends_with_seven(number) else "Число не оканчивается на 7")

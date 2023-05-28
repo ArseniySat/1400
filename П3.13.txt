@@ -1,0 +1,9 @@
+a)
+A = True, B = True
+res = False
+b)
+A = True, B = True
+res = True
+c)
+A = True, B = True
+res = True

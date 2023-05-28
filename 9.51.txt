@@ -1,0 +1,14 @@
+n = int(input("Введите n: "))
+m = int(input("Введите m: "))
+
+def is_prime(x): # функция для проверки простоты числа
+    if x < 2:
+        return False
+    for i in range(2, int(x ** 0.5) + 1):
+        if x % i == 0:
+            return False
+    return True
+
+for i in range(2, n):
+    if is_prime(i) and i % m != 0: # проверяем, является ли число простым и не кратным m
+        print(i)

@@ -1,0 +1,8 @@
+
+numbers = [float(input("Введите первое число: ")),
+           float(input("Введите второе число: ")),
+           float(input("Введите третье число: "))]
+
+squares = [number ** 2 if number >= 0 else number for number in numbers]
+
+print("Результат: ", squares)

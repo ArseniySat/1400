@@ -1,0 +1,6 @@
+
+numbers = [76, 30, 54, 100, 9, 200, 40, 27, 60]
+
+indices = [i for i in range(len(numbers)) if numbers[i] % 10 == 0]
+
+print("Элементы с индексами", indices, "оканчиваются на 0")

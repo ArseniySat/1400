@@ -1,0 +1,4 @@
+word = "abcdefghijkl"
+new_word = word[:1] + word[2:10][::-1] + word[10:]
+print(new_word)
+

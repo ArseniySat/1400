@@ -1,0 +1,46 @@
+import random
+
+class RandomNumbers:
+    def __init__(self, min_value, max_value, count=1):
+        self.min_value = min_value
+        self.max_value = max_value
+        self.count = count
+
+    def generate(self):
+        return [random.uniform(self.min_value, self.max_value) for _ in range(self.count)]
+
+# а)
+a = RandomNumbers(0, 1, 8).generate()
+print(a)
+
+# б)
+k = int(input("Введите количество чисел: "))
+b = RandomNumbers(0, 15, k).generate()
+print(b)
+
+# в)
+c = RandomNumbers(25, 26, 15).generate()
+print(c)
+
+# г)
+d = RandomNumbers(0, 15, 20).generate()
+print(d)
+
+# д)
+e = int(input("Введите число a: "))
+f = int(input("Введите число b: "))
+n = random.randint(0, e)
+g = RandomNumbers(0, f, n).generate()
+print(g)
+
+# е)
+h = RandomNumbers(-40, 40, 10).generate()
+print(h)
+
+# ж)
+m = int(input("Введите число m: "))
+a = int(input("Введите число a: "))
+b = int(input("Введите число b: "))
+o = random.randint(0, m)
+p = RandomNumbers(a, b, o).generate()
+print(p)

@@ -1,0 +1,12 @@
+x = False
+y = False
+print(not y and not x or y)
+x = False
+y = True
+print(not y and not x or y)
+x = True
+y = False
+print(not y and not x or y)
+x = True
+y = True
+print(not y and not x or y)

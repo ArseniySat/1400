@@ -1,0 +1,18 @@
+# a)
+X = False
+Y = True
+Z = False
+res = X or Z
+print(res)
+# b)
+X = False
+Y = True
+Z = False
+res = X and Y
+print(res)
+# c)
+X = False
+Y = True
+Z = False
+res = X and Y
+print(res)

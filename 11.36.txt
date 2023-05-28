@@ -1,0 +1,8 @@
+arr = [1, -2, 3, 0, -5, 7, 0, 4, -9, 0]
+k1 = 2
+n = 6
+
+arr = [(i - arr[k1]) if i > 0 else i for i in arr]
+arr = [(i - n) if i < 0 else i for i in arr]
+
+print(arr)

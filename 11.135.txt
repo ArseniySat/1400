@@ -1,0 +1,11 @@
+game_scores = [3, 0, 1, 1, 1, 0, 3, 1, 1]
+
+win_slice = game_scores.index(3) if 3 in game_scores else len(game_scores)
+lose_slice = game_scores.index(0) if 0 in game_scores else len(game_scores)
+
+if win_slice < lose_slice:
+    print("Первый выигрыш был раньше")
+elif lose_slice < win_slice:
+    print("Первый проигрыш был раньше")
+else:
+    print("Выигрыш и проигрыш были в одной игре")

@@ -1,0 +1,8 @@
+s = [10, 4, 7, 3, 10, 2, 8, 4, 5, 10, 7, 10]
+s.sort()
+max_num = s[-1]
+min_num = s[0]
+max_count = s.count(max_num)
+min_count = s.count(min_num)
+print(f"Максимальное число {max_num} встречается {max_count} раз(а)")
+print(f"Минимальное число {min_num} встречается {min_count} раз(а)")

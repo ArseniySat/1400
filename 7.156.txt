@@ -1,0 +1,7 @@
+def monotonic_fragments(a):
+    inc_fragments = [sum(1 for _ in list(group)) for val, group in groupby(a) if val < sorted(a)[-2]]
+    dec_fragments = [sum(1 for _ in list(group)) for val, group in groupby(a) if val > sorted(a)[1]]
+    return max(max(inc_fragments, default=0), max(dec_fragments, default=0))
+
+a = list(map(int, input("Введите последовательность чисел через пробел: ").split()))
+print("Наибольшая длина монотонного фрагмента: ", monotonic_fragments(a))

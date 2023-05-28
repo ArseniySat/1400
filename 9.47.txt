@@ -1,0 +1,42 @@
+def binary_search(low, high, target, function):
+    # бинарный поиск на заданном интервале
+    while low <= high:
+        mid = (low + high) // 2
+        if target == function(mid):
+            return mid
+        elif target < function(mid):
+            high = mid - 1
+        else:
+            low = mid + 1
+    return None
+
+def calculate_cows_calves(money_spent, total_heads, bulls):
+    # находим количество коров и телят
+    remaining_heads = total_heads - bulls
+    remaining_money = money_spent - 10 * bulls
+    cows = remaining_heads // 2
+    calves = remaining_heads - cows
+    while (cows * 5 + calves * 0.5) > remaining_money:
+        cows -= 1
+        calves += 1
+    return (cows, calves)
+
+# основная часть программы
+total_heads = 100
+money_spent = 100
+low = 0
+high = total_heads // 2
+target = (total_heads, money_spent)
+
+# функция для бинарного поиска - количество быков
+def count_bulls(n):
+    return 10 * n
+
+bulls = binary_search(low, high, target, count_bulls)
+
+if bulls is not None:
+    cows, calves = calculate_cows_calves(money_spent, total_heads, bulls)
+    if (bulls + cows + calves) == total_heads and (10 * bulls + 5 * cows + 0.5 * calves) == money_spent:
+        print("Bulls:", bulls)
+        print("Cows:", cows)
+        print("Calves:", calves)

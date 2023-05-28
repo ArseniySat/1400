@@ -1,0 +1,11 @@
+
+word = "pythonixfox"
+i_index = word.find("i")
+o_index = word.rfind("o")
+if i_index != -1 and o_index != -1:
+    if i_index > o_index:
+        word = word[:o_index] + "i" + word[o_index+1:i_index] + "o" + word[i_index+1:]
+    else:
+        word = word[:i_index] + "o" + word[i_index+1:o_index] + "i" + word[o_index+1:]
+print(word)
+

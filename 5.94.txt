@@ -1,0 +1,7 @@
+
+def print_squares(n, i=1):
+    if i**2 <= n:
+        print(i**2)
+        print_squares(n, i+1)
+n = int(input("Введите число п: "))
+print_squares(n)

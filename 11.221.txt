@@ -1,0 +1,12 @@
+def binary_power(base, exp):
+    result = 1
+    while exp > 0:
+        if exp % 2 == 1:
+            result *= base
+        base *= base
+        exp //= 2
+    return result
+
+num = binary_power(2, 100)
+digit_list = [int(x) for x in str(num)]
+print(digit_list)

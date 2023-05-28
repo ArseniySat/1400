@@ -1,0 +1,5 @@
+string = input("Введите строку: ")
+substring1 = input("Введите подстроку, которую нужно заменить: ")
+substring2 = input("Введите подстроку, на которую нужно заменить: ")
+new_string = string.replace(substring1, substring2)
+print("Новая строка:", new_string)

@@ -1,0 +1,12 @@
+
+import numpy as np
+
+day = np.arange(1, 100)
+distance = 10 * 1.1 ** (day - 1)
+
+day_to_20km = np.min(np.where(distance > 20))
+print("Лыжник пробежит больше 20 км на", day_to_20km, "день")
+
+total_distance = np.cumsum(distance)
+day_to_100km = np.min(np.where(total_distance > 100))
+print("Суммарный пробег превысит 100 км на", day_to_100km, "день")

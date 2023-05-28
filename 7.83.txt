@@ -1,0 +1,7 @@
+
+numbers = [1, 3, 5, 7, 8, 9, 11]
+
+if not set(numbers).isdisjoint(set(range(0, len(numbers), 2)))):
+    print("В заданном наборе есть хотя бы одно четное число")
+else:
+    print("В заданном наборе нет четных чисел")

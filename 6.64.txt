@@ -1,0 +1,25 @@
+def min_money_recursive(p):
+    denominations = [64, 32, 16, 8, 4, 2, 1]
+
+    def helper(p, i, memo):
+        if p == 0:
+            return [0]*7
+        if i == 6:
+            return [p//denominations[i] if denominations[i] <= p else 0 for i in range(7)]
+        if (p, i) in memo:
+            return memo[(p, i)]
+        res = None
+        if denominations[i] <= p:
+            count = [0]*7
+            count[i] = p//denominations[i]
+            new_p = p - count[i]*denominations[i]
+            curr_res = helper(new_p, i, memo)
+            if res is None or sum(count) + sum(curr_res) < sum(res):
+                res = count + curr_res
+        curr_res = helper(p, i+1, memo)
+        if res is None or sum(curr_res) < sum(res):
+            res = curr_res
+        memo[(p, i)] = res
+        return res
+
+    return helper(p, 0, {})

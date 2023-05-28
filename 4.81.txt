@@ -1,0 +1,23 @@
+from math import acos, degrees
+
+a = float(input("Введите длину стороны a: "))
+b = float(input("Введите длину стороны b: "))
+c = float(input("Введите длину стороны c: "))
+
+if a + b > c and a + c > b and b + c > a:
+    max_side = max(a, b, c)
+    if 2*max_side**2 == a**2 + b**2 + c**2:
+        print("Треугольник прямоугольный")
+    elif 2*max_side**2 > a**2 + b**2 + c**2:
+        print("Треугольник тупоугольный")
+    else:
+        print("Треугольник остроугольный")
+else:
+    print("Треугольник с такими сторонами не существует")
+
+if a == b == c:
+    print("Треугольник равносторонний")
+elif a == b or a == c or b == c:
+    print("Треугольник равнобедренный")
+else:
+    print("Треугольник разносторонний")

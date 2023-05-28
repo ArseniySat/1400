@@ -1,0 +1,15 @@
+arr = [1, 2, 13, 4, 13, 6, 7, 13, 9]
+
+new_arr = [i for i in arr if i != 13]
+
+print(new_arr)
+
+arr = [1, 2, 13, 4, 13, 6, 7, 13, 9]
+
+new_arr = []
+
+for i in arr:
+    if i != 13:
+        new_arr.append(i)
+
+print(new_arr)

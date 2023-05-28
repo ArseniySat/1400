@@ -1,0 +1,10 @@
+from math import sqrt, sin
+
+a = 2
+b = 3
+
+x = (((2 / a ** 2 + 25) + b ) / (sqrt(b) + (a + b) / 2))
+y = (abs(a) + 2 * sin(b)) / (5.5 * a)
+
+print("Значение функции x =", x)
+print("Значение функции y =", y) 

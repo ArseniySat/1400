@@ -1,0 +1,10 @@
+phrase = "нужно вставить заданную букву перед последней буквой u_"
+s = "т"
+u_index = phrase.rindex("u")
+correct_phrase = ""
+for i in range(u_index):
+    correct_phrase += phrase[i]
+correct_phrase += s
+for i in range(u_index, len(phrase)):
+    correct_phrase += phrase[i]
+print(correct_phrase)

@@ -1,0 +1,6 @@
+text = input('Введите текст:')
+expr = text.replace('-', ' -').replace('+', ' +')
+signs = [1 if c == '+' else -1 for c in expr.split()]
+digits = [int(num) for num in re.findall('\d+', expr)]
+result = sum([signs[i] * digits[i] for i in range(len(digits))])
+print('Алгебраическая сумма:', result)

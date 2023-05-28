@@ -1,0 +1,21 @@
+class Group:
+    def __init__(self, exams):
+        self.exams = exams
+
+    def average_score(self):
+        return sum(self.exams) / len(self.exams)
+
+group1 = Group([5, 4, 3])
+group2 = Group([4, 3, 5])
+group3 = Group([3, 5, 4])
+
+highest_avg = -1
+highest_group = ""
+
+for group in [group1, group2, group3]:
+    avg = group.average_score()
+    if avg > highest_avg:
+        highest_avg = avg
+        highest_group = group
+
+print("Group", [group1, group2, group3].index(highest_group) + 1, "has the highest average score")

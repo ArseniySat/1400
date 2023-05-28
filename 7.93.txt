@@ -1,0 +1,19 @@
+engine_power = [150, 180, 190, 205, 170, 220, 210, 195, 185, 200, 202, 195, 198, 212, 183, 179, 191, 198, 205, 180, 165, 170, 175, 225, 205, 212, 195, 197, 190, 185]
+
+engine_power.sort()
+found = False
+left = 0
+right = len(engine_power) - 1
+
+while left <= right:
+    middle = (left + right) // 2
+    if engine_power[middle] <= 200:
+        left = middle + 1
+    else:
+        right = middle - 1
+        found = True
+
+if found:
+    print("Среди моделей есть модель с мощностью двигателя более 200 л. с.")
+else:
+    print("Среди моделей нет модели с мощностью двигателя более 200 л. с.")

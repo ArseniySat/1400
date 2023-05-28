@@ -1,0 +1,7 @@
+def convert_inches_to_cms(inches):
+    return inches * 25.4
+
+for i in range(10, 23):
+    inches = i
+    cms = convert_inches_to_cms(inches)
+    print(inches, "дюймов =", cms, "сантиметров")

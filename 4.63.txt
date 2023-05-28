@@ -1,0 +1,17 @@
+def can_fit(a, b, e, n, d):
+    if e + 2 <= a and n + 2 <= b:
+        return True
+    else:
+        return False
+
+a = int(input("Введите размер A конверта в мм: "))
+b = int(input("Введите размер B конверта в мм: "))
+e = int(input("Введите размер E открытки в мм: "))
+n = int(input("Введите размер N открытки в мм: "))
+d = int(input("Введите размер D открытки в мм: "))
+
+if can_fit(a, b, e, n, d):
+    print("Открытка поместится в конверт.")
+else:
+    print("Открытка не поместится в конверт.")
+

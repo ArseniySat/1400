@@ -1,0 +1,7 @@
+sentence = input('Введите предложение: ')
+if ',' in sentence:
+    print(sentence.split(',')[0])
+else:
+    print(sentence)
+
+

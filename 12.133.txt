@@ -1,0 +1,4 @@
+word = "рпроцессо"
+correct_word = word.replace("р", "", 1) + "р" + word[0]
+print(correct_word)
+

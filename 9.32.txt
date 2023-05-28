@@ -1,0 +1,47 @@
+    divisors_sum = 0
+    for i in range(1, int(num**0.5)+1):
+        if num % i == 0:
+            divisors_sum += i
+            if i != num // i:
+                divisors_sum += num // i
+    return divisors_sum
+
+a, b = map(int, input().split())
+
+max_sum = 0
+max_num = 0
+for i in range(a, b+1):
+    div_sum = sum_divisors(i)
+    if div_sum > max_sum:
+        max_sum = div_sum
+        max_num = i
+
+print(max_num)
+ def is_prime(n):
+   if n < 2:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+
+a, b = map(int, input().split())
+
+n = b - a
+p = 2
+while n > 1:
+    if n % p == 0 and is_prime(p):
+        break
+    p += 1
+    if p > n:
+        p = n
+    while not is_prime(p):
+        p += 1
+
+max_num = (2**p - 1) * (2**(p-1))
+if max_num > b:
+    max_num = (2**p - 1) * (2**(p-2))
+    if max_num < a:
+        max_num = a
+
+print(max_num)

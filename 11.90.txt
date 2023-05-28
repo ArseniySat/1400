@@ -1,0 +1,12 @@
+import numpy as np
+
+array = [2, 3, 4, -1, 0, -3, 5, -6, 1, -2]
+
+positive_numbers = np.array([num for num in array if num > 0])
+negative_numbers = np.array([num for num in array if num < 0])
+
+average_positive = np.mean(positive_numbers)
+average_negative = np.mean(negative_numbers)
+
+print("Average of positive numbers:", average_positive)
+print("Average of negative numbers:", average_negative)

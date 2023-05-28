@@ -1,0 +1,7 @@
+sentence = input("Введите предложение: ")
+nums = [1, 2, 5, 6, 9, 10]
+result = []
+for num in nums:
+    if num <= len(sentence):
+        result.append(sentence[num-1])
+print(result)

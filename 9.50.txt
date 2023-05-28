@@ -1,0 +1,18 @@
+n = int(input("Введите число: "))
+
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+numbers = []
+for i in range(1, n):
+    is_coprime = True
+    for j in range(2, min(i, n-i)+1):
+        if gcd(i, j) != 1:
+            is_coprime = False
+            break
+    if is_coprime:
+        numbers.append(i)
+    
+print(numbers)

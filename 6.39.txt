@@ -1,0 +1,9 @@
+def print_digits(number):
+    if number < 10:
+        print(number)
+    else:
+        print_digits(number // 10)
+        print(number % 10)
+
+number = int(input("Введите натуральное число: "))
+print_digits(number)

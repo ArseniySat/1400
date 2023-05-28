@@ -1,0 +1,20 @@
+
+researcher1_directions = []
+researcher2_directions = []
+
+for i in range(1, 32):
+    researcher1_direction = int(input("Researcher 1 wind direction for day {}: ".format(i)))
+    researcher2_direction = int(input("Researcher 2 wind direction for day {}: ".format(i)))
+    
+    researcher1_directions.append(researcher1_direction)
+    researcher2_directions.append(researcher2_direction)
+    
+wind_directions = []
+
+for i in range(31):
+    if researcher1_directions[i] == researcher2_directions[i]:
+        wind_directions.append(researcher1_directions[i])
+    else:
+        print("There is a disagreement on the wind direction for day {}".format(i + 1))
+        
+print("Final wind directions for June: ", wind_directions)

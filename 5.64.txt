@@ -1,0 +1,4 @@
+
+num = 1234567
+rev_num = int(str(num)[::-1])
+print(rev_num)

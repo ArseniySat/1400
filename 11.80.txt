@@ -1,0 +1,8 @@
+marks = [5, 4, 5, 3, 2, 4, 3, 5, 4, 3, 4, 2, 5, 3, 2, 4, 5, 3, 4, 2, 3, 4]
+counters = {}
+for mark in marks:
+    counters[mark] = counters.get(mark, 0) + 1
+print("Количество пятерок:", counters.get(5, 0))
+print("Количество четверок:", counters.get(4, 0))
+print("Количество троек:", counters.get(3, 0))
+print("Количество двоек:", counters.get(2, 0))

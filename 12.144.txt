@@ -1,0 +1,13 @@
+def change_letter(word, k, s):
+    word_list = list(word)
+    s_letter = word_list.pop(s-1)
+    word_list.insert(k-1, s_letter)
+    for i in range(s-1, k-1, -1):
+        word_list[i], word_list[i-1] = word_list[i-1], word_list[i]
+    new_word = "".join(word_list)
+    return new_word
+
+word = input("Введите слово: ")
+k = int(input("Введите номер буквы k: "))
+s = int(input("Введите номер буквы s: "))
+print(change_letter(word, k, s))

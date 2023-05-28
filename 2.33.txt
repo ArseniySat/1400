@@ -1,0 +1,13 @@
+def calculate_age_difference(age, average_age):
+    return abs(average_age - age)
+
+x = int(input("Введите возраст Тани: "))
+y = int(input("Введите возраст Мити: "))
+
+average_age = (x + y) / 2
+tanias_age_difference = calculate_age_difference(x, average_age)
+mitias_age_difference = calculate_age_difference(y, average_age)
+
+print("Средний возраст: ", average_age)
+print("Отличие возраста Тани от среднего значения: ", tanias_age_difference)
+print("Отличие возраста Мити от среднего значения: ", mitias_age_difference)

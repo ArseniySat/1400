@@ -1,0 +1,26 @@
+import random
+
+correct_answers = 0
+incorrect_answers = 0
+
+while True:
+  print("Выберите чет (введите 2) или нечет (введите 1): ")
+  choice = int(input())
+
+  computer_choice = random.choice([1, 2])
+
+  if choice == computer_choice:
+    print("Вы угадали!")
+    correct_answers += 1
+  else:
+    print("Вы не угадали.")
+    incorrect_answers += 1
+
+  print("Хотите продолжить еще раз? (Да/Нет)")
+  answer = input()
+
+  if answer.lower() == "нет":
+    break
+
+print("Количество верных ответов:", correct_answers)
+print("Количество неверных ответов:", incorrect_answers)

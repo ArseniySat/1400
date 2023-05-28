@@ -1,0 +1,4 @@
+word = "коровка"
+new_word = word[:2] + word[3:]
+print(new_word)
+

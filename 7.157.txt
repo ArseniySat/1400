@@ -1,0 +1,10 @@
+n = int(input("Введите количество чисел: "))
+a = list(map(int, input("Введите числа через пробел: ").split()))
+
+max_num = max(a)
+max_index = a.index(max_num) + 1
+min_num = min(a)
+min_index = a.index(min_num) + 1
+
+print("Номер максимального числа:", max_index)
+print("Номер минимального числа:", min_index)

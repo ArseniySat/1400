@@ -1,0 +1,6 @@
+import numpy as np
+
+arr = np.arange(31, 100)
+mask = np.logical_and(arr % 3 == 0, np.in1d(arr % 10, [2, 4, 8]))
+sum = np.sum(arr[mask])
+print(sum)

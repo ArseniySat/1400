@@ -1,0 +1,17 @@
+arr = [10, 8, 6, 4, 2]
+a = 5
+l, r = 0, len(arr) - 1
+index = -1
+
+while l <= r:
+    mid = (l + r) // 2
+    if arr[mid] < a:
+        index = mid
+        r = mid - 1
+    else:
+        l = mid + 1
+
+if index == -1:
+    print("No elements found")
+else:
+    print("Index of first element smaller than a:", index)

@@ -1,0 +1,12 @@
+def is_power_of_5(m):
+    if m == 1:
+        return True
+    if m % 5 != 0 or m == 0:
+        return False
+    return is_power_of_5(m//5)
+
+b = int(input("Введите число: "))
+if is_power_of_5(b):
+    print(b, "является степенью числа 5")
+else:
+    print(b, "не является степенью числа 5")

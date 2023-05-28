@@ -1,0 +1,15 @@
+
+scores = [6, 8, 7, 9, 6, 8, 9, 7] # оценки, выставленные судьями
+maximums = [i for i, x in enumerate(scores) if x == max(scores)] # индексы наибольших оценок
+minimums = [i for i, x in enumerate(scores) if x == min(scores)] # индексы наименьших оценок
+
+if len(maximums) > 1: # если есть несколько наибольших оценок
+    scores.pop(maximums[0]) # удаляем одну из них
+else:
+    scores.remove(max(scores)) # удаляем наибольшую оценку
+if len(minimums) > 1: # если есть несколько наименьших оценок
+    scores.pop(minimums[0]) # удаляем одну из них
+else:
+    scores.remove(min(scores)) # удаляем наименьшую оценку
+average_score = sum(scores) / len(scores) # вычисляем среднее арифметическое
+print("Оценка спортсмена:", average_score)

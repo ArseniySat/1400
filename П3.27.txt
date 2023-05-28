@@ -1,0 +1,22 @@
+а) 
+a = 3
+y = 4
+if a > 2 and y > 3:
+    print(True)
+else:
+    print(False)
+
+b) 
+x = 1
+if not x > 2:
+    print(True)
+else:
+    print(False)
+
+c) 
+a = 1
+y = -1
+if a > 1 or y > -2:
+    print(True)
+else:
+    print(False)

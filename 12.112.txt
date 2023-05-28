@@ -1,0 +1,5 @@
+
+word = "pythonisfun"
+new_word = word[len(word)//2:] + word[:len(word)//2]
+print(new_word)
+

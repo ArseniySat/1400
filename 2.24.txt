@@ -1,0 +1,15 @@
+def arithmetic_operations(a, b):
+    summa = a + b
+    raznost = a - b
+    proizvedenie = a * b
+    chastnoe = a / b
+    return summa, raznost, proizvedenie, chastnoe
+
+a = float(input("Введите первое число: "))
+b = float(input("Введите второе число: "))
+
+result = arithmetic_operations(a, b)
+print("Сумма:", result[0])
+print("Разность:", result[1])
+print("Произведение:", result[2])
+print("Частное от деления первого числа на второе:", result[3])

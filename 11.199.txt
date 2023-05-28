@@ -1,0 +1,14 @@
+numbers = [1.5, 2.0, -3.7, 0.12, 5.9, -2.3, 4.2]
+
+negatives = list(filter(lambda x: x < 0, numbers))
+
+if negatives:
+    print("Есть отрицательные числа")
+    index_first_negative = numbers.index(negatives[0])
+    print("Первое отрицательное число: ", numbers[index_first_negative])
+    print("Следующие элементы: ", numbers[index_first_negative + 1:])
+    index_last_negative = len(numbers) - numbers[::-1].index(negatives[-1]) - 1
+    print("Последнее отрицательное число: ", numbers[index_last_negative])
+    print("Элементы перед ним: ", numbers[:index_last_negative])
+else:
+    print("Отрицательных чисел нет")

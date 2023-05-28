@@ -1,0 +1,20 @@
+k = int(input("Введите значение k: "))
+# определяем сколько цифр находится в каждом трехзначном числе
+digits_in_num = 3 
+# определяем общее количество цифр в начале последовательности (от 101 до 999)
+first_chunk_digits = digits_in_num * (999 - 101 + 1) 
+# определяем количество трехзначных чисел после 150 (не включая 150)
+extra_num_of_nums = (k - first_chunk_digits) // digits_in_num 
+# определяем номер цифры внутри трехзначного числа
+digit_num = k % 3 
+# определяем искомое трехзначное число
+if k <= first_chunk_digits: 
+    required_num = 100 + (k - 1) // digits_in_num
+else:
+    required_num = 150 + extra_num_of_nums 
+# определяем порядковый номер искомой цифры в последовательности
+required_digit_num = (k - 1) % digits_in_num 
+# определяем искомую цифру
+required_digit = str(required_num)[required_digit_num] 
+print("Искомая цифра: ", required_digit)
+

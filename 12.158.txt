@@ -1,0 +1,4 @@
+text = input('Введите текст:')
+digits = [char for char in text if char.isdigit()]
+number = int(''.join(digits))
+print('Число:', number)

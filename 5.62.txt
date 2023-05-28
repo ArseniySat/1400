@@ -1,0 +1,16 @@
+a = float(input("Введите число a: "))
+n = int(input("Введите степень n: "))
+
+result = 1
+while n != 0:
+    if n % 2 == 0:
+        a *= a
+        n /= 2
+    else:
+        result *= a
+        n -= 1
+
+if n < 0:
+    result = 1/result
+
+print(f"{a} в степени {n} равно {result}")

@@ -1,0 +1,7 @@
+arr = []
+i = 0
+while i < 10:
+    num = int(input("Введите число: "))
+    arr.append(num)
+    i += 1
+print(arr)

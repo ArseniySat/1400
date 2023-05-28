@@ -1,0 +1,10 @@
+sentence = input("Введите предложение: ")
+for i, char in enumerate(sentence):
+    if char == 'a':
+        index = i + 1
+        break
+else:
+    print("Буквы 'a' нет в предложении.")
+    exit()
+print("Порядковый номер первой буквы 'a':", index)
+

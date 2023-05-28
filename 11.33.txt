@@ -1,0 +1,6 @@
+
+arr = [5.6, 12.5, 8.9, 4, 3.2, 20.1]
+arr = list(map(lambda x: x ** 0.5 if x > 10 else x, arr))
+print(arr)
+arr = list(map(lambda x, i: abs(x) if i % 2 == 0 else x, arr, range(len(arr))))
+print(arr)

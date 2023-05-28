@@ -1,0 +1,9 @@
+from dateutil.relativedelta import relativedelta
+import datetime
+
+birthday = datetime.date(1999, 3, 15)
+current_date = datetime.date.today()
+
+age = relativedelta(current_date, birthday).years
+
+print(age)

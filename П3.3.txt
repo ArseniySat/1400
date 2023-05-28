@@ -1,0 +1,13 @@
+а) 
+A = True
+B = False
+C = False
+result = (not A) and B
+print(result)
+# b)
+result = A or (not B)
+print(result)
+# c)
+result = A and B or C
+print(result)
+

@@ -1,0 +1,5 @@
+sentence = input().split()
+for word in sentence:
+    if word.startswith('к'):
+        print(word)
+        break

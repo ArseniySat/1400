@@ -1,0 +1,4 @@
+
+radius = float(input("Введите радиус окружности: "))
+diameter = radius * 2
+print("Диаметр окружности равен: ", diameter

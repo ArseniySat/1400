@@ -1,0 +1,8 @@
+comprehension
+def calculate_price(quantity):
+    price = 20.4
+    return round(price * quantity, 2)
+
+prices = [calculate_price(i) for i in range(2, 21)]
+for i, price in enumerate(prices, start=2):
+    print(f"{i} шт - {price} руб.")

@@ -1,0 +1,9 @@
+def density(volume, mass):
+    return mass / volume
+
+volume = float(input("Введите объем тела: "))
+mass = float(input("Введите массу тела: "))
+
+density = density(volume, mass)
+
+print("Плотность материала этого тела:", density)

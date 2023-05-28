@@ -1,0 +1,11 @@
+s = input("Введите строку: ")
+newstring = ''
+index = 0
+while index < len(s):
+    if s[index:index+len("очепатка")] == "очепатка":
+        newstring += "опечатка"
+        index += len("очепатка")
+    else:
+        newstring += s[index]
+        index += 1
+print("Новая строка:", newstring)

@@ -1,0 +1,37 @@
+def prime_factors(n):
+    factors = []
+    divisor = 2
+    while divisor <= n:
+        if n % divisor == 0:
+            factors.append(divisor)
+            n //= divisor
+        else:
+            divisor += 1
+    return factors
+
+def repeated_factors(n):
+    factors = prime_factors(n)
+    repeated_factors_list = []
+    for factor in factors:
+        if factors.count(factor) > 1:
+            if factor not in repeated_factors_list:
+                repeated_factors_list.append(factor)
+    return repeated_factors_list
+
+def print_factors(n):
+    factors = prime_factors(n)
+    print(f'Множители {n} = ', end='')
+    for factor in factors:
+        print(f'{factor}', end=' ')
+    print()
+
+def print_repeated_factors(n):
+    repeated_factors_list = repeated_factors(n)
+    print(f'Повторяющиеся множители {n} = ', end='')
+    for factor in repeated_factors_list:
+        print(f'{factor}^{prime_factors(n).count(factor)}', end=' ')
+    print()
+
+n = int(input('Введите натуральное число: '))
+print_factors(n)
+print_repeated_factors(n)

@@ -1,0 +1,31 @@
+class School:
+    def __init__(self, parallel, klass_A, klass_B, klass_C, klass_D):
+        self.parallel = parallel
+        self.klass_A = klass_A
+        self.klass_B = klass_B
+        self.klass_C = klass_C
+        self.klass_D = klass_D
+
+    def smallest_class(self):
+        return min(self.klass_A, self.klass_B, self.klass_C, self.klass_D)
+
+    def total_parallel(self):
+        return self.klass_A + self.klass_B + self.klass_C + self.klass_D
+# а) сколько учеников учится в самом малочисленном классе школы
+smallest_class_list = [school.smallest_class() for school in school_list]
+smallest_class = min(smallest_class_list)
+print(f"Самый малочисленный класс школы содержит {smallest_class} ученика(ов)")
+
+# б) минимальное значение общего количества учеников, учащихся в классах одной параллели
+total_parallel_list = [school.total_parallel() for school in school_list]
+min_total_parallel = min(total_parallel_list)
+print(f"Минимальное значение общего количества учеников в классах одной параллели: {min_total_parallel}")
+
+# в) минимальное значение общего количества учеников, учащихся в классах А, Б, В и Г
+klass_A_list = [school.klass_A for school in school_list]
+klass_B_list = [school.klass_B for school in school_list]
+klass_C_list = [school.klass_C for school in school_list]
+klass_D_list = [school.klass_D for school in school_list]
+
+min_total_ABCD = min(sum(klass_A_list), sum(klass_B_list), sum(klass_C_list), sum(klass_D_list))
+print(f"Минимальное значение общего количества учеников в классах А, Б, В и Г: {min_total_ABCD}")

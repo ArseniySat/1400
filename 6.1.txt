@@ -1,0 +1,30 @@
+# а)
+def div(a, b):
+    if b == 0:
+        return None
+    q = 0
+    while a >= b:
+        d = 1
+        while d*b <= a:
+            d *= 2
+        d //= 2
+        q += d
+        a -= d*b
+    return q
+
+# б)
+def mod(a, b):
+    if b == 0:
+        return None
+    while a >= b:
+        d = 1
+        while d*b <= a:
+            d *= 2
+        d //= 2
+        a -= d*b
+    return a
+
+a = 17
+b = 5
+print("a // b =", div(a, b))
+print("a % b =", mod(a, b))

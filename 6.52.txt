@@ -1,0 +1,27 @@
+def has_three(num):
+    while num > 0:
+        if num % 10 == 3:
+            return True
+        num //= 10
+    return False
+
+def has_two_and_five(num):
+    has_two = False
+    has_five = False
+    while num > 0:
+        if num % 10 == 2:
+            has_two = True
+        if num % 10 == 5:
+            has_five = True
+        num //= 10
+    return has_two and has_five
+
+num = int(input('Введите натуральное число: '))
+if has_three(num):
+    print('В числе есть цифра 3')
+else:
+    print('В числе нет цифры 3')
+if has_two_and_five(num):
+    print('В числе есть цифры 2 и 5')
+else:
+    print('В числе нет цифр 2 и 5')

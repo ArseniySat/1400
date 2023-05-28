@@ -1,0 +1,10 @@
+import numpy as np
+
+grades = np.array([5, 4, 5, 3, 5, 4, 3, 2, 5, 3, 4, 5, 3, 4, 2, 5, 4, 2, 3, 4, 5, 4])
+
+average_grade = np.mean(grades)
+
+below_average_grades = np.where(grades < average_grade)[0]
+
+print("Количество учеников с оценками ниже средней: ", len(below_average_grades))
+print("Их номера в массиве: ", below_average_grades)

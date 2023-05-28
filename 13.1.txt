@@ -1,0 +1,7 @@
+students1 = ['John Smith', 'Mary Johnson', 'David Lee', 'Karen Brown']
+students2 = ['Emily Davis', 'Linda Taylor', 'Samuel Wilson', 'Sarah Miller']
+for student in students1:
+  print(student)
+for student in students2:
+  print(student)
+

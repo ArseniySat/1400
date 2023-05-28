@@ -1,0 +1,11 @@
+word = "python"
+m, n = 1, 4
+new_word = ""
+for i in range(len(word)):
+    if i == m:
+        new_word += word[n]
+    elif i == n:
+        new_word += word[m]
+    else:
+        new_word += word[i]
+print(new_word)

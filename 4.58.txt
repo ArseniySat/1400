@@ -1,0 +1,11 @@
+a = float(input("Введите число a: "))
+b = float(input("Введите число b: "))
+c = float(input("Введите число c: "))
+
+set_numbers = {a, b, c}
+
+if len(set_numbers) < 3:
+    print("Есть равные числа")
+else:
+    print("Нет равных чисел")
+

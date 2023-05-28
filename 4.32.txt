@@ -1,0 +1,14 @@
+def sum_of_cubes(number):
+    digit1 = number // 100
+    digit2 = (number // 10) % 10
+    digit3 = number % 10
+    return digit1 ** 3 + digit2 ** 3 + digit3 ** 3
+
+def is_cube_sum_of_digits(number):
+    return sum_of_cubes(number) == number ** 2
+
+number = int(input("Введите трехзначное число: "))
+if is_cube_sum_of_digits(number):
+    print("Квадрат числа равен сумме кубов его цифр")
+else:
+    print("Квадрат числа не равен сумме кубов его цифр")

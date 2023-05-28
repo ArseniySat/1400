@@ -1,0 +1,4 @@
+text = input('Введите текст:')
+sum_of_digits = sum(int(char) for char in text if char.isdigit())
+print('Сумма цифр:', sum_of_digits)
+

@@ -1,0 +1,10 @@
+
+seat_number = int(input("Введите номер места от 1 до 36: "))
+if seat_number < 1 or seat_number > 36:
+    print("Ошибка: в купе всего 36 мест, введите число от 1 до 36.")
+else:
+    coupe_number = 1
+    while seat_number > 4:
+        seat_number -= 4
+        coupe_number += 1
+    print("Место номер", seat_number, "находится в купе номер", coupe_number)

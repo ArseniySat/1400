@@ -1,0 +1,33 @@
+
+import numpy as np
+
+array = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+def sum_array(arr):
+    return np.sum(arr)
+
+def mult_array(arr):
+    return np.prod(arr)
+
+def sum_sq_array(arr):
+    return np.sum(arr**2)
+
+def sum_first_six(arr):
+    return np.sum(arr[:6])
+
+def sum_k1_k2(arr, k1, k2):
+    return np.sum(arr[k1-1:k2])
+
+def avg_array(arr):
+    return np.mean(arr)
+
+def avg_s1_s2(arr, s1, s2):
+    return np.mean(arr[s1-1:s2])
+
+print("Сумма всех элементов:", sum_array(array))
+print("Произведение всех элементов:", mult_array(array))
+print("Сумма квадратов всех элементов:", sum_sq_array(array))
+print("Сумма шести первых элементов:", sum_first_six(array))
+print("Сумма элементов с", k1, "-го по", k2, "-й:", sum_k1_k2(array, k1, k2))
+print("Среднее арифметическое всех элементов:", avg_array(array))
+print("Среднее арифметическое элементов с", s1, "-го по", s2, "-й:", avg_s1_s2(array, s1, s2))

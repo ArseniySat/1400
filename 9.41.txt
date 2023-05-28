@@ -1,0 +1,4 @@
+p = int(input("Введите число p: "))
+for i in range(100, 1000):
+    if (i // 100 + i // 10 % 10 + i % 10) == p:
+        print(i)

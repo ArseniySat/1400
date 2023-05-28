@@ -1,0 +1,4 @@
+sentence = input().split()
+result_set = set(sentence)
+result = sorted(result_set, key=sentence.index)
+print(" ".join(result))

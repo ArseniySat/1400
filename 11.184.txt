@@ -1,0 +1,25 @@
+max_speeds = [160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260,
+              270, 280, 290, 300, 310, 320, 330, 340, 350, 360, 370,
+              380, 390, 400, 410, 420, 430, 440, 450]
+
+k = 12  # например, значение 12-го элемента не удовлетворяет требованию
+def quick_sort(arr, left, right):
+    if left < right:
+        pivot = partition(arr, left, right)
+        quick_sort(arr, left, pivot-1)
+        quick_sort(arr, pivot+1, right)
+
+def partition(arr, left, right):
+    pivot = arr[right]
+    i = left - 1
+    for j in range(left, right):
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    arr[i+1], arr[right] = arr[right], arr[i+1]
+    return i+1
+
+quick_sort(max_speeds, 0, len(max_speeds)-1)
+max_speeds[k-1] = 315  # устанавливаем новое значение элемента
+quick_sort(max_speeds, 0, len(max_speeds)-1)
+print(max_speeds)

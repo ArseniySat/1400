@@ -1,0 +1,6 @@
+x = float(input("Введите значение x: "))
+y = float(input("Введите значение y: "))
+
+quadrants = ["II", "IV", "III", "I"]
+indx = (x < 0) + 2 * (y < 0)
+print("Точка принадлежит", quadrants[indx], "четверти")

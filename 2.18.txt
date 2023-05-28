@@ -1,0 +1,16 @@
+import math
+
+def calculate_z(x, y):
+    return ((x + ((2 + y) / math.pow(x, 2))) / (y + (1 / (math.sqrt(math.pow(x, 2) + 10)))))
+
+def calculate_q(x, y):
+    return 7.25 * math.sin(x) - abs(y)
+
+x = float(input("Введите значение x: "))
+y = float(input("Введите значение y: "))
+
+z = calculate_z(x, y)
+q = calculate_q(x, y)
+
+print("z =", z)
+print("q =", q)

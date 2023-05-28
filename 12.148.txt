@@ -1,0 +1,6 @@
+text = input('Введите текст:')
+digits = ''
+for char in text:
+    if char.isdigit():
+        digits += char
+print('Цифры:', digits)

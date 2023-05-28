@@ -1,0 +1,14 @@
+def divide(m, n):
+    if m % n == 0:
+        return m // n
+    else:
+        return None
+
+m = int(input("Введите m: "))
+n = int(input("Введите n: "))
+result = divide(m, n)
+if result is None:
+    print("m на n нацело не делится")
+else:
+    print("Частное от деления m на n равно:", result)
+

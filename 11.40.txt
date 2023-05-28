@@ -1,0 +1,13 @@
+import statistics
+
+arr = [2, 4, 9, 16, 25]
+num1 = 0
+num2 = 4
+
+if num1 >= len(arr) or num2 >= len(arr):
+    print("Неверный индекс элемента в массиве")
+else:
+    sqrt = pow(arr[num1], 0.5)
+    avg = statistics.mean([arr[num1], arr[num2]])
+    print(f"Квадратный корень из {arr[num1]} равен {sqrt}")
+    print(f"Среднее арифметическое элементов {arr[num1]} и {arr[num2]} равно {avg}")

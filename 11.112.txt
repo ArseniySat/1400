@@ -1,0 +1,18 @@
+arr = [1, 5, 3, 7, 2, 8, 4, 9]
+max_num = arr[0]
+min_num = arr[0]
+max_index = 0
+min_index = 0
+for i, elem in enumerate(arr):
+    if elem > max_num:
+        max_num = elem
+        max_index = i
+    elif elem < min_num:
+        min_num = elem
+        min_index = i
+diff = max_num - min_num
+print("Максимальный элемент:", max_num)
+print("Минимальный элемент:", min_num)
+print("Разность между максимальным и минимальным элементами:", diff)
+print("Индекс максимального элемента:", max_index)
+print("Индексы минимального и максимального элементов:", min_index, max_index)

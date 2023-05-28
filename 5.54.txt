@@ -1,0 +1,7 @@
+a = float(input("Введите число а: "))
+n = int(input("Введите число n: "))
+
+an = a  # начальное значение
+for i in range(2, n + 1):
+    an *= an  # возводим в квадрат
+    print(f"a_{i} =", an)

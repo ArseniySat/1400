@@ -1,0 +1,10 @@
+import math
+
+n = 100
+sum = 0
+for i in range(1, n + 1):
+    sum += ((-1) ** (i + 1)) / i
+distance_from_home = math.log10(2) * sum
+distance_to_work = math.exp(distance_from_home)
+print("Расстояние от дома:", distance_to_work - 1)
+print("Общий пройденный путь:", distance_to_work * 2 - 1)

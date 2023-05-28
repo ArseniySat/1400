@@ -1,0 +1,5 @@
+mountains = ['Everest', 'K2', 'Kilimanjaro', 'Mont Blanc', 'Matterhorn']
+heights = [8848, 8611, 5895, 4810, 4478]
+for i in range(len(mountains)):
+  if heights[i] > 3000:
+    print(mountains[i])

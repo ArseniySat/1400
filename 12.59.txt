@@ -1,0 +1,8 @@
+
+sentence = input("Введите предложение: ")
+char = input("Введите символ: ")
+count = 0
+for s in sentence:
+    if s == char:
+        count += 1
+print(count)

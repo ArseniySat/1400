@@ -1,0 +1,19 @@
+def adjust_string_length(s, l):
+  words = s.split()
+  diff = l - len(s)
+  if len(words) == 1: # если только одно слово 
+    return s + ' ' * diff # заполнить пробелами до нужной длины
+  spaces_count = diff // (len(words) - 1) # количество пробелов между словами
+  extra_spaces_count = diff % (len(words) - 1) # количество слов с дополнительными пробелами
+  result = ''
+  for i in range(len(words)):
+    result += words[i]
+    if i != len(words) - 1:
+      result += ' ' * spaces_count
+      if i < extra_spaces_count:
+        result += ' '
+  return result
+
+s = input("Введите исходную строку: ")
+l = int(input("Введите нужную длину строки: "))
+print(adjust_string_length(s, l))

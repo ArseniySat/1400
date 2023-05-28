@@ -1,0 +1,14 @@
+from datetime import date
+
+def calculate_age(year_born, month_born, year_today, month_today):
+    birth_date = date(year_born, month_born, 1)
+    today_date = date(year_today, month_today, 1)
+    age = today_date.year - birth_date.year - ((today_date.month, today_date.day) < (birth_date.month, birth_date.day))
+    return age
+
+year_born = 1990
+month_born = 5
+year_today = 2021
+month_today = 9
+
+print(calculate_age(year_born, month_born, year_today, month_today))

@@ -1,0 +1,6 @@
+word = input("Введите слово: ")
+unique_letters = []
+for char in word:
+  if char not in unique_letters:
+    unique_letters.append(char)
+print("Количество различных букв в слове:", len(unique_letters))

@@ -1,0 +1,5 @@
+text = input('Введите текст:')
+digits = [int(num) for num in text.split() if num.isdigit()]
+max_number = max(digits, default=0)
+print('Максимальное число:', max_number)
+

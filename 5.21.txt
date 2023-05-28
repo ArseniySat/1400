@@ -1,0 +1,4 @@
+price = float(input("Введите стоимость 1 кг сыра: "))
+for weight in range(50, 1001, 50):
+    cost = price * weight / 1000
+    print("{} г сыра стоят {} рублей".format(weight, cost))

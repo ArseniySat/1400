@@ -1,0 +1,32 @@
+# a)
+for A in [True, False]:
+    for B in [True, False]:
+        for C in [True, False]:
+            result = not (A or not B and Q or C)
+            print(f"A = {A}, B = {B}, C = {C}: {result}")
+# b)
+def expression_a(A, B, C, Q):
+    return not (A or not B and Q or C)
+
+for A in [True, False]:
+    for B in [True, False]:
+        for C in [True, False]:
+            for Q in [True, False]:
+                result = expression_a(A, B, C, Q)
+                print(f"A = {A}, B = {B}, C = {C}, Q = {Q}: {result}")
+# c)
+def or_func(val1, val2):
+    return val1 or val2
+
+def and_func(val1, val2):
+    return val1 and val2
+
+def expression_a(A, B, C, Q):
+    return not_func(or_func(A, not_func(and_func(not_func(B), Q), C)))
+
+for A in [True, False]:
+    for B in [True, False]:
+        for C in [True, False]:
+            for Q in [True, False]:
+                result = expression_a(A, B, C, Q)
+                print(f"A = {A}, B = {B}, C = {C}, Q = {Q}: {result}")

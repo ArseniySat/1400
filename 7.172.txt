@@ -1,0 +1,11 @@
+import numpy as np
+
+results = []
+for i in range(22):
+    result = float(input("Введите результат спортсмена: "))
+    results.append(result)
+
+results = np.array(results)
+sorted_results = np.sort(results)[::-1]
+print(f"Первое место: {sorted_results[0]}")
+print(f"Второе место: {sorted_results[1]}")

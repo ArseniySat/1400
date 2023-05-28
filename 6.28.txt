@@ -1,0 +1,3 @@
+numbers = filter(lambda n: n % 13 == 0 or n % 17 == 0, range(500, 100000))
+for n in list(numbers)[:20]:
+    print(n)

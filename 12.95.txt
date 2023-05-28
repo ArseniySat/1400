@@ -1,0 +1,12 @@
+
+sentence = input("Enter a sentence with 'k' or 'n': ")
+if 'n' in sentence and 'k' in sentence:
+    n_index = sentence.index('n')
+    k_index = sentence.index('k')
+    if n_index < k_index:
+        print("'n' appears before 'k'.")
+    else:
+        print("'k' appears before 'n'.")
+else:
+    print("Both 'k' and 'n' should be in the sentence.")
+

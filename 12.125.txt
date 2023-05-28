@@ -1,0 +1,23 @@
+
+def is_palindrome(string):
+    new_string = ''
+    for char in string:
+        if char != ' ':
+            new_string += char
+    left = 0
+    right = len(new_string) - 1
+    while left < right:
+        if new_string[left] != new_string[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
+
+string1 = 'АРГЕНТИНА МАНИТ НЕГРА'
+print(is_palindrome(string1))
+
+string2 = 'ПОТ КАК ПОТОП'
+print(is_palindrome(string2))
+
+string3 = 'А РОЗА УПАЛА НА ЛАПУ АЗОРА'
+print(is_palindrome(string3))

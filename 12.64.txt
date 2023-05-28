@@ -1,0 +1,7 @@
+sentence = input("Введите предложение: ")
+count = 0
+for i in range(len(sentence)):
+    if sentence[i] == ' ' and sentence[i-1] != ' ':
+        count += 1
+count += 1 if sentence[-1] != ' ' else 0
+print(count)

@@ -1,0 +1,12 @@
+sequence = input("Введите последовательность: ")
+if len(set(sequence)) == 1:
+    count = len(sequence)
+else:
+    count = 0
+    for i in range(len(sequence)-1):
+        if sequence[i] == sequence[i+1]:
+            count += 1
+        else:
+            break
+print("Количество первых одинаковых символов:", count)
+

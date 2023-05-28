@@ -1,0 +1,16 @@
+def factorize(n):
+    d = 2
+    factors = []
+    while d*d <= n:
+        while (n % d) == 0:
+            factors.append(d)
+            n //= d
+        d += 1
+    if n > 1:
+        factors.append(n)
+    return factors
+
+for num in range(200, 501):
+    factors = factorize(num)
+    if len(set(factors)) == 3:
+        print(num)

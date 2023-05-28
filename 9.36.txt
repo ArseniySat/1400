@@ -1,0 +1,10 @@
+def find_rectangles(s, a):
+    if s % a == 0:
+        b = s // a
+        if a <= b:
+            print("Прямоугольник размером ", a, "x", b)
+    if a < s:
+        find_rectangles(s, a+1)
+
+s = int(input("Введите площадь прямоугольника: "))
+find_rectangles(s, 1)

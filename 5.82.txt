@@ -1,0 +1,14 @@
+def is_sum_of_squares_divisible_by_13(number):
+    return (number // 10)**2 + (number % 10)**2) % 13 == 0
+
+def isNumberValid(number):
+    digit_sum = number // 10 + number % 10
+    return number == digit_sum + digit_sum**2
+
+#а)
+a = list(filter(is_sum_of_squares_divisible_by_13, range(10, 100)))
+print(a)
+
+#б)
+b = list(filter(isNumberValid, range(10, 100)))
+print(b)

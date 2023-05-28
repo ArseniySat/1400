@@ -1,0 +1,11 @@
+n = int(input("Введите количество последних цифр: "))
+num = input("Введите натуральное число: ")
+
+digits = [int(d) for d in num[-n:]]  # вырезаем последние n цифр из числа, создав список
+summa = sum(digits)  # суммируем все цифры в списке digits
+prod = 1
+for d in digits:
+    prod *= d  # перемножаем все цифры в списке digits
+
+print("Сумма последних {} цифр: {}".format(n, summa))
+print("Произведение последних {} цифр: {}".format(n, prod))

@@ -1,0 +1,6 @@
+n = int(input("Введите натуральное число: "))
+
+power_list = [i**i for i in range(1, n+1)]
+total_sum = sum(power_list)
+
+print("Сумма ряда:", total_sum)

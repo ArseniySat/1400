@@ -1,0 +1,10 @@
+import numpy as np
+
+jan_precipitation = [25, 30, 40, 20, 10, 15, 35, 45, 20, 10, 30, 50]
+mar_precipitation = [20, 35, 25, 15, 10, 20, 30, 40, 10, 5, 25, 45]
+
+jan_avg_precipitation = np.mean(jan_precipitation)
+mar_avg_precipitation = np.mean(mar_precipitation)
+
+print("Среднедневное количество осадков в январе:", jan_avg_precipitation)
+print("Среднедневное количество осадков в марте:", mar_avg_precipitation)

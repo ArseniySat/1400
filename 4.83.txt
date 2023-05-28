@@ -1,0 +1,10 @@
+def find_mushrooms_3(k):
+    endings = ['грибов', 'гриб', 'гриба', 'гриба', 'гриба', 'грибов', 'грибов', 'грибов', 'грибов', 'грибов']
+    print(f"Мы нашли {k} {endings[k % 10]} в лесу")
+
+# Проверка работы программ
+for k in range(1, 21):
+    find_mushrooms_1(k)
+    find_mushrooms_2(k)
+    find_mushrooms_3(k)
+    print()

@@ -1,0 +1,15 @@
+def find_eight(number, position):
+    if number == 0:
+        return (position, -1) # -1 означает, что цифра 8 не найдена
+    digit = number % 10
+    if digit == 8:
+        return (position, position)
+    else:
+        return find_eight(number // 10, position + 1)
+
+number = int(input("Введите натуральное число: "))
+_, result = find_eight(number, 1) # забрасываем первый возвращаемый параметр
+if result == -1:
+    print(0)
+else:
+    print(result)

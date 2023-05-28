@@ -1,0 +1,12 @@
+from collections import Counter
+
+arr = [1, 2, 2, 4, 5, 5, 5, 7, 8, 8, 8, 9, 10, 11, 12, 12, 12, 12, 13, 13]
+
+# Находим количество повторяющихся элементов
+counts = dict(Counter(arr))
+count = sum([counts[k]-1 for k in counts])
+print("Количество повторяющихся элементов:", count)
+
+# Находим количество уникальных элементов
+unique = len(set(arr))
+print("Количество уникальных элементов:", unique)

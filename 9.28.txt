@@ -1,0 +1,10 @@
+for n in range(100, 301):
+    div_sum = 0
+    for i in range(1, int(n**(0.5))+1):
+        if n % i == 0:
+            div_sum += i
+            if i != n//i:
+                div_sum += n//i
+    
+    if div_sum*2 - n == 100:
+        print(n)

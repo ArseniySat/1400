@@ -1,0 +1,16 @@
+class SchoolClass:
+    def __init__(self, size):
+        self.size = size
+
+    def __str__(self):
+        return str(self.size)
+
+classes = [SchoolClass(25), SchoolClass(30), SchoolClass(20), SchoolClass(40), SchoolClass(18), SchoolClass(22), SchoolClass(36), SchoolClass(28), SchoolClass(34), SchoolClass(24), SchoolClass(26), SchoolClass(38), SchoolClass(32), SchoolClass(21), SchoolClass(29), SchoolClass(23), SchoolClass(35), SchoolClass(31), SchoolClass(27), SchoolClass(33), SchoolClass(37), SchoolClass(19), SchoolClass(17), SchoolClass(39), SchoolClass(16), SchoolClass(15), SchoolClass(14), SchoolClass(13), SchoolClass(12), SchoolClass(11), SchoolClass(10), SchoolClass(9), SchoolClass(8), SchoolClass(7), SchoolClass(6), SchoolClass(5), SchoolClass(4), SchoolClass(3), SchoolClass(2), SchoolClass(1)]
+
+largest = max(classes, key=lambda x: x.size)
+smallest = min(classes, key=lambda x: x.size)
+
+if largest.size - smallest.size == 10:
+    print("Yes")
+else:
+    print("No")

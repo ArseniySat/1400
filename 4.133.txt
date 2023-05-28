@@ -1,0 +1,18 @@
+day_number = int(input("Введите порядковый номер дня недели: "))
+
+if day_number == 1:
+    print("понедельник")
+elif day_number == 2:
+    print("вторник")
+elif day_number == 3:
+    print("среда")
+elif day_number == 4:
+    print("четверг")
+elif day_number == 5:
+    print("пятница")
+elif day_number == 6:
+    print("суббота")
+elif day_number == 7:
+    print("воскресенье")
+else:
+    print("Некорректный номер дня недели")

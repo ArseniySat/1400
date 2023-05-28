@@ -1,0 +1,10 @@
+word1 = input("Введите первое слово: ")
+word2 = input("Введите второе слово: ")
+unique_letters = set(word1)
+result = ""
+for char in unique_letters:
+  if char in word2:
+    result += "Да "
+  else:
+    result += "Нет "
+print(result)

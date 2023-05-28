@@ -1,0 +1,3 @@
+precipitation = [0, 5, 0, 3, 0, 0, 0, 10, 0, 0, 0, 0] # список количества осадков в каждый день мая
+days = next((i for i, x in enumerate(precipitation) if x != 0), len(precipitation))
+print(f"Непрерывно без осадков {days} дней.")

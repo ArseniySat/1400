@@ -1,0 +1,7 @@
+from itertools import groupby
+
+sequence = [1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 5]
+
+max_count = max(len(list(group)) for _, group in groupby(sequence))
+
+print("Наибольшее количество подряд идущих одинаковых элементов:", max_count)

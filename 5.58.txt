@@ -1,0 +1,17 @@
+import random
+
+def monte_carlo_method(f, a, b, c, d, n):
+    ct = 0
+    for i in range(n):
+        x = random.uniform(a, b)
+        y = random.uniform(c, d)
+        if f(x) >= y >= 2:
+            ct += 1
+    return ct/n*(b-a)*(d-c)
+
+def curve_area(a, b):
+    f = lambda x: 0.4*(x+2)**2 + 1
+    area = monte_carlo_method(f, a, b, 0, 4, 1000000)
+    return area
+
+print(curve_area(-4, 2))

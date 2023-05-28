@@ -1,0 +1,20 @@
+
+scores = [75, 81, 67, 91, 87, 70]
+teams = ['Team A', 'Team B', 'Team C', 'Team D', 'Team E', 'Team F']
+places = []
+
+for i in range(len(scores)):
+    count = 1
+    for j in range(len(scores)):
+        if scores[j] > scores[i]:
+            count += 1
+    places.append(count)
+
+print("Places by score:")
+for i in range(len(places)):
+    print(teams[i], " - ", scores[i], " - ", places[i])
+
+if places == sorted(places):
+    print("Teams are listed in order of their places in the championship.")
+else:
+    print("Teams are not listed in order of their places in the championship.")

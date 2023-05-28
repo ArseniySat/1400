@@ -1,0 +1,15 @@
+A = True
+B = False
+C = False
+
+a = A or B and not C
+b = not A and not B
+c = A and (not B or Q)
+d = not((not A and C) or B)
+e = not(A and C) or B or not not 0
+
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)

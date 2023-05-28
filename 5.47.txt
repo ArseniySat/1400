@@ -1,0 +1,16 @@
+def v_helper(v1, v2, v3, count, n):
+    if count == n:
+        return v3
+    v = ((count - 1) / (count ** 2 + 1)) * v2 + v1
+    return v_helper(v2, v3, v, count + 1, n)
+
+def v(n):
+    if n == 1 or n == 2:
+        return 0
+    elif n == 3:
+        return 1.5
+    else:
+        return v_helper(0, 0, 1.5, 4, n)
+
+n = int(input("Введите n: "))
+print("v_n =", v(n))

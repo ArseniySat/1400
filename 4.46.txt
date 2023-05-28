@@ -1,0 +1,4 @@
+f = lambda x: sin(x) if (x > 0.2 and x < 0.9) else 1
+x = float(input("Введите число x: "))
+fx = f(x)
+print("f(x) =", fx)

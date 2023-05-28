@@ -1,0 +1,8 @@
+def find_greater_elems(array):
+    sum_array = sum(array)
+    result_array = [i for i, elem in enumerate(array) if elem > sum_array]
+    return result_array
+
+array = [3, 7, 12, 5, 9]
+result_array = find_greater_elems(array)
+print("Номера элементов, больших суммы всех элементов массива:", result_array)

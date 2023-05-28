@@ -1,0 +1,153 @@
+# a)
+from math import sqrt
+
+x1 = float(input("Введите x1: "))
+x2 = float(input("Введите x2: "))
+
+result = sqrt(x1**2 + x2**2)
+
+print("Результат: ", result)
+# b)
+x1 = float(input("Введите x1: "))
+x2 = float(input("Введите x2: "))
+x3 = float(input("Введите x3: "))
+
+result = x1*x2 + x1*x3 + x2*x3
+
+print("Результат: ", result)
+# c)
+v0 = float(input("Введите начальную скорость v0: "))
+t = float(input("Введите время t: "))
+a = float(input("Введите ускорение a: "))
+
+result = v0*t + (a*t**2)/2
+
+print("Результат: ", result)
+# d)
+m = float(input("Введите массу m: "))
+v = float(input("Введите скорость v: "))
+g = float(input("Введите ускорение свободного падения g: "))
+h = float(input("Введите высоту падения h: "))
+
+result = m*v**2/(m*g*h)
+
+print("Результат: ", result)
+# e)
+R1 = float(input("Введите сопротивление R1: "))
+R2 = float(input("Введите сопротивление R2: "))
+
+result = 1/R1 + 1/R2
+
+print("Результат: ", result)
+# f)
+m = float(input("Введите массу тела m: "))
+g = float(input("Введите ускорение свободного падения g: "))
+a = float(input("Введите угол a в радианах: "))
+
+result = m*g*math.cos(a)
+
+print("Результат: ", result)
+# g)
+import math
+
+R = float(input("Введите радиус R: "))
+
+result = 2*math.pi*R
+
+print("Результат: ", result)
+# h)
+a, b, c = map(float, input("Введите коэффициенты a, b, c квадратного уравнения через пробел: ").split())
+
+result = b**2 - 4*a*c
+
+print("Результат: ", result)
+# i)
+y = float(input("Введите значение y: "))
+m1 = float(input("Введите значение m1: "))
+m2 = float(input("Введите значение m2: "))
+r = float(input("Введите значение r: "))
+
+result = y * m1*m2/(r**2)
+
+print("Результат: ", result)
+# k)
+I = float(input("Введите значение I: "))
+R = float(input("Введите значение R: "))
+
+result = I*I*R
+
+print("Результат: ", result)
+# l)
+import math
+
+a = float(input("Введите значение a: "))
+b = float(input("Введите значение b: "))
+c = float(input("Введите значение c: "))
+x = float(input("Введите значение x: "))
+
+result = a*b*math.sin(c*x)
+
+print("Результат: ", result)
+# m)
+import math
+
+a = float(input("Введите значение a: "))
+b = float(input("Введите значение b: "))
+c = float(input("Введите значение c: "))
+cos = float(input("Введите значение угла cos: "))
+
+result = math.sqrt(a*a + b*b - 2*a*b*cos)
+
+print("Результат: ", result)
+# n)
+a = float(input("Введите значение a: "))
+b = float(input("Введите значение b: "))
+c = float(input("Введите значение c: "))
+d = float(input("Введите значение d: "))
+
+result = a*d + b*c / a*d
+
+print("Результат: ", result)
+# o)
+a = float(input("Введите значение a: "))
+b = float(input("Введите значение b: "))
+c = float(input("Введите значение c: "))
+x = float(input("Введите значение x: "))
+
+result = math.sqrt(a*x*x + b*x + c)
+
+print("Результат: ", result)
+# p)
+import math
+
+a = float(input("Введите значение a: "))
+b = float(input("Введите значение b: "))
+c = float(input("Введите значение c: "))
+x = float(input("Введите значение x: "))
+
+result = 1 / math.sqrt(a*x*x + b*x + c)
+
+print("Результат: ", result)
+# r)
+import math
+
+x = float(input("Введите значение x: "))
+
+result = (math.sqrt(x+1) + math.sqrt(x-1)) / (2*math.sqrt(x))
+
+print("Результат: ", result)
+# s)
+x = float(input("Введите значение x: "))
+
+result = abs(x) + abs(x+1)
+
+print("Результат: ", result)
+# t)
+x = float(input("Введите значение x: "))
+
+if x < 1:
+    result = 1 - x
+else:
+    result = abs(1 - abs(x))
+
+print("Результат: ", result)

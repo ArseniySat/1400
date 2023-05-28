@@ -1,0 +1,8 @@
+cost = int(input("Введите стоимость 1 кг конфет: "))
+
+weights = list(range(100, 2100, 100))
+
+candy_costs = [weight/1000 * cost for weight in weights]
+
+for i in range(len(weights)):
+  print(f"{weights[i]} г. конфет стоят {candy_costs[i]} руб.")

@@ -1,0 +1,9 @@
+
+n = int(input("Введите количество чисел: "))
+d = [float(input("Введите число: ")) for i in range(n)]
+r = float(input("Введите число r: "))
+summa = sum([i for i in d if i > 20.5])
+if summa < r:
+    print("Cумма чисел больше 20.5 меньше r")
+else:
+    print("Cумма чисел больше 20.5 не меньше r")

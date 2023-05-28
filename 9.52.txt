@@ -1,0 +1,11 @@
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+def get_divisors(q, p):
+    return [i for i in range(1, q+1) if q % i == 0 and gcd(i, p) == 1]
+
+q = int(input("Введите q: "))
+p = int(input("Введите p: "))
+print("Делители q, взаимно простые с p:", get_divisors(q, p))

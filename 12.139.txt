@@ -1,0 +1,4 @@
+
+word = "роцессорп"
+correct_word = word[::-1].replace("р", "", 1)[::-1]
+print(correct_word)

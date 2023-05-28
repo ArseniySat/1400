@@ -1,0 +1,9 @@
+
+words = input("Enter a sequence of words: ")
+if 'cha' in words or 'scha' in words:
+    print("The word combinations 'cha' or 'scha' were found.")
+    words = words.replace('cha', 'sha').replace('scha', 'shta')
+    print("Corrected sequence of words:", words)
+else:
+    print("The word combinations 'cha' or 'scha' were not found.")
+

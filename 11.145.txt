@@ -1,0 +1,9 @@
+temperature = [-13, -12, -10, -8, -6, -5, -2, 0, 1, -9, 
+               -11, -14, -15, -16, -7, -4, -1, 2, 3, -17, 
+               -19, -20, -18, -5, -3, 0, 1, -6, -8, -9]
+
+min1 = min(temperature)
+temperature.remove(min1)
+min2 = min(temperature)
+
+print("Два самых холодных дня в феврале:", min1, "и", min2)

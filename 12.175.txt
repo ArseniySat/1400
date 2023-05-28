@@ -1,0 +1,14 @@
+a = input("Введите первое слово: ")
+b = input("Введите второе слово: ")
+c = input("Введите третье слово: ")
+
+letters = set(a + b + c)
+result = ""
+
+for letter in letters:
+    if a.count(letter) == 1:
+        if b.count(letter) == 1:
+            if c.count(letter) == 1:
+                result += letter + " "
+
+print(f"Неповторяющиеся буквы: {result}")

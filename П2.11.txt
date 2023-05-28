@@ -1,0 +1,12 @@
+def calculate_c():
+    a = 32
+    b = -1
+    b_temp = b * 4
+    b_diff = a - b_temp
+    if a > b_diff:
+        return 6 * b - 4 * a
+    else:
+        return a - b
+
+c = calculate_c()
+print(c)

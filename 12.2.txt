@@ -1,0 +1,12 @@
+class Country:
+    def __init__(self, state, capital):
+        self.state = state
+        self.capital = capital
+    
+    def get_info(self):
+        return f"Столица государства {self.state} - город {self.capital}"
+    
+state = input("Введите название государства: ")
+capital = input("Введите название столицы: ")
+country = Country(state, capital)
+print(country.get_info())

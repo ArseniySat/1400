@@ -1,0 +1,4 @@
+grades = [5, 5, 5, 5, 5, 4, 4, 3, 2, 1]
+count = sum(1 for grade in grades if grade == 5)
+
+print(f"Количество учеников с оценкой 5: {count}")

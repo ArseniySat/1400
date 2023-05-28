@@ -1,0 +1,7 @@
+num_list = []
+for i in range(2):
+    num_list.append(float(input("Введите число: ")))
+
+print("Максимальное число: ", max(num_list))
+print("Минимальное число: ", min(num_list))
+

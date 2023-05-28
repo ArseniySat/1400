@@ -1,0 +1,10 @@
+import numpy as np
+
+t = int(input("Введите натуральное число t: "))
+x = np.array(input("Введите целые числа через пробел: ").split(), dtype=int)
+
+t_count = np.count_nonzero(x % 3 == 0)
+seven_count = np.count_nonzero(x % 7 == 0)
+
+print("Количество чисел, кратных трем: ", t_count)
+print("Количество чисел, кратных семи: ", seven_count)

@@ -1,0 +1,14 @@
+# a)
+f (a, b) == (c, d) or a == c or b == d:
+    print("Ладья угрожает полю ({}, {})".format(c, d))
+# б)
+f abs(a - c) / abs(b-d) == 1:
+    print("Слон угрожает полю ({}, {})".format(c, d))
+# в)
+if abs(a - c) <= 1 and abs(b - d) <= 1:
+    print("Король может попасть на поле ({}, {}) одним ходом".format(c, # г)
+if a == c or b == d or abs(a - c) == abs(b - d):
+    print("Ферзь угрожает полю ({}, {})".format(c, d))
+# ж)
+if (abs(a - c) == 2 and abs(b - d) == 1) or (abs(a - c) == 1 and abs(b - d) == 2):
+    print("Конь угрожает полю ({}, {})".format(c, d))

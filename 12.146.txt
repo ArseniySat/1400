@@ -1,0 +1,15 @@
+
+def replace_letters(word):
+    new_word = ""
+    for letter in word:
+        if letter.lower() == "а":
+            new_word += "б" if letter.islower() else "Б"
+        elif letter.lower() == "б":
+            new_word += "а" if letter.islower() else "А"
+        else:
+            new_word += letter
+    return new_word
+
+word = "абвАБВ"
+print(replace_letters(word))
+

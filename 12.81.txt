@@ -1,0 +1,4 @@
+sentence = input("Введите предложение: ")
+longest_word = sorted(sentence.split(), key=len)[-1]
+print("Самое длинное слово:", longest_word)
+

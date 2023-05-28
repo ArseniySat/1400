@@ -1,0 +1,10 @@
+word = "ИТЕРНЕТН"
+correct_word = "ИНТЕРНЕТ"
+# Удаление повторяющихся букв
+correct_word = "".join(sorted(set(correct_word), key=correct_word.index))
+# Замена символов
+for i in range(len(word)):
+    if word[i] != correct_word[i]:
+        correct_word = correct_word[:i] + word[i] + correct_word[i:]
+        break
+print(correct_word)

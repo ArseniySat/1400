@@ -1,0 +1,9 @@
+# a) двузначные числа
+arr = [45, 23, 67, 88, 102, 12, 98, 5, 76, 99]
+result = list(filter(lambda x: x >= 10 and x <= 99, arr))
+print(result)
+
+# б) трехзначные числа
+arr = [45, 23, 67, 88, 102, 12, 981, 5, 763, 999]
+result = list(filter(lambda x: x >= 100 and x <= 999, arr))
+print(result)

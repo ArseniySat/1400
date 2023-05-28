@@ -1,0 +1,6 @@
+
+a = int(input("Введите число a: "))
+b = int(input("Введите число b: "))
+
+print(1 if a % b == 0 or b % a == 0 else 0)
+

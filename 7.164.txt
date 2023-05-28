@@ -1,0 +1,16 @@
+import numpy as np
+
+n = int(input("Введите количество пар чисел: "))
+pairs = []
+for i in range(n):
+  pair = tuple(map(int, input(f"Введите пару чисел {i+1}: ").split()))
+  pairs.append(pair)
+
+# Поиск максимального среднего арифметического
+arr = np.array(pairs)
+max_avg_idx = np.argmax(np.mean(arr, axis=1))
+print(f"Максимальное среднее арифметическое: {np.mean(arr[max_avg_idx])} (в паре {max_avg_idx + 1})")
+
+# Поиск минимального среднего геометрического
+min_geo_idx = np.argmin(np.prod(arr**0.5, axis=1))
+print(f"Минимальное среднее геометрическое: {np.prod(arr[min_geo_idx]**0.5)} (в паре {min_geo_idx + 1})")

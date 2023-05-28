@@ -1,0 +1,6 @@
+sentence = input("Введите предложение: ")
+sub_str = input("Введите буквосочетание: ")
+if len(sub_str) == 2:
+    print(f"Количество вхождений '{sub_str}': {len([sentence[i:i+2] for i in range(len(sentence)-1) if sentence[i:i+2] == sub_str])}")
+else:
+    print(f"Количество вхождений '{sub_str}': {sentence.count(sub_str)}")

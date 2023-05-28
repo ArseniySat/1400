@@ -1,0 +1,16 @@
+
+import random
+
+def throw_dice():
+    return random.randint(1, 6)
+
+players = []
+for i in range(2):
+    players.append(throw_dice())
+
+winner = max(players)
+
+if players[0] == players[1]:
+    print("It's a tie!")
+else:
+    print("Player", players.index(winner) + 1, "wins with", winner, "points!")

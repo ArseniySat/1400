@@ -1,0 +1,17 @@
+
+def print_symbol(num, symbol, counter=1):
+  if counter <= num:
+    print(symbol * counter)
+    print_symbol(num, symbol, counter+1)
+
+num = int(input("Введите число: "))
+symbol = input("Введите символ: ")
+print_symbol(num, symbol)
+
+Пример вывода:
+Введите число: 4
+Введите символ: $
+$
+$$
+$$$
+$$$$

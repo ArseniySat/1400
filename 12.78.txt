@@ -1,0 +1,7 @@
+sentence = input('Введите предложение: ')
+words = sentence.split(' ')
+if len(words) == 2:
+    print(words[0])
+else:
+    print(words[-2] + ' ' + words[-1])
+

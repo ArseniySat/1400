@@ -1,0 +1,5 @@
+count = int(input("Введите количество квартир: "))
+residents = [int(input("Введите количество жильцов в квартире №" + str(i) + ": ")) for i in range(1, count + 1)]
+max_residents = max(residents)
+max_residents_num = residents.index(max_residents) + 1
+print("Больше всего жильцов проживает в", max_residents_num, "квартире")

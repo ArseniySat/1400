@@ -1,0 +1,10 @@
+lst = []
+ 
+while True:
+    number = int(input("Введите число: "))
+    if number == 0:
+        break
+    lst.append(number)
+ 
+print("Сумма чисел:", sum(lst))
+print("Количество чисел:", len(lst))

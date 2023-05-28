@@ -1,0 +1,50 @@
+a = 3 # размеры стола
+b = 2
+c = 2 # размеры кости домино
+d = 1
+e = 1
+
+# функция для проверки возможности размещения кости с помощью алгоритма поиска с возвратом
+def search_tiles(table, tiles, remaining_tiles):
+    if not remaining_tiles: # если все кости размещены
+        return True
+    for i in range(table[0]):
+        for j in range(table[1]):
+            for k in range(len(remaining_tiles)):
+                # проверка возможности размещения текущей кости в текущей ячейке
+                if i + remaining_tiles[k][0] <= table[0] and j + remaining_tiles[k][1] <= table[1]:
+flag = True
+                    # проверка, что все ячейки, занятые текущей костью, пусты и лежат на одной грани
+                    for l in range(remaining_tiles[k][0]):
+                        for m in range(remaining_tiles[k][1]):
+                            if table[i+l][j+m] or (l+m != 0 and not table[i+l][j] and not table[i][j+m]):
+                                flag = False
+                                break
+                        if not flag:
+                            break
+                    if flag:
+                        for l in range(remaining_tiles[k][0]):
+                            for m in range(remaining_tiles[k][1]):
+                                table[i+l][j+m] = True # помечаем ячейки, занятые текущей костью
+                        tiles.append([i, j]) # добавляем кость в список
+                        if search_tiles(table, tiles, remaining_tiles[:k] + remaining_tiles[k+1:]): # рекурсивный поиск следующей кости
+                            return True
+                        else:
+                            for l in range(remaining_tiles[k][0]):
+                                for m in range(remaining_tiles[k][1]):
+                                    table[i+l][j+m] = False # снимаем отметку с ячеек, занятых текущей костью
+                            tiles.pop() # удаляем текущую кость из списка
+    return False
+
+# построение двумерного массива для представления стола
+table = [[False for j in range(b)] for i in range(a)]
+
+tiles = [] # список костей в текущем варианте размещения
+
+# запуск алгоритма поиска с возвратом
+search_tiles(table, tiles, [[c, e] for i in range(c)] + [[d, e] for i in range(d)])
+
+print('Наибольшее количество костей:', len(tiles))
+print('Координаты костей:')
+for tile in tiles:
+    print(tile[0], tile[1])

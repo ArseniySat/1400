@@ -1,0 +1,13 @@
+numbers = []
+
+for i in range(4):
+    number = int(input("Введите число: "))
+    numbers.append(number)
+
+count = 0
+
+for number in numbers:
+    if number % 2 == 0:
+        count += 1
+        
+print("Из заданных чисел", count, "четных")

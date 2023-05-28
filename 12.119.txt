@@ -1,0 +1,9 @@
+word = "питон"
+if len(word) % 2 == 0:
+    new_word = word[:len(word)//2-1] + word[len(word)//2+1:]
+else:
+    middle_index = len(word)//2
+    new_word = word[:middle_index] + word[middle_index+1:]
+    new_word = new_word[:middle_index-1] + new_word[middle_index:]
+print(new_word)
+

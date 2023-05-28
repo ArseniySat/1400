@@ -1,0 +1,19 @@
+import datetime
+
+h = int(input("Введите часы: "))
+m = int(input("Введите минуты: "))
+s = int(input("Введите секунды: "))
+
+now = datetime.datetime.now()
+dt = datetime.datetime(now.year, now.month, now.day, h, m, s)
+
+if now < dt:
+    angle = (dt - now).seconds / 120
+else:
+    angle = (now - dt).seconds / 120
+
+if angle > 180:
+    angle = 360 - angle
+
+print("Угол между положением часовой стрелки в начале суток и в указанный момент времени:", math.floor(angle), "градусов")
+

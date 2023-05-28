@@ -1,0 +1,11 @@
+arr = [2, 6, 8, 3, 9, 1, 4]
+num = 5
+
+# используем генераторы списков для нахождения элементов меньше числа и считаем их среднее арифметическое
+filtered_arr = [i for i in arr if i < num]
+if len(filtered_arr) != 0:
+    avg = sum(filtered_arr)/len(filtered_arr)
+else:
+    avg = 0
+
+print(avg)

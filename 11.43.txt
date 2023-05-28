@@ -1,0 +1,4 @@
+from functools import reduce
+a = [5, 3, -2, 1, 7, -4, 6]
+s = reduce(lambda x, y: x ^ y, a)
+print(s)

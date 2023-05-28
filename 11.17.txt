@@ -1,0 +1,11 @@
+def fib(n):
+    if n <= 1:
+        return n
+    else:
+        return(fib(n-1) + fib(n-2))
+
+fibonacci = []
+for i in range(10):
+    fibonacci.append(fib(i))
+
+print(fibonacci)

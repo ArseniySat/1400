@@ -1,0 +1,17 @@
+import bisect
+
+arr = [10, 8, 5, 3, 2, 1]
+a = 6
+
+index = bisect.bisect_left(arr, a)
+if index == 0:
+    print("В массиве нет элементов, меньших", a)
+else:
+    print("Элементы, следующие за первым элементом, меньшим", a, ":")
+    for i in range(index, len(arr)):
+        if arr[i] >= a:
+            break
+        print(arr[i])
+    print("Элементы, большие", a, ":")
+    for i in range(index-1, len(arr)):
+        print(arr[i])

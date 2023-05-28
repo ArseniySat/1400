@@ -1,0 +1,14 @@
+
+from functools import reduce
+
+july1 = [10, 20, 30, 40, 50]
+july2 = [15, 25, 35, 45, 55]
+august1 = [12, 22, 32, 42, 52]
+august2 = [18, 28, 38, 48, 58]
+
+total_july = reduce(lambda x, y: x+y, july1 + july2)
+total_august = reduce(lambda x, y: x+y, august1 + august2)
+
+total_sales = total_july + total_august
+
+print("Total sales for July and August: ", total_sales)

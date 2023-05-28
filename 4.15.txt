@@ -1,0 +1,20 @@
+class Equation:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+    
+    def discriminant(self):
+        return self.b**2 - 4*self.a*self.c
+
+a = float(input("Введите коэффициент a: "))
+b = float(input("Введите коэффициент b: "))
+c = float(input("Введите коэффициент c: "))
+
+eq = Equation(a, b, c)
+d = eq.discriminant()
+
+if d < 0:
+    print("Уравнение не имеет корней")
+else:
+    print("Уравнение имеет корни")

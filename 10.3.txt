@@ -1,0 +1,14 @@
+import random
+
+a = int(input("Введите значение a: "))
+b = int(input("Введите значение b: "))
+
+m = random.randint(0, 20)
+n = random.randint(0, 20)
+
+numbers = [random.randint(a, b) for i in range(n)]
+floats = [random.triangular(0, n, n/2) for i in range(m)]
+
+print("Случайные натуральные числа m и n:", m, n)
+print("Случайные целые числа в диапазоне от", a, "до", b, ":", numbers)
+print("Случайные вещественные числа неотрицательные и не превосходят n:", floats)

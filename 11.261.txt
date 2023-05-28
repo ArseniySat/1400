@@ -1,0 +1,52 @@
+words = ["apple", "banana", "cherry", "date", "elderberry"] # пример массива слов
+
+# а) средняя длина слова
+sum_length = 0
+for word in words:
+    sum_length += len(word)
+average_length = sum_length / len(words)
+print("Средняя длина слова: ", average_length)
+
+# б) количество слов, в которых больше пяти символов
+long_words = 0
+for word in words:
+    if len(word) > 5:
+        long_words += 1
+print("Количество слов, в которых больше пяти символов: ", long_words)
+
+# в) количество символов в самом длинном слове
+length_longest_word = 0
+for word in words:
+    if len(word) > length_longest_word:
+        length_longest_word = len(word)
+print("Количество символов в самом длинном слове: ", length_longest_word)
+
+# г) номер первого самого короткого слова
+shortest_word_index = 0
+for i in range(len(words)):
+    if len(words[i]) < len(words[shortest_word_index]):
+        shortest_word_index = i
+print("Номер первого самого короткого слова: ", shortest_word_index)
+
+# д) количество символов в слове, больше которого только в самом длинном слове
+long_word_length = 0
+for word in words:
+    if len(word) > long_word_length:
+        long_word_length = len(word)
+more_than_long_word = 0
+for word in words:
+    if len(word) > long_word_length:
+        more_than_long_word += 1
+print("Количество символов в слове, больше которого только в самом длинном слове: ", more_than_long_word)
+
+# е) количество слов, начинающихся на букву «к» или «К»
+k_words = 0
+for word in words:
+    if word.startswith("k") or word.startswith("K"):
+        k_words += 1
+print("Количество слов, начинающихся на букву «к» или «К»: ", k_words)
+
+# Получение массива слов в алфавитном порядке
+sorted_words = sorted(words)
+print("Слова в алфавитном порядке: ", sorted_words)
+

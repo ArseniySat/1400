@@ -1,0 +1,15 @@
+def compare_precipitation(jan_precipitation, mar_precipitation):
+    jan_precipitation_total = sum(jan_precipitation)
+    mar_precipitation_total = sum(mar_precipitation)
+
+    if jan_precipitation_total > mar_precipitation_total:
+        return "В январе выпало больше осадков"
+    elif jan_precipitation_total < mar_precipitation_total:
+        return "В марте выпало больше осадков"
+    else:
+        return "В январе и марте выпало одинаковое количество осадков"
+
+jan_precipitation = [10, 20, 15, 5, 30, 25, 40, 20, 15, 10, 5, 0]
+mar_precipitation = [5, 15, 10, 20, 25, 30, 35, 40, 20, 15, 10, 5]
+
+print(compare_precipitation(jan_precipitation, mar_precipitation))

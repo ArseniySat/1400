@@ -1,0 +1,12 @@
+word1 = input("Введите первое слово: ")
+word2 = input("Введите второе слово: ")
+count = 0
+for i, char1 in enumerate(word1):
+    if i >= len(word2):
+        break
+    if char1 == word2[i]:
+        count += 1
+    else:
+        break
+print("Количество совпадающих начальных букв:", count)
+

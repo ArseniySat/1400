@@ -1,0 +1,12 @@
+n = int(input("Введите количество чисел: "))
+c = []
+
+for i in range(n):
+    c.append(int(input("Введите число: ")))
+
+filtered_c = [x for x in c if x < 20]
+
+if len(filtered_c) == 5:
+    print("Верно")
+else:
+    print("Неверно")

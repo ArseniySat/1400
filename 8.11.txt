@@ -1,0 +1,13 @@
+def calc_summa(i, n):
+    if i == 1:
+        return 1
+    else:
+        return calc_summa(i-1, n) + 1/i
+    
+n = float(input("Введите число n: "))
+i = 1
+summa = 0
+while summa <= n:
+    summa = calc_summa(i, n)
+    i += 1
+print("Первое число, большее", n, "равно", round(summa, 3))

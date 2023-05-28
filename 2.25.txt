@@ -1,0 +1,16 @@
+def calculate_volume(a: float, b: float, c: float) -> float:
+    return a * b *c
+
+def calculate_lateral_surface_area(a: float, b: float, c: float) -> float:
+    sides = [a*b, b*c, a*c]
+    return sum(sides) * 2
+
+a = float(input("Введите длину: "))
+b = float(input("Введите ширину: "))
+c = float(input("Введите высоту: "))
+
+volume = calculate_volume(a, b, c)
+print("Объем прямоугольного параллелепипеда равен:", volume)
+
+lateral_surface_area = calculate_lateral_surface_area(a, b, c)
+print("Площадь боковой поверхности равна:", lateral_surface_area)

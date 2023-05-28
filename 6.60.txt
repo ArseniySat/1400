@@ -1,0 +1,12 @@
+
+# а) Находим максимальные цифры:
+
+num = input("Введите натуральное число: ")
+digits = sorted(num, reverse=True)
+print("Максимальные цифры:", digits[0], digits[1])
+
+# б) Находим минимальные цифры:
+
+num = input("Введите натуральное число: ")
+digits = sorted(num)
+print("Минимальные цифры:", digits[0], digits[1])

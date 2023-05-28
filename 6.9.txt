@@ -1,0 +1,11 @@
+def get_even_number():
+    number = int(input("Введите четное число: "))
+    if number%2 == 0:
+        return number
+    else:
+        print("Ошибка! Вы ввели нечетное число. Попробуйте еще раз.")
+        return get_even_number()
+    
+# пример использования
+even_number = get_even_number()
+print("Вы ввели четное число: ", even_number)

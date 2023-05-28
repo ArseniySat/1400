@@ -1,0 +1,6 @@
+import re
+
+s = int(input("Введите значение s: "))
+pattern = "^[" + str(s) + "][0-9][" + str(s) + "][0-9][" + str(s) + "-9]$"
+count = len([num for num in range(100, 1000) if re.match(pattern, str(num))])
+print("Количество трехзначных чисел с суммой цифр, равной", s, ":", count)

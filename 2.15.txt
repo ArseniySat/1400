@@ -1,0 +1,10 @@
+def calculate_area(outer_radius, inner_radius):
+    area = 3.14 * (outer_radius ** 2 - inner_radius ** 2)
+    return area
+
+outer_radius = float(input("Введите внешний радиус: "))
+inner_radius = float(input("Введите внутренний радиус: "))
+
+area = calculate_area(outer_radius, inner_radius)
+
+print("Площадь кольца равна:", area)

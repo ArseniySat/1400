@@ -1,0 +1,19 @@
+def check_box_in_suitcase(a1, a2, a3, b1, b2, b3):
+    a = sorted([a1, a2, a3])
+    b = sorted([b1, b2, b3])
+    if all(i <= j for i, j in zip(a, b)):
+        return True
+    else:
+        return False
+
+a1 = float(input("Введите длину чемодана: "))
+a2 = float(input("Введите ширину чемодана: "))
+a3 = float(input("Введите высоту чемодана: "))
+b1 = float(input("Введите длину коробки: "))
+b2 = float(input("Введите ширину коробки: "))
+b3 = float(input("Введите высоту коробки: "))
+
+if check_box_in_suitcase(a1, a2, a3, b1, b2, b3):
+    print("Коробка помещается в чемодан")
+else:
+    print("Коробка не помещается в чемодан")

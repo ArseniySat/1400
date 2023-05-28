@@ -1,0 +1,5 @@
+a = 40
+b = 10
+c = b - a if a < b else a - 2 * b
+b = -a / 2 * b
+print(b)

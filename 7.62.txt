@@ -1,0 +1,21 @@
+def is_greater_p(x):
+    return x > p
+
+def ends_with_5(x):
+    return x % 10 == 5
+
+def is_divisible_by_k(x):
+    return x % k == 0
+
+n = int(input("Введите количество чисел: "))
+p = int(input("Введите число p: "))
+k = int(input("Введите число k: "))
+
+numbers = [int(input("Введите число a: ")) for i in range(n)]
+count_p = len(list(filter(is_greater_p, numbers)))
+count_5 = len(list(filter(ends_with_5, numbers)))
+count_k = len(list(filter(is_divisible_by_k, numbers)))
+
+print("Количество чисел, больших p: ", count_p)
+print("Количество чисел, оканчивающих на 5: ", count_5)
+print("Количество чисел, кратных k: ", count_k))

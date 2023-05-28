@@ -1,0 +1,6 @@
+distance_cm = int(input("Введите расстояние в сантиметрах: "))
+distance_m = 0
+while distance_cm >= 100:
+    distance_cm -= 100
+    distance_m += 1
+print("Расстояние в полных метрах: ", distance_m)

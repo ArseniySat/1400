@@ -1,0 +1,8 @@
+students = [('John', 170), ('Emily', 165), ('Alex', 175), ('Kim', 160), ('Lisa', 180)]
+
+check_list = [students[i][1] >= students[i+1][1] for i in range(len(students)-1)]
+
+if all(check_list):
+    print("Students are listed in descending order of height")
+else:
+    print("Students are NOT listed in descending order of height")

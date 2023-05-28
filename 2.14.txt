@@ -1,0 +1,5 @@
+
+a = float(input("Введите первый катет: "))
+b = float(input("Введите второй катет: "))
+c = math.hypot(a, b)
+print("Гипотенуза: ", c)

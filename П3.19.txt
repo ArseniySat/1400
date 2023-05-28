@@ -1,0 +1,14 @@
+
+a = False
+b = False
+print(not(not a and not b) and a)
+a = False
+b = True
+print(not(not a and not b) and a)
+a = True
+b = False
+print(not(not a and not b) and a)
+a = True
+b = True
+print(not(not a and not b) and a)
+

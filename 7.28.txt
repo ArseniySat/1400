@@ -1,0 +1,7 @@
+import statistics
+
+grades = [5, 4, 3, 4, 5, 5, 4, 3, 4, 5]
+
+average_grade = statistics.mean(grades)
+
+print("Средняя оценка:", average_grade)

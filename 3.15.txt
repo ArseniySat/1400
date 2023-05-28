@@ -1,0 +1,6 @@
+place_number = int(input("Введите номер места: "))
+section_number, floor_number = divmod(divmod(place_number - 1, 15)[0], 8)
+section_number += 1
+floor_number = floor_number // 2 + 1
+
+print("Товар находится в секции ", section_number, " на ярусе ", floor_number)

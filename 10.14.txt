@@ -1,0 +1,28 @@
+import random
+
+# генератор, создающий результаты бросаний
+def dice_generator(n):
+    for i in range(n):
+        yield random.randint(1, 6)
+
+# бросаем n кубиков и возвращаем сумму результатов
+def roll_dice_n(n):
+    return sum(dice_generator(n))
+
+# моделируем бросание кубиков всеми тремя игроками
+player1_score = roll_dice_n(10)
+player2_score = roll_dice_n(10)
+player3_score = roll_dice_n(10)
+
+# выводим результаты
+print("Игрок 1 набрал", player1_score, "очков")
+print("Игрок 2 набрал", player2_score, "очков")
+print("Игрок 3 набрал", player3_score, "очков")
+
+# определяем победителя
+if player1_score > player2_score and player1_score > player3_score:
+    print("Игрок 1 победил")
+elif player2_score > player3_score:
+    print("Игрок 2 победил")
+else:
+    print("Игрок 3 победил")

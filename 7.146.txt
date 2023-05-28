@@ -1,0 +1,9 @@
+
+heights = [175, 182, 159, 194, 168, 176, 185]
+difference = 0
+for height in heights:
+  if height > difference:
+    difference = height
+  if height < difference:
+    difference = height
+print("Рост самого высокого человека превышает рост самого низкого на", difference, "cм")

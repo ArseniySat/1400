@@ -1,0 +1,10 @@
+a)
+X = False, Y = True, Z = False
+res = True
+b)
+X = False, Y = True, Z = False
+res = False
+c)
+X = False, Y = True, Z = False
+res = False
+

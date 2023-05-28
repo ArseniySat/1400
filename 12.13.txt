@@ -1,0 +1,5 @@
+word = "hello"
+k = 3
+for i in range(len(word)):
+    if i == k-1:
+        print(word[i])

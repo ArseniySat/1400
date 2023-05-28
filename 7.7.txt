@@ -1,0 +1,9 @@
+import numpy as np
+
+resistors = [1, 2, 3, 4, 5]
+
+total_resistance = np.sum(1/np.array(resistors))
+
+total_resistance = 1/total_resistance
+
+print("Total resistance: ", total_resistance)

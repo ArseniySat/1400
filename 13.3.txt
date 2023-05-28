@@ -1,0 +1,5 @@
+cities = ['Rome', 'Milan', 'Venice', 'Naples']
+countries = ['Italy', 'Germany', 'France', 'Spain']
+for i in range(4):
+  if countries[i] == 'Italy':
+    print(cities[i])

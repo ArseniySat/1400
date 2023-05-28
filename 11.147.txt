@@ -1,0 +1,11 @@
+import numpy as np
+
+arr = [4, -7, 1, 12, -5, 8]
+
+# Находим индекс максимального по модулю элемента
+max_index = np.abs(arr).argmax()
+
+# Изменяем знак максимального элемента
+arr = np.where(np.arange(len(arr))==max_index, -arr[max_index], arr)
+
+print(arr)

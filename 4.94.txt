@@ -1,0 +1,12 @@
+k = int(input())
+if k <= 18:
+    print(k+9)
+else:
+    k -= 18
+    num = 10 + k // 2
+    if k % 2 == 0:
+        ans = str(num)[0]
+    else:
+        ans = str(num)[1]
+    print(ans)
+

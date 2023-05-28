@@ -1,0 +1,3 @@
+y = float(input("Введите y: "))
+f = {y > 2: 2, y > 0: 0}.get(False, -3*y)
+print(f)

@@ -1,0 +1,15 @@
+import numpy as np
+
+n = int(input("Введите количество чисел: "))
+s = float(input("Введите значение s: "))
+d = []
+for i in range(n):
+    di = float(input("Введите число: "))
+    d.append(di)
+
+p = np.prod(d) # считаем произведение с помощью функции prod из numpy
+
+if p > s:
+    print("Произведение чисел больше s")
+else:
+    print("Произведение чисел меньше или равно s")

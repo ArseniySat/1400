@@ -1,0 +1,12 @@
+a)
+res = False
+b)
+res = True
+c)
+res = False
+d)
+res = True
+e)
+res = True
+ж)
+res = True

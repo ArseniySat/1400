@@ -1,0 +1,31 @@
+def sum_of_array(arr):
+    result = 0
+    for n in arr:
+        result += n
+    return result
+
+def sum_of_squares_array(arr):
+    result = 0
+    for n in arr:
+        result += n ** 2
+    return result
+
+numbers = [2, 3, 4, 5, 6, 7]
+
+sum_of_numbers = sum_of_array(numbers)
+
+# Проверка на четность
+if sum_of_numbers % 2 == 0:
+    print("Сумма элементов массива четная")
+else:
+    print("Сумма элементов массива нечетная")
+
+# Проверка на пятизначность суммы квадратов элементов массива
+
+squares_sum = sum_of_squares_array(numbers)
+
+if 10000 <= squares_sum < 100000:
+    print("Сумма квадратов элементов массива пятизначная")
+else:
+    print("Сумма квадратов элементов массива непятизначная")
+

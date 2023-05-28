@@ -1,0 +1,6 @@
+
+text = input('Введите текст: ')
+if ('00000' in text) or ('11111' in text) or ('22222' in text) or ('33333' in text) or ('44444' in text) or ('55555' in text) or ('66666' in text) or ('77777' in text) or ('88888' in text) or ('99999' in text):
+    print('Есть пять идущих подряд символов')
+else:
+    print('Пять идущих подряд одинаковых символов не найдено')

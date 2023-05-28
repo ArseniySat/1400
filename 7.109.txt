@@ -1,0 +1,11 @@
+numbers = [int(input()) for i in range(12)]
+even_sum = sum(filter(lambda x: x % 2 == 0, numbers))
+even_count = len(list(filter(lambda x: x % 2 == 0, numbers)))
+odd_sum = sum(filter(lambda x: x % 2 != 0, numbers))
+odd_count = len(list(filter(lambda x: x % 2 != 0, numbers)))
+
+even_avg = even_sum / even_count
+odd_avg = odd_sum / odd_count
+
+print("Среднее арифметическое четных чисел:", even_avg)
+print("Среднее арифметическое нечетных чисел:", odd_avg)

@@ -1,0 +1,8 @@
+n = int(input())
+if n <= 10:
+    print(n-1)
+else:
+    n -= 10
+    num = (n + 8) // 2 + 10
+    ans = str(num)[n % 2]
+    print(ans)

@@ -1,0 +1,19 @@
+
+class Divider:
+    def __init__(self, a, n):
+        self.a = a
+        self.n = n
+    
+    def is_divider(self):
+        if self.n % self.a == 0:
+            return True
+        else:
+            return False
+
+a = int(input("Введите число a: "))
+n = int(input("Введите число n: "))
+d = Divider(a, n)
+if d.is_divider():
+    print("Число", a, "является делителем числа", n)
+else:
+    print("Число", a, "не является делителем числа", n)

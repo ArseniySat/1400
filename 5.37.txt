@@ -1,0 +1,6 @@
+sum = 0
+sign = 1
+for n in range(1, 101):
+    sum += sign * (1/n)
+    sign = -sign
+print(sum)

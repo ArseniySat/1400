@@ -1,0 +1,9 @@
+a = Symbol('a')
+b = Symbol('b')
+c = Symbol('c')
+a = 5
+a = a + 6
+b = -a
+c = a - 2*b
+s = solve(c-a-2*b)
+print(s)

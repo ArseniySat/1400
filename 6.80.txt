@@ -1,0 +1,5 @@
+number = input("Введите натуральное число: ")
+if ''.join(map(str, sorted(map(int, list(number))))) == number:
+    print("Упорядоченная по возрастанию")
+else:
+    print("Не упорядоченная по возрастанию")

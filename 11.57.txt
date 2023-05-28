@@ -1,0 +1,35 @@
+import numpy as np
+
+def main():
+    rainfall = [20, 12, 15, 10, 16, 23, 28, 30, 27, 22, 18, 25] #массив количества осадков
+
+    first_half, second_half = calc_halves(rainfall)
+    if first_half > second_half:
+        print("Больше осадков выпало в первую половину июня.")
+    else:
+        print("Больше осадков выпало во вторую половину июня.")
+
+    decades = np.array_split(rainfall, 3) #разбиваем массив на три декады
+    max_decade = 0
+    max_decade_index = 0
+    for i in range(len(decades)): #определяем декаду с наибольшим количеством осадков
+        if sum(decades[i]) > max_decade:
+            max_decade = sum(decades[i])
+            max_decade_index = i
+    print(f"Больше всего осадков выпало в {max_decade_index+1}-ую декаду месяца.")
+
+
+def calc_halves(rainfall):
+    first_half = 0 #больше осадков в первую половину
+    second_half = 0 #больше осадков во вторую половину
+
+    for i in range(len(rainfall)):
+        if i < len(rainfall)/2:
+            first_half += rainfall[i]
+        else:
+            second_half += rainfall[i]
+
+    return first_half, second_half
+
+if __name__ == '__main__':
+    main()

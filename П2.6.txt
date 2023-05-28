@@ -1,0 +1,5 @@
+a = 9.4
+b = 15.1
+a, b = b, a
+print("a =", a)
+print("b =", b)

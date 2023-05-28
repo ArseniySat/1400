@@ -1,0 +1,16 @@
+def arithmetic_mean(a: int, b: int) -> float:
+    return (abs(a) + abs(b)) / 2
+
+
+def geometric_mean(a: int, b: int) -> float:
+    return math.sqrt(abs(a) * abs(b))
+
+
+num1 = int(input("Введите первое число: "))
+num2 = int(input("Введите второе число: "))
+
+arith_mean = arithmetic_mean(num1, num2)  # среднее арифметическое модулей
+geom_mean = geometric_mean(num1, num2)  # среднее геометрическое модулей
+
+print("Среднее арифметическое модулей: ", arith_mean)
+print("Среднее геометрическое модулей: ", geom_mean)

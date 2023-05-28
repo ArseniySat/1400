@@ -1,0 +1,11 @@
+
+k = int(input())
+if k <= 201:
+    num = (k+1)//2 + 49
+else:
+    k -= 201
+    num = (k//3) + 100
+    num += 1 if k%3 == 0 else 0
+ans = str(num)[(k-1)%2]
+print(ans)
+

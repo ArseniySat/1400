@@ -1,0 +1,12 @@
+def calculate_total(scores):
+    return sum(scores)
+
+obligatory_total = calculate_total(obligatory_scores)
+free_total = calculate_total(free_scores)
+
+if obligatory_total > free_total:
+    print("Спортсмен показал лучший результат по обязательной программе.")
+elif obligatory_total < free_total:
+    print("Спортсмен показал лучший результат по произвольной программе.")
+else:
+    print("Спортсмен показал одинаковый результат по обоим программам.")

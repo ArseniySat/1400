@@ -1,0 +1,20 @@
+
+heights = [180, 175, 172, 168, 165, 160, 155, 153, 150, 148, 145, 142, 140, 139, 135]
+
+new_height = 149
+
+def binary_search(nums, target):
+    low, high = 0, len(nums) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if nums[mid] == target:
+            return mid
+        elif nums[mid] < target:
+            high = mid - 1
+        else:
+            low = mid + 1
+    return low
+
+position = binary_search(heights, new_height)
+
+print("Место нового ученика по росту:", position)

@@ -1,0 +1,5 @@
+sentence = input("Введите предложение: ")
+num = 3
+while num <= len(sentence):
+    print(sentence[num-1])
+    num += 3

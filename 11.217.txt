@@ -1,0 +1,23 @@
+import numpy as np
+
+num1 = np.random.randint(0, 10, size=20)
+num2 = np.random.randint(0, 10, size=20)
+
+sum_num = np.zeros(21)
+
+# Сложение чисел с помощью функции add из библиотеки NumPy
+sum_num[:-1] = np.add(num1, num2)
+
+# Обработка случая, когда был перенос в старший разряд
+if np.any(sum_num[:-1] >= 10):
+    carry = 0
+    for i in range(20, -1, -1):
+        s = sum_num[i] + carry
+        sum_num[i] = s % 10
+        carry = s // 10
+    sum_num[-1] = carry
+
+# Вывод результатов
+print("Первое число: ", *num1, sep="")
+print("Второе число: ", *num2, sep="")
+print("Сумма: ", *sum_num[::-1], sep="")

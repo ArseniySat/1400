@@ -1,0 +1,11 @@
+rainfall = [5, 10, 3, 8, 15, 9, 4, 10, 7, 13, 6, 12, 11, 7, 2, 8, 14, 6, 9, 3, 11, 7, 10, 6, 9, 8, 12, 14, 5, 7, 10]
+
+max_rainfall = 0
+max_rainfall_day = 0
+
+for i in range(len(rainfall)):
+    if rainfall[i] > max_rainfall:
+        max_rainfall = rainfall[i]
+        max_rainfall_day = i + 1
+
+print("The rainiest day of July was day", max_rainfall_day)

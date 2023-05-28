@@ -1,0 +1,18 @@
+def find_shortest_segment(sequence):
+    # Функция для нахождения длины отрезка с нулями внутри заданного диапазона
+    def find_zero_segment(start, end):
+        # Если диапазон состоит только из нулей, возвращаем его длину
+        if all(x == 0 for x in sequence[start:end+1]):
+            return end - start + 1
+        # Если диапазон содержит хотя бы одну единицу, разбиваем его на две части
+        mid = (start + end) // 2
+        left_length = find_zero_segment(start, mid)
+        right_length = find_zero_segment(mid+1, end)
+        # Возвращаем минимальную длину из двух частей
+        return min(left_length, right_length)
+
+    # Вызываем функцию для всей последовательности
+    return find_zero_segment(0, len(sequence)-1)
+
+sequence = [1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0]
+print(find_shortest_segment(sequence))  # 3

@@ -1,0 +1,19 @@
+а)
+A = True
+B = False
+C = False
+result = A or B
+print(result)
+б)
+A = True
+B = False
+C = False
+result = A and B
+print(result)
+в)
+A = True
+B = False
+C = False
+result = B or C
+print(result)
+

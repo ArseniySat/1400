@@ -1,0 +1,4 @@
+word = "Pythonist"
+half_length = len(word)//2
+new_word = word[half_length:] + word[0:half_length]
+print(new_word)

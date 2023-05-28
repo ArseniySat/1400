@@ -1,0 +1,8 @@
+text = input('Введите текст:')
+max_digit = 0
+index = -1
+for i, char in enumerate(text):
+    if char.isdigit() and int(char) > max_digit:
+        max_digit = int(char)
+        index = i
+print('Порядковый номер максимальной цифры:', index)

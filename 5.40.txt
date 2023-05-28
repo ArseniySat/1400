@@ -1,0 +1,6 @@
+
+from functools import reduce
+
+num = input("Введите 9-значное число: ")
+summ = reduce(lambda x, y: int(x) + int(y), num)
+print("Сумма цифр числа:", summ)

@@ -1,0 +1,15 @@
+
+grades = [3, 4, 5, 2, 3, 4, 3, 4, 5, 4, 3, 2, 4, 5, 4, 3, 4, 5, 3, 4, 3, 4, 2, 5, 4, 3, 4, 5]
+
+index = 0
+found = False
+
+while not found and index < len(grades):
+    if grades[index] == 2:
+        found = True
+    index += 1
+
+if found:
+    print("Двойка есть")
+else:
+    print("Двойки нет")

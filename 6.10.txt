@@ -1,0 +1,13 @@
+password = 1234 
+
+def check_password():
+    user_input = int(input("Введите пароль: "))
+    if user_input == password:
+        return True
+    else:
+        print("Неверный пароль. Попробуйте еще раз.")
+        return False
+
+while not check_password():
+    pass
+print("Добро пожаловать!")

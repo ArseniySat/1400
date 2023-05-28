@@ -1,0 +1,7 @@
+sentence = input().split()
+result_set = set()
+for word in sentence:
+    if sentence.count(word) == 1:
+        result_set.add(word)
+result = list(result_set)
+print(" ".join(result))

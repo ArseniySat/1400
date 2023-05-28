@@ -1,0 +1,9 @@
+import numpy as np
+arr = [-5, 10, 3, 200, 0, 50, -1, 100]
+np_arr = np.array(arr)
+print("а) Неотрицательные элементы массива:")
+pos_arr = np_arr[np_arr >= 0]
+print(*pos_arr)
+print("б) Элементы массива, не превышающие число 100:")
+lt_hndrd_arr = np_arr[np_arr <= 100]
+print(*lt_hndrd_arr)

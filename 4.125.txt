@@ -1,0 +1,7 @@
+weight = float(input("Введите вес боксера в кг: "))
+category = "Легкий вес" if weight <= 60 else \
+           "Первый полусредний вес" if weight <= 64 else \
+           "Полусредний вес" if weight <= 69 else \
+           "Тяжеловес"
+print("Боксер будет выступать в категории:", category)
+

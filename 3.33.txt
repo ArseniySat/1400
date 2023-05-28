@@ -1,0 +1,11 @@
+a = int(input("Введите трехзначное число: "))
+p = int(input("Введите число p: "))
+x = 0
+for i in range(10):
+    if (a - i) // 10 == p // 10 and (a - i) % 10 == x:
+        x = i
+        break
+if x == 0:
+    print("Неверный результат")
+else:
+    print("Число п равно", x)

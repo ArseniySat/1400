@@ -1,0 +1,21 @@
+k = int(input("Введите k: "))
+
+# определяем дату 1 января
+year_start = "0101" + str(datetime.datetime.now().year)
+jan1 = datetime.datetime.strptime(year_start, "%m%d%Y")
+
+# определяем день недели 1 января (1 - понедельник, 7 - воскресенье)
+weekday_num = jan1.isoweekday()
+
+# определяем день недели k-го дня
+for i in range(1, k):
+    jan1 += datetime.timedelta(days=1)
+    weekday_num = (weekday_num % 7) + 1
+
+# проверяем, является ли день выходным или рабочим
+if weekday_num == 6:
+    print("Суббота")
+elif weekday_num == 7:
+    print("Воскресенье")
+else:
+    print("Рабочий день")

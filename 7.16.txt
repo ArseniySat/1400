@@ -1,0 +1,14 @@
+n = int(input())
+b = list(map(int, input().split()))
+p = int(input())
+s = 0
+
+for i in range(len(b)):
+    s += b[i]
+    if s >= p:
+        break
+
+if s < p:
+    print("Yes")
+else:
+    print("No")

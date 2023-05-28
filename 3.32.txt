@@ -1,0 +1,10 @@
+a = int(input("Введите трехзначное число: "))
+x = 0
+for i in range(10):
+    if (a - i) // 10 == 23 and (a - i) % 10 == x:
+        x = i
+        break
+if x == 0:
+    print("Неверный результат")
+else:
+    print("Число x равно", x)

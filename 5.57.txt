@@ -1,0 +1,16 @@
+import random
+
+def func(x):
+    return 0.3*(x-1)**2 + 3
+
+def monte_carlo(n):
+    count = 0
+    for i in range(n):
+        x = random.uniform(0, 4)
+        y = random.uniform(0, 6)
+        if y <= func(x) and y >= 2:
+            count += 1
+    area = count/n * 16
+    return area
+
+print(monte_carlo(1000000))

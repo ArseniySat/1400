@@ -1,0 +1,26 @@
+# a)
+expr = "a/b/c"
+expr_list = expr.split("/")
+result = expr_list[0] + " / " + expr_list[1] + " / " + expr_list[2]
+print(result)
+# b)
+expr = "a+b/c"
+expr_list = expr.split("/")
+result = expr_list[0] + " + " + expr_list[1] + " / " + expr_list[2]
+print(result)
+# c)
+expr = "(a+b)/c"
+expr_list = expr.split("/")
+result = "(" + expr_list[0] + " + " + expr_list[1] + ")" + " / " + expr_list[2]
+print(result)
+# d)
+string formatting
+expr = "a*b/(c+2)"
+expr_list = expr.split("/")
+result = "{} * {} / ({})".format(expr_list[0], expr_list[2], expr_list[1] + " + 2")
+print(result)
+# e)
+expr = "a/b*(c-3)/d"
+expr_list = expr.split("/")
+result = "({} / {}) * ({} - 3) / {}".format(expr_list[0], expr_list[1], expr_list[2], expr_list[3])
+print(result)

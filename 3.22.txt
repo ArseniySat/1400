@@ -1,0 +1,4 @@
+
+number = input("Введите трехзначное число: ")
+second_number = number[1] + number[2] + number[0]
+print("Полученное число:", second_number)

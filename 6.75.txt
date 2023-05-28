@@ -1,0 +1,16 @@
+a = 1
+b = 1.5
+tolerance = 0.001
+
+def f(x):
+    return x**3 - 0.2*x**2 - 0.2*x - 1.2
+
+x0 = a
+x1 = b
+while True:
+    x_next = x1 - f(x1) * (x1 - x0) / (f(x1) - f(x0))
+    if abs(x_next - x1) < tolerance:
+        print("Root found:", x_next)
+        break
+    x0 = x1
+    x1 = x_next

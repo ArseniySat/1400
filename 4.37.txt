@@ -1,0 +1,8 @@
+def is_divisor(a, b):
+    return b % a == 0 
+
+a = int(input("Введите число а: "))
+b = int(input("Введите число b: "))
+
+print("Число а", "является" if is_divisor(a,b) else "не является", "делителем числа b")
+print("Число b", "является" if is_divisor(b,a) else "не является", "делителем числа a")

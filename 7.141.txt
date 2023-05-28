@@ -1,0 +1,7 @@
+squares = [36, 49, 64, 81]  # пример площадей квадратов
+max_square = 0
+for square in squares:
+    if square > max_square:
+        max_square = square
+diagonal = round((2 * max_square) ** 0.5, 2)
+print("Длина диагонали самого большого квадрата:", diagonal)

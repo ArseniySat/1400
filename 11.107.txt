@@ -1,0 +1,12 @@
+arr = [1, 3, 7, 2, 4, 5, 9, 6, 8, 4]
+
+unique_nums = set()
+duplicate_nums = set()
+
+for num in arr:
+    if num in unique_nums:
+        duplicate_nums.add(num)
+    else:
+        unique_nums.add(num)
+
+print(duplicate_nums.pop())

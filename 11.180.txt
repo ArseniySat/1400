@@ -1,0 +1,9 @@
+n = int(input("Введите размер массива: "))
+arr = []
+for i in range(n):
+    num = int(input("Введите число: "))
+    arr.append(num)
+last_elem = arr[-1]
+arr[1:] = arr[:-1]
+arr[0] = last_elem
+print(arr)

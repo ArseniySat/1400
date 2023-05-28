@@ -1,0 +1,10 @@
+import random 
+
+pages = [random.randint(1, 1000) for i in range(100)]
+max_pages = 0 
+
+for page in pages:
+    if page > max_pages:
+        max_pages = page 
+
+print(f"Самая толстая книга содержит {max_pages} страниц")

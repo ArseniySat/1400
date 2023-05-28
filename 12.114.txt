@@ -1,0 +1,6 @@
+
+word = "abcdefghijklmno"
+k, s = 3, 10
+new_word = word[:k+1] + word[k+1:s][::-1] + word[s:]
+print(new_word)
+

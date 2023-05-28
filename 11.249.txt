@@ -1,0 +1,4 @@
+m = [2, -5, 3, 8, -1, 0]
+n = [(x / 3) if x >= 0 else (x ** 2) for x in m]
+
+print(n)

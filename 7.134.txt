@@ -1,0 +1,11 @@
+
+n = float(input())
+count = 1
+while True:
+    prev = n
+    n = float(input())
+    if n == 0:
+        break
+    if n != prev:
+        count += 1
+print(count)

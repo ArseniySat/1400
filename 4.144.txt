@@ -1,0 +1,41 @@
+def days_in_month(g, t):
+    if t in [4, 6, 9, 11]:
+        return 30
+    elif t == 2:
+        if g % 4 == 0 and (g % 100 != 0 or g % 400 == 0):
+            return 29
+        else:
+            return 28
+    else:
+        return 31
+
+def prev_day(g, t, p):
+    if p == 1:
+        if t == 1:
+            return g - 1, 12, 31
+        else:
+            return g, t - 1, days_in_month(g, t - 1)
+    else:
+        return g, t, p - 1
+
+def next_day(g, t, p):
+    if p == days_in_month(g, t):
+        if t == 12:
+            return g + 1, 1, 1
+        else:
+            return g, t + 1, 1
+    else:
+        return g, t, p + 1
+
+# ввод данных
+g = int(input('Введите год: '))
+t = int(input('Введите месяц: '))
+p = int(input('Введите число: '))
+
+# вычисление предыдущего и следующего дня
+g_prev, t_prev, p_prev = prev_day(g, t, p)
+g_next, t_next, p_next = next_day(g, t, p)
+
+# вывод результатов
+print('Предыдущий день:', p_prev, '.', t_prev, '.', g_prev)
+print('Следующий день:', p_next, '.', t_next, '.', g_next)

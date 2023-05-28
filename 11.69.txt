@@ -1,0 +1,11 @@
+arr = [3, 7, 9, 5, 3, 8, 2, 5, 9]
+last_elem = arr[-1]
+
+# a) Количество элементов, отличных от последнего элемента
+count = len(list(filter(lambda elem: elem != last_elem, arr)))
+print("Количество элементов, отличных от последнего элемента: ", count)
+
+# б) Количество элементов, кратных а
+a = 3
+count = len(list(filter(lambda elem: elem % a == 0, arr)))
+print("Количество элементов, кратных а: ", count)

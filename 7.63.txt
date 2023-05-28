@@ -1,0 +1,5 @@
+grades = [5, 4, 3, 2, 5, 4, 5, 2, 3, 5]
+count_five = sum(1 for grade in grades if grade == 5)
+count_two = sum(1 for grade in grades if grade == 2)
+print("Количество пятерок:", count_five)
+print("Количество двоек:", count_two)

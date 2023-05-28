@@ -1,0 +1,29 @@
+# a) Увеличение элементов в 2 раза:
+arr = [1, 2, 3, 4, 5]
+new_arr = []
+
+for num in arr:
+  new_arr.append(num * 2)
+
+print(new_arr)
+
+# б) Уменьшение элементов на число А:
+arr = [1, 2, 3, 4, 5]
+A = 2
+new_arr = []
+
+for num in arr:
+  new_arr.append(num - A)
+
+print(new_arr)
+# в) Разделение элементов на первый элемент:
+arr = [1, 2, 3, 4, 5]
+new_arr = []
+
+for i, num in enumerate(arr):
+  if i == 0:
+    new_arr.append(num)
+  else:
+    new_arr.append(num / arr[0])
+
+print(new_arr)

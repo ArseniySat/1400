@@ -1,0 +1,7 @@
+cities = ["Москва", "Санкт-Петербург", "Екатеринбург"]
+
+longest_city = max(cities, key=len)
+shortest_city = min(cities, key=len)
+
+print("Самый длинный город:", longest_city)
+print("Самый короткий город:", shortest_city)

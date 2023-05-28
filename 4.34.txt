@@ -1,0 +1,8 @@
+a = [int(i) for i in str(333)]
+if len(set(a)) == 1:
+    print("Все цифры одинаковы")
+else:
+    if a[0] == a[1] or a[0] == a[2] or a[1] == a[2]:
+        print("Среди цифр есть одинаковые")
+    else:
+        print("Все цифры разные")

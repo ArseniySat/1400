@@ -1,0 +1,6 @@
+lst = [1, 2, 3, 4, 5]
+idx = 2
+
+new_lst = [lst[i] for i in range(len(lst)) if i != idx]
+
+print(new_lst)

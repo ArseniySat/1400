@@ -1,0 +1,8 @@
+best_result = float("inf")
+while True:
+    result = float(input("Введите результат спортсмена (время в минутах): "))
+    if result < best_result:
+        best_result = result
+        print("Лучший результат на данный момент: ", best_result)
+    else:
+        print("Лучший результат: ", best_result)

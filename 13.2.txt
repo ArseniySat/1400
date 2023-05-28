@@ -1,0 +1,5 @@
+clubs = ['Manchester United', 'Barcelona', 'Real Madrid', 'Bayern Munich']
+cities = ['Manchester', 'Barcelona', 'Madrid', 'Munich']
+for i in range(len(clubs)):
+  print(clubs[i] + " - " + cities[i])
+

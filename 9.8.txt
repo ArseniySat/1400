@@ -1,0 +1,9 @@
+marks = []
+for i in range(14):
+    marks.append(tuple(int(input(f"Введите оценку студента {i+1} по предмету {j+1}: ")) for j in range(3)))
+passed_without_two = sum(all(mark >= 3 for mark in student_marks) for student_marks in marks)
+print(f"Количество студентов, сдавших сессию без двоек: {passed_without_two}")
+subjects_with_45 = sum(all(mark >= 4 for mark in subject_marks) for subject_marks in zip(*marks))
+print(f"Количество предметов, по которым были получены только оценки 4 и 5: {subjects_with_45}")
+twos_per_subject = [student_marks.count(2) for student_marks in zip(*marks)]
+print(f"Количество двоек по каждому предмету: {twos_per_subject}")

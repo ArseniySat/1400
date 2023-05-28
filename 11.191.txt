@@ -1,0 +1,7 @@
+arr = [1, 0, 5, 0, 8, 9]
+zero_index = arr.index(0)  # индекс первого нулевого элемента
+print(*filter(lambda x: arr.index(x) > zero_index, arr))
+
+arr = [1, 0, 5, 0, 8, 9]
+zero_index = len(arr) - arr[::-1].index(0) - 1  # индекс последнего нулевого элемента
+print(*filter(lambda x: arr.index(x) < zero_index, arr))

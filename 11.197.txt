@@ -1,0 +1,19 @@
+# a) 
+
+from itertools import takewhile
+
+arr = [5, 2, 7, 8, 7, 1, 3, 4, 0]
+p = 7
+
+filtered_arr = takewhile(lambda x: x != p, arr)
+print(list(filtered_arr))
+
+# б) 
+
+from itertools import dropwhile
+
+arr = [5, 2, 7, 8, 7, 1, 3, 4, 0]
+
+filtered_arr = dropwhile(lambda x: x % 10 != 7, arr)
+next_items = list(filtered_arr)[1:]
+print(next_items) if next_items else print([])

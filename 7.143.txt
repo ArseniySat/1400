@@ -1,0 +1,9 @@
+def calculate_density(population, area):
+    return population * 1000000 / (area * 1000)
+
+populations = [5, 7, 2, 3, 8, 6, 4, 12, 10, 15, 9, 20, 13, 14, 18, 11] 
+areas = [1, 2, 0.5, 0.8, 3, 2.5, 1.6, 4, 3.5, 5, 2.8, 6, 4.5, 4.8, 5.3, 3.6]
+densities = [calculate_density(populations[i], areas[i]) for i in range(len(populations))]
+min_density = min(densities)
+min_country = densities.index(min_density) + 1
+print("Минимальная плотность населения в государстве", min_country, "составляет", min_density, "чел/кв. км")

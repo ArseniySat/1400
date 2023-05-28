@@ -1,0 +1,14 @@
+numbers = []
+while True:
+    number = int(input("Введите число: "))
+    if number == 9999:
+        break
+    numbers.append(number)
+
+for i, (num1, num2) in enumerate(zip(numbers[:-1], numbers[1:])):
+    if num1 % 2 == 0 and num2 % 2 == 0:
+        print("Соседние четные числа найдены!")
+        print("Их рядковые номера: ", i+1, i+2)
+        break
+else:
+    print("Соседние четные числа не найдены.")

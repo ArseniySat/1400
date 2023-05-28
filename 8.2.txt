@@ -1,0 +1,12 @@
+import itertools
+
+p = 12 # заданное число
+numbers = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144]
+
+for num1, num2 in itertools.zip_longest(numbers, numbers[1:]):
+  if num1 > p:
+    print(num1)
+    break
+  if num2 and num2 > p:
+    print(num2)
+    break

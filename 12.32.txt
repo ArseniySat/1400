@@ -1,0 +1,3 @@
+word = "строка"
+new_word = ''.join(['ф' if i=='к' else 'о' if i=='а' else i for i in word])
+print(new_word)

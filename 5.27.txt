@@ -1,0 +1,6 @@
+a = int(input("Введите значение а: "))
+b = int(input("Введите значение b: "))
+total_sum = 0
+for i in range(a, b+1):
+   total_sum += i
+print("Сумма всех целых чисел от а до b равна:", total_sum)

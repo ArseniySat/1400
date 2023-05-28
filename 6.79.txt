@@ -1,0 +1,6 @@
+def check_order(num):
+    digits_list = [int(digit) for digit in str(num)]
+    for i in range(len(digits_list)-1, 0, -1):
+        if digits_list[i] < digits_list[i-1]:
+            return False
+    return True

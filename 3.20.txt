@@ -1,0 +1,11 @@
+num = input("Введите трехзначное число: ")
+units = int(num[-1])
+tens = int(num[-2])
+hundreds = int(num[-3])
+sum_digits = units + tens + hundreds
+mult_digits = units * tens * hundreds
+
+print("Число единиц в числе:", units)
+print("Число десятков в числе:", tens)
+print("Сумма цифр в числе:", sum_digits)
+print("Произведение цифр в числе:", mult_digits)

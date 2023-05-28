@@ -1,0 +1,13 @@
+parallel = dict() # создаем словарь для хранения данных
+letters = ['А', 'Б', 'В', 'Г']
+
+# заполнение словаря данными с использованием list comprehension
+parallel = {i: {letter: list(map(int, input(f"Введите количество учеников для {i} параллели {letter} класса через пробел: ").split())) for letter in letters} for i in range(1, 12)}
+
+# нахождение самого малочисленного класса в каждой параллели с использованием list comprehension
+min_parallel = [min([min(parallel[i][letter]) for letter in letters]) for i in range(1, 12)]
+print("Самый малочисленный класс в каждой параллели:", min_parallel)
+
+# нахождение самого малочисленного класса с каждой буквой (А, Б, В, Г) с использованием list comprehension
+min_letters = [min([min(parallel[i][letter]) for i in range(1, 12)]) for letter in letters]
+print("Самый малочисленный класс с каждой буквой:", min_letters)

@@ -1,0 +1,31 @@
+# a)
+for A in [True, False]:
+    for B in [True, False]:
+        for C in [True, False]:
+            result = not(A and B) and (not A or not C)
+            print(f"A = {A}, B = {B}, C = {C}, result = {result}")
+# b)
+A_options = [True, False]
+B_options = [True, False]
+C_options = [True, False]
+
+for A in A_options:
+    for B in B_options:
+        for C in C_options:
+            result = not(A and B) and (not A or not C)
+            print("A = {}, B = {}, C = {}, result = {}".format(A, B, C, result))
+# c)
+A = True
+B = True
+C = True
+
+while A != False:
+    while B != False:
+        while C != False:
+            result = not(A and B) and (not A or not C)
+            print("A = {}, B = {}, C = {}, result = {}".format(A, B, C, result))
+            C = not C
+        B = not B
+        C = not C
+    A = not A
+    B = not B

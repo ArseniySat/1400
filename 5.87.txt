@@ -1,0 +1,12 @@
+def count_numbers(n, k, s, start=1):
+    if n == 0 and s == 0:
+        return 1
+    if n == 0 or s == 0:
+        return 0
+    count = 0
+    for i in range(start, k + 1):
+        if s >= i:
+            count += count_numbers(n-1, k, s-i, i+1)
+    return count
+
+print("Количество чисел:", count_numbers(3, 9, 15))

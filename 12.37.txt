@@ -1,0 +1,4 @@
+word = list(input("Введите слово: "))
+word[:3], word[-3:] = word[-3:], word[:3]
+new_word = ''.join(word)
+print(new_word)

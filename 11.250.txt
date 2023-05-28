@@ -1,0 +1,14 @@
+# решение а) методом списковых срезов
+
+input_arr = [1, 2, 3, 4, 5, 6]
+output_arr = input_arr[1::2]
+print(output_arr) # [2, 4, 6]
+
+# решение б) методом цикла со счётчиком
+
+input_arr = [1, 2, 3, 4, 5, 6]
+output_arr = []
+for i in range(len(input_arr)):
+    if i % 2 == 1:
+        output_arr.append(input_arr[i])
+print(output_arr) # [2, 4, 6]

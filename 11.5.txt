@@ -1,0 +1,4 @@
+import random
+
+arr = list(map(lambda x: random.randint(163, 190), range(20)))
+print(arr)

@@ -1,0 +1,31 @@
+а) x = 2 * x;
+
+b) import math
+   x = math.sin(x)
+
+в) a = a ** 2
+
+г) import math
+   x = math.sqrt(x)
+
+д) n = abs(n)
+
+е) import math
+   x = 5 * math.cos(y)
+
+ж) a = 9.5 * a ** 2
+
+з) import math
+   x = 3 * math.sqrt(x)
+
+и) import math
+   result = math.sin(a) * math.cos(B) + math.cos(a) * math.sin(B)
+
+к) import math
+   result = a * math.sqrt(2 * b)
+
+л) import math
+   result = 4 * math.sin(2 * a) * math.cos(B)
+
+м) import math
+   result = -5 * math.sqrt(x + math.sqrt(y))

@@ -1,0 +1,31 @@
+# a)
+for X in [True, False]:
+    for Y in [True, False]:
+        for Z in [True, False]:
+            result = not(Y or not X and Z) or Z
+            print(f"X = {X}, Y = {Y}, Z = {Z}, result = {result}")
+# b)
+X_options = [True, False]
+Y_options = [True, False]
+Z_options = [True, False]
+
+for X in X_options:
+    for Y in Y_options:
+        for Z in Z_options:
+            result = not(Y or not X and Z) or Z
+            print("X = {}, Y = {}, Z = {}, result = {}".format(X, Y, Z, result))
+# c)
+X = True
+Y = True
+Z = True
+
+while X != False:
+    while Y != False:
+        while Z != False:
+            result = not(Y or not X and Z) or Z
+            print("X = {}, Y = {}, Z = {}, result = {}".format(X, Y, Z, result))
+            Z = not Z
+        Y = not Y
+        Z = not Z
+    X = not X
+    Y = not Y

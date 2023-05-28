@@ -1,0 +1,9 @@
+age_mity = 25
+age_vasi = 30
+
+if max(age_mity, age_vasi) == age_mity:
+    print("Митя старше Васи")
+elif max(age_mity, age_vasi) == age_vasi:
+    print("Вася старше Мити")
+else:
+    print("Митя и Вася одного возраста")

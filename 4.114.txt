@@ -1,0 +1,6 @@
+
+a, b, c, d = 5, 6, 9, 15
+numbers = [a, b, c, d]
+sum = sum([x for x in numbers if x % 3 == 0])
+
+print("Сумма чисел, кратных трем:", sum)

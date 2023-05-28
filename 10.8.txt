@@ -1,0 +1,11 @@
+import numpy as np
+
+outcomes = [0, 1]
+probs = [0.5, 0.5]
+
+result = np.random.choice(outcomes, size=1, p=probs)
+
+if result == 0:
+  print("Орел")
+else:
+  print("Решка")

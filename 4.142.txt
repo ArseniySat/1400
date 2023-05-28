@@ -1,0 +1,11 @@
+import datetime
+
+months = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь',
+          'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
+
+date_str = '2010-01-01'
+date_obj = datetime.datetime.strptime(date_str, '%Y-%m-%d')
+date_obj += datetime.timedelta(months=p, days=2)
+
+month_name = months[date_obj.month - 1]
+print(month_name)

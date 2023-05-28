@@ -1,0 +1,7 @@
+sentence = input('Введите предложение: ')
+a_count = sentence.count('а')
+o_count = len(sentence) - a_count
+if a_count > o_count:
+    print('Больше букв "а"')
+else:
+    print('Больше букв "о"')

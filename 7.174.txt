@@ -1,0 +1,16 @@
+
+scores = []
+for i in range(12):
+  score = int(input("Введите количество очков команды №{}: ".format(i+1)))
+  scores.append(score)
+
+scores_copy = scores.copy()
+scores_copy.sort(reverse=True)
+
+first_place = scores.index(scores_copy[0])
+second_place = scores.index(scores_copy[1])
+third_place = scores.index(scores_copy[2])
+
+print("Первое место: команда №{}, {} очков".format(first_place+1, scores[first_place]))
+print("Второе место: команда №{}, {} очков".format(second_place+1, scores[second_place]))
+print("Третье место: команда №{}, {} очков".format(third_place+1, scores[third_place]))

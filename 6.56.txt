@@ -1,0 +1,13 @@
+import re
+
+number = input("Введите натуральное число: ")
+
+match = re.search('[2|5]', number)
+
+if match:
+    if match.group() == '2':
+        print("Цифра 2 расположена левее")
+    else:
+        print("Цифра 5 расположена левее")
+else:
+    print("Цифры 2 и 5 отсутствуют в числе")

@@ -1,0 +1,18 @@
+points = [3, 1, 0] # очки за победу, ничью и поражение
+game_results = [] # список результатов матчей
+
+n = int(input("Введите количество матчей: "))
+
+# заполнение списка результатов игр
+for i in range(n):
+    result = int(input(f"Результат матча {i+1}: "))
+    game_results.append(result)
+
+# вычисление количества побед, поражений и ничьих
+wins = sum(1 for r in game_results if r == points[0])
+draws = sum(1 for r in game_results if r == points[1])
+losses = sum(1 for r in game_results if r == points[2])
+
+print(f"Количество побед: {wins}")
+print(f"Количество ничьих: {draws}")
+print(f"Количество поражений: {losses}")

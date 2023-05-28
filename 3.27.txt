@@ -1,0 +1,10 @@
+# а) сумма цифр 4-значного числа
+num = input("Введите 4-значное число: ")
+sum_digits = sum(int(digit) for digit in num)
+print("Сумма цифр:", sum_digits)
+
+# б) сумма цифр 5-значного числа
+num = input("Введите 5-значное число: ")
+sum_digits = sum(int(digit) for digit in num)
+print("Сумма цифр:", sum_digits)
+

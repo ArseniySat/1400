@@ -1,0 +1,14 @@
+def fibonacci_list(n):
+    fibonacci_sequence = [1, 1]
+    for i in range(2, n):
+        fibonacci_sequence.append(fibonacci_sequence[i-2] + fibonacci_sequence[i-1])
+    return fibonacci_sequence[-1]
+
+n = int(input("Введите номер искомого члена последовательности Фибоначчи: "))
+print(f"{n}-й член последовательности Фибоначчи равен {fibonacci_list(n)}")
+
+p = int(input("Введите количество членов последовательности Фибоначчи: "))
+fibonacci_sequence = [1, 1]
+for i in range(2, p):
+    fibonacci_sequence.append(fibonacci_sequence[i-2] + fibonacci_sequence[i-1])
+print(f"Первые {p} членов последовательности Фибоначчи: {fibonacci_sequence}")

@@ -1,0 +1,9 @@
+numbers = []
+for i in range(4):
+    num = float(input("Введите число: "))
+    numbers.append(num)
+
+negatives = list(filter(lambda x: x < 0, numbers))
+count = len(negatives)
+
+print("Количество отрицательных чисел:", count)

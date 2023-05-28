@@ -1,0 +1,6 @@
+
+from functools import reduce
+
+distances = [120, 300, 450, 600, 900, 1500, 2000]
+max_distance = reduce(lambda x, y: x if x > y else y, distances)
+print("Самое дальнее расстояние от Москвы:", max_distance)

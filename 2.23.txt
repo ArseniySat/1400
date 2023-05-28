@@ -1,0 +1,9 @@
+
+sides = input("Введите длины сторон прямоугольника через пробел: ")
+a, b = map(float, sides.split())
+
+perimeter = 2 * (a + b)
+diagonal = (a ** 2 + b ** 2) ** 0.5
+
+print("Периметр прямоугольника равен", perimeter)
+print("Длина диагонали прямоугольника равна", diagonal)

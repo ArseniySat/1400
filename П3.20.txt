@@ -1,0 +1,25 @@
+# a)
+for X in [True, False]:
+    for Y in [True, False]:
+        result = (not (not X or Y)) or (not X)
+        print(f"X = {X}, Y = {Y}: {result}")
+# b)
+def expression_a(X, Y):
+    return (not (not X or Y)) or (not X)
+
+for X in [True, False]:
+    for Y in [True, False]:
+        result = expression_a(X, Y)
+        print(f"X = {X}, Y = {Y}: {result}")
+
+# c)
+def not_func(val):
+    return not val
+
+def expression_a(X, Y):
+    return not_func(not_func(X or Y)) or not_func(X)
+
+for X in [True, False]:
+    for Y in [True, False]:
+        result = expression_a(X, Y)
+        print(f"X = {X}, Y = {Y}: {result}")

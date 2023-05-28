@@ -1,0 +1,45 @@
+lengths = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+widths = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+heights = [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+
+volumes = []
+for i in range(len(lengths)):
+    volumes.append(lengths[i] * widths[i] * heights[i])
+
+max_volume = max(volumes)
+print("Максимальный объем фигуры:", max_volume)
+
+lengths = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+widths = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+heights = [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+
+volumes = []
+for i in range(len(lengths)):
+    volumes.append(lengths[i] * widths[i] * heights[i])
+
+min_volume = min(volumes)
+print("Минимальный объем фигуры:", min_volume)
+
+lengths = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+widths = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+heights = [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+
+volumes = []
+for i in range(len(lengths)):
+    volumes.append(lengths[i] * widths[i] * heights[i])
+
+max_volume = max(volumes)
+max_index = volumes.index(max_volume)
+print("Номер фигуры с максимальным объемом:", max_index)
+
+lengths = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+widths = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+heights = [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+
+volumes = []
+for i in range(len(lengths)):
+    volumes.append(lengths[i] * widths[i] * heights[i])
+
+min_volume = min(volumes)
+min_index = volumes.index(min_volume)
+print("Номер фигуры с минимальным объемом:", min_index)

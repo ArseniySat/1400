@@ -1,0 +1,7 @@
+def print_author_and_title(rom_name: str, author_name: str) -> None:
+    output_str = f"Писатель {author_name} - автор романа {rom_name}"
+    print(output_str)
+
+rom_name = input("Введите название романа: ")
+author_name = input("Введите фамилию автора: ")
+print_author_and_title(rom_name, author_name)

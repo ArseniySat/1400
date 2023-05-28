@@ -1,0 +1,8 @@
+word1 = input("Введите первое слово: ")
+word2 = input("Введите второе слово: ")
+letters1 = Counter(word1)
+letters2 = Counter(word2)
+if all([letters1[char] >= letters2[char] for char in letters2.keys()]) or all([letters1[char] >= 2*letters2[char] for char in letters2.keys()]):
+  print("Можно получить второе слово из букв первого")
+else:
+  print("Нельзя получить второе слово из букв первого")

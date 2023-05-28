@@ -1,0 +1,24 @@
+suit = int(input("Введите номер масти (1 - пик, 2 - треф, 3 - бубен, 4 - черв): "))
+rank = int(input("Введите номер достоинства карты (6 - шестерка, 9 - девятка, 10 - валет, 11 - дама, 12 - король, 14 - туз): "))
+
+if suit == 1:
+    suit_name = "пик"
+elif suit == 2:
+    suit_name = "треф"
+elif suit == 3:
+    suit_name = "бубен"
+else:
+    suit_name = "черв"
+
+if rank == 11:
+    rank_name = "валет"
+elif rank == 12:
+    rank_name = "дама"
+elif rank == 13:
+    rank_name = "король"
+elif rank == 14:
+    rank_name = "туз"
+else:
+    rank_name = str(rank)
+
+print(rank_name + " " + suit_name)

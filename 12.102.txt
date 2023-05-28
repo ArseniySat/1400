@@ -1,0 +1,11 @@
+sentence = input("Введите предложение: ")
+new_sentence = ""
+i = 0
+while i < len(sentence):
+    if sentence[i:i+2] == "ах":
+        new_sentence += "ух"
+        i += 2
+    else:
+        new_sentence += sentence[i]
+        i += 1
+print(new_sentence)

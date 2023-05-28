@@ -1,0 +1,21 @@
+numbers = [1, 2, 3, 8, 5, 8, 7, 8, 9, 10, 0]
+
+count_8 = 0
+for num in numbers:
+    if num == 8:
+        count_8 += 1
+
+numbers.append(0)
+count_8_new = 0
+for num in numbers:
+    if num == 8:
+        count_8_new += 1
+
+numbers[-1] = 8
+count_8_new_8 = 0
+for num in numbers:
+    if num == 8:
+        count_8_new_8 += 1
+
+print(f"При A = 0 количество максимальных элементов: {count_8_new}")
+print(f"При A = 8 количество максимальных элементов: {count_8_new_8}")

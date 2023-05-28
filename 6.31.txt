@@ -1,0 +1,21 @@
+# 
+a)
+
+def calculate_increase(deposit, month):
+    increase = deposit * 0.02
+    if increase > 30:
+        return month
+    else:
+        return calculate_increase(deposit + increase, month + 1)
+    
+print("Ежемесячное увеличение вклада превысит 30 рублей через", calculate_increase(1000, 0), "месяцев")
+
+# б)
+
+def calculate_deposit(deposit, month):
+    if deposit > 1200:
+        return month
+    else:
+        return calculate_deposit(deposit + deposit * 0.02, month + 1)
+    
+print("Размер вклада превысит 1200 рублей через", calculate_deposit(1000, 0), "месяцев")

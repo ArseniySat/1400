@@ -1,0 +1,21 @@
+def calculate_a(e, f):
+    return (math.e + f / 2) / 3
+
+def calculate_b(g, h):
+    return abs(h ** 2 - g)
+
+def calculate_c(e, g, h):
+    return math.sqrt((g - h) ** 2 - 3 * math.sin(e))
+
+e = float(input("Введите значение e: "))
+f = float(input("Введите значение f: "))
+g = float(input("Введите значение g: "))
+h = float(input("Введите значение h: "))
+
+a = calculate_a(e, f)
+b = calculate_b(g, h)
+c = calculate_c(e, g, h)
+
+print("a =", a)
+print("b =", b)
+print("c =", c)

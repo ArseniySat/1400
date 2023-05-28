@@ -1,0 +1,9 @@
+def is_increasing(n):
+    if n < 10:
+        return True
+    if n % 10 < (n // 10) % 10:
+        return False
+    return is_increasing(n // 10)
+
+# Пример использования
+print(is_increasing(1368))  # True

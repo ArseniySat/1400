@@ -1,0 +1,4 @@
+sentence = input().split()
+first_word, last_word = sentence[0], sentence[-1]
+sentence[0], sentence[-1] = last_word, first_word
+print(" ".join(sentence))

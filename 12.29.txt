@@ -1,0 +1,3 @@
+word = "вирус"
+new_word = ''.join(['ф' if i=='в' else 'к' if i=='с' else i for i in word])
+print(new_word)

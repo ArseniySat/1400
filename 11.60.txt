@@ -1,0 +1,15 @@
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+a = 3
+b = 5
+
+odd_arr = [num for num in arr if num % 2 != 0]
+multiple_arr = [num for num in arr if num % a == 0]
+ab_multiple_arr = [num for num in arr if num % a == 0 or num % b == 0]
+
+sum_odd = sum(odd_arr)
+sum_multiple = sum(multiple_arr)
+sum_ab_multiple = sum(ab_multiple_arr)
+
+print(f"Сумма нечетных элементов: {sum_odd}")
+print(f"Сумма элементов кратных {a}: {sum_multiple}")
+print(f"Сумма элементов массива, кратных {a} или {b}: {sum_ab_multiple}")

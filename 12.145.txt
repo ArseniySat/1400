@@ -1,0 +1,11 @@
+def shuffle_word(word):
+    shuffled_word = ""
+    for i in range(len(word)//2):
+        shuffled_word += word[i] + word[-i-1]
+    if len(word) % 2 != 0:
+        shuffled_word += word[len(word)//2]
+    return shuffled_word
+
+word = "qwertyuiopas"
+new_word = shuffle_word(word)
+print(new_word[0] + new_word[-1] + new_word[1:-1:2] + new_word[2:-1:2])

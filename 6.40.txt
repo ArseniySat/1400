@@ -1,0 +1,18 @@
+def get_first_digit(number):
+    while number >= 10:
+        number //= 10
+    return number
+
+def count_first_digit(number):
+    first_digit = get_first_digit(number)
+    count = 0
+    while number > 0:
+        if number % 10 == first_digit:
+            count += 1
+        number //= 10
+    return count
+
+number = int(input("Введите натуральное число: "))
+count = count_first_digit(number)
+first_digit = get_first_digit(number)
+print(f"В числе {number} первая цифра {first_digit} встречается {count} раз(а)")

@@ -1,0 +1,14 @@
+num1 = 10
+num2 = 10.4
+print(num1, num2)
+
+num_list1 = [25, 25.5, 24.8]
+num_list2 = [11, 11.4]
+num_list3 = [26, 26.5, 25.8]
+num_list4 = [25, 25.4]
+num_list5 = [35, 35.5, 34.8]
+print(*num_list1)
+print(*num_list2)
+print(*num_list3)
+print(*num_list4)
+print(*num_list5)

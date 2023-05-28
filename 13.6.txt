@@ -1,0 +1,5 @@
+cars = ['Honda Civic', 'Toyota Corolla', 'Chevrolet Malibu', 'Ford Mustang']
+speeds = [175, 185, 170, 200]
+for i in range(len(cars)):
+  if speeds[i] > 180:
+    print(cars[i])

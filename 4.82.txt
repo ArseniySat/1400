@@ -1,0 +1,11 @@
+def get_ending(age):
+    if age % 10 == 1 and age % 100 != 11:
+        return "год"
+    elif age % 10 >= 2 and age % 10 <= 4 and (age % 100 < 10 or age % 100 >= 20):
+        return "года"
+    else:
+        return "лет"
+
+age = int(input("Введите возраст: ")) # принимаем возраст от пользователя
+
+print("Мне", age, get_ending(age))

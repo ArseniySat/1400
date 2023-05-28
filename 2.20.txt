@@ -1,0 +1,17 @@
+def calculate_function_values(e, f, g, h):
+    a = sqrt(abs(e - 3 / f)**3 + g)
+    b = sin(e) + cos(h)**2
+    c = 33 * g / (e*f - 3)
+
+    return a, b, c
+
+e = float(input("Введите значение e: "))
+f = float(input("Введите значение f: "))
+g = float(input("Введите значение g: "))
+h = float(input("Введите значение h: "))
+
+a, b, c = calculate_function_values(e, f, g, h)
+
+print("a =", a)
+print("b =", b)
+print("c =", c)

@@ -1,0 +1,12 @@
+
+temperature = [20, 21, 23, 22, 25, 24, 26, 27, 28, 22, 
+               24, 20, 21, 23, 26, 27, 29, 30, 31, 20,
+               22, 24, 26, 28, 29, 30, 31, 25, 23, 22]
+
+max1 = max(temperature)
+temperature.remove(max1)
+max2 = max(temperature)
+
+print("Два самых теплых дня в июле:", max1, "и", max2)
+
+

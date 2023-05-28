@@ -1,0 +1,4 @@
+
+farengeit = 450
+celsius = (farengeit - 32) * 5 / 9
+print("Температура", farengeit, "градусов по Фаренгейту соответствует", celsius, "градусам по Цельсию.")

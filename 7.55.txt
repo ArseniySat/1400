@@ -1,0 +1,18 @@
+
+def check_sum(n, a, m, q):
+    sum_a1 = 0
+    for i in range(n):
+        if a[i] <= m:
+            sum_a1 += a[i]
+    if sum_a1 > q:
+        return True
+    else:
+        return False
+
+n = int(input("Введите количество чисел: "))
+a = []
+for i in range(n):
+    a.append(int(input("Введите число: ")))
+m = int(input("Введите число m: "))
+q = int(input("Введите число q: "))
+print(check_sum(n, a, m, q))

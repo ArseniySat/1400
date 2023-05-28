@@ -1,0 +1,15 @@
+def check_digits(num):
+    digits = [False] * 10
+    while num > 0:
+        digit = num % 10
+        if digits[digit]:
+            return False
+        digits[digit] = True
+        num //= 10
+    return True
+
+numbers = []
+for i in range(102, 988):
+    if check_digits(i):
+        numbers.append(i)
+print("Трехзначные числа с уникальными цифрами:", numbers)

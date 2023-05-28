@@ -1,0 +1,16 @@
+import math
+
+def digits(num):
+    if num < 10:
+        return [num]
+    else:
+        return digits(num//10) + [num % 10]
+
+num = int(input("Введите натуральное число: "))
+digits_list = digits(num)
+max_digit = max(digits_list)
+min_digit = min(digits_list)
+print("Максимальная цифра:", max_digit)
+print("Минимальная цифра:", min_digit)
+print("Разница между максимальной и минимальной цифрой:", max_digit - min_digit)
+print("Сумма максимальной и минимальной цифр:", max_digit + min_digit)

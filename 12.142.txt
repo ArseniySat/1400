@@ -1,0 +1,19 @@
+def change_letter(word, k):
+    word_list = list(word)
+    last_letter = word_list.pop()
+    word_list.insert(k-1, last_letter)
+    new_word = ""
+    for i in range(len(word_list)):
+        if i < k-1:
+            new_word += word_list[i]
+        elif i == k-1:
+            pass
+        else:
+            new_word += word_list[i-1]
+    new_word += word[-1]
+    return new_word
+
+word = input("Введите слово: ")
+k = int(input("Введите номер буквы k: "))
+print(change_letter(word, k))
+

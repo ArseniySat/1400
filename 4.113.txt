@@ -1,0 +1,4 @@
+a, b, c, d = 3.5, 7.2, 6.1, 4.9
+lst = [a, b, c, d]
+sum = sum([x for x in lst if x > 5])
+print(sum)

@@ -1,0 +1,13 @@
+population = [12, 15, 10, 8, 25, 18, 13, 21, 7, 16, 19, 11] # количество жителей в тысячах человек
+area = [5, 4, 7, 10, 3, 6, 9, 2, 12, 8, 3, 11] # площадь в км2
+
+# создаем функцию для вычисления плотности населения одного района
+def density(population, area):
+    return population / area
+
+# находим среднюю плотность населения по области с помощью функции reduce()
+from functools import reduce
+density = reduce(lambda a, b: a+b, map(density, population, area)) / len(population)
+
+# выводим результат на экран
+print("Средняя плотность населения по области: ", density)

@@ -1,0 +1,11 @@
+marks = [5, 4, 3, 4, 5, 2, 3, 4, 5, 5, 3, 2, 4, 5, 3, 4, 2, 3, 5, 4]
+
+num_fives = marks.count(5)
+num_fours = marks.count(4)
+num_threes = marks.count(3)
+num_twos = marks.count(2)
+
+print("Количество пятерок:", num_fives)
+print("Количество четверок:", num_fours)
+print("Количество троек:", num_threes)
+print("Количество двоек:", num_twos)

@@ -1,0 +1,15 @@
+
+import numpy as np
+
+rainfall = [0, 0, 3, 0, 0, 5, 10, 0, 0, 0, 2, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 1, 8, 0, 0, 4, 0]
+arr_rainfall = np.array(rainfall)
+
+rainy_days = arr_rainfall[np.nonzero(arr_rainfall)]
+days_with_rain = len(rainy_days)
+
+if days_with_rain == 0:
+    print("В августе не было дождей")
+else:
+    total_rainfall = np.sum(rainy_days)
+    average_rainfall = total_rainfall / days_with_rain
+    print("Среднее количество осадков, выпавших в дни дождя: ", average_rainfall)

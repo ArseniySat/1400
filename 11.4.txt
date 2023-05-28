@@ -1,0 +1,4 @@
+string = "#"
+array = [string] * 20
+result = "".join(array)
+print(result)

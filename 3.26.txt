@@ -1,0 +1,6 @@
+import itertools
+number = input("Введите трехзначное число: ")
+perms = list(itertools.permutations(number, 3))
+print(f"Число {number} может быть переставлено следующими способами:")
+for perm in perms:
+    print("".join(perm))

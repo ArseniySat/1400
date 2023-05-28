@@ -1,0 +1,11 @@
+sentence = input("Введите предложение: ")
+for i, char in enumerate(sentence):
+    if char.isalpha():
+        first_index = i + 1
+        break
+for i, char in reversed(list(enumerate(sentence))):
+    if char.isalpha():
+        last_index = i + 1
+        break
+print("Порядковый номер первой буквы:", first_index)
+print("Порядковый номер последней буквы:", last_index)

@@ -1,0 +1,8 @@
+from itertools import count
+
+a = float(input("Введите число a: "))
+for i in count(2):
+    num = 1 + 1/i
+    if num < a:
+        print("Первое число, меньшее a: ", num)
+        break

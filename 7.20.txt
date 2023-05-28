@@ -1,0 +1,32 @@
+# Функция для ввода масс каждого груза и создания списка масс грузов
+def get_weights():
+    weights = []
+    while True:
+        weight = float(input("Введите массу груза (0 для завершения): "))
+        if weight == 0:
+            break
+        weights.append(weight)
+    return weights
+
+# Функция для подсчета общей массы грузов
+def get_total_weight(weights):
+    return sum(weights)
+
+# Функция для проверки, не превышает ли общая масса грузов грузоподъемность автомобиля
+def check_weight(max_weight, total_weight):
+    if total_weight <= max_weight:
+        print("Общая масса грузов не превышает грузоподъемность автомобиля")
+    else:
+        print("Общая масса грузов превышает грузоподъемность автомобиля")
+
+# Вводим максимальную грузоподъемность автомобиля
+max_weight = float(input("Введите грузоподъемность автомобиля: "))
+
+# Получаем список масс грузов
+weights = get_weights()
+
+# Получаем общую массу грузов
+total_weight = get_total_weight(weights)
+
+# Проверяем, не превышает ли общая масса грузов грузоподъемность автомобиля
+check_weight(max_weight, total_weight)

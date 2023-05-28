@@ -1,0 +1,15 @@
+
+a = float(input("Введите вещественное число a: "))
+x0 = 1.0
+eps = 0.00001
+
+def f(x):
+    return 1 + 1/x - a
+
+def f_der(x):
+    return -1/(x*x)
+
+while abs(f(x0)) > eps:
+    x0 = x0 - f(x0) / f_der(x0)
+    if 1 + 1/x0 < a:
+        print(1 + 1/x0)

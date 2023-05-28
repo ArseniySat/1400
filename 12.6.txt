@@ -1,0 +1,6 @@
+def even_or_odd(num):
+    return "четное" if num % 2 == 0 else "нечетное"
+
+city_name = input("Введите название города: ")
+
+print(f"Количество символов в названии города {even_or_odd(len(city_name))}")

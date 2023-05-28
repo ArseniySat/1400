@@ -1,0 +1,10 @@
+
+sentence = input("Enter a sentence: ")
+new_sentence = ''
+for i, char in enumerate(sentence):
+    if (i+1) % 3 == 0:
+        new_sentence += 'а'
+    else:
+        new_sentence += char
+print("Converted sentence:", new_sentence)
+

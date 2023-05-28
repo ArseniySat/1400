@@ -1,0 +1,6 @@
+
+array = ['a', 'b', 'c', 'd', 'e']
+index = -2
+if index < 0:
+  index += len(array)
+print(array[index])

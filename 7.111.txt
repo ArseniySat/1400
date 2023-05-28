@@ -1,0 +1,20 @@
+boys = 0
+boys_count = 0
+girls = 0
+girls_count = 0
+while True:
+    height = input("Введите рост ученика (для завершения введите 0): ")
+    if height == '0':
+        break
+    else:
+        height = int(height)
+        if height < 0:
+            boys += height
+            boys_count += 1
+        else:
+            girls += height
+            girls_count += 1
+boys_avg = boys / boys_count if boys_count > 0 else 0
+girls_avg = girls / girls_count if girls_count > 0 else 0
+print("Средний рост мальчиков: ", boys_avg)
+print("Средний рост девочек: ", girls_avg)

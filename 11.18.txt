@@ -1,0 +1,10 @@
+
+array = []
+num = 300
+while len(array) < 20:
+    if num % 13 == 0:
+        array.append(num)
+    elif num % 17 == 0:
+        array.append(num)
+    num += 1
+print(array)

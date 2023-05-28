@@ -1,0 +1,5 @@
+days = int(input("Введите количество дней в месяце: "))
+rainfall = np.array([int(input(f"Введите количество осадков за {i}-й день: ")) for i in range(1, days+1)])
+total_rainfall = np.sum(rainfall[1::2])
+
+print(f"Общее количество осадков, выпавших на четных днях: {total_rainfall}")

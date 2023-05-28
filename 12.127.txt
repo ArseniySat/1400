@@ -1,0 +1,8 @@
+phrase = "ценая вещъ_"
+correct_phrase = ""
+for i in range(len(phrase)):
+    if i == 9:
+        correct_phrase += "ь"
+    else:
+        correct_phrase += phrase[i]
+print(correct_phrase)

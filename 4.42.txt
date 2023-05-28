@@ -1,0 +1,12 @@
+
+from shapely.geometry import Point
+from shapely.geometry.polygon import Polygon
+
+point = Point(float(input("Введите координату x точки: ")),
+              float(input("Введите координату y точки: ")))
+polygon = Polygon([(-2,0), (0,-4), (2,0)])
+
+if polygon.contains(point):
+    print("Точка попадает в область I")
+else:
+    print("Точка не попадает в область I")

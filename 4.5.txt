@@ -1,0 +1,17 @@
+def check_area(x, y):
+    if x > 0 and y > 0:
+        return "I"
+    elif x < 0 and y > 0:
+        return "II"
+    else:
+        return None
+
+x = float(input("Введите значение координаты x: "))
+y = float(input("Введите значение координаты y: "))
+
+area = check_area(x, y)
+if area:
+    print(f"Точка принадлежит области {area}")
+else:
+    print("Точка не принадлежит ни одной из областей")
+

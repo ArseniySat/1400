@@ -1,0 +1,13 @@
+studentsPerClass = [20, 25, 18, 21, 30, 27, 23, 19, 22, 24, 28]
+
+# используем функцию filter() для выбора нечетных классов
+oddClasses = list(filter(lambda x: x % 2 == 1, range(1, 12)))
+
+# используем функцию map() для получения количества учеников в каждом нечетном классе
+studentsInOddClasses = list(map(lambda x: studentsPerClass[x-1], oddClasses))
+
+# используем функцию reduce() для подсчета общего количества учеников в нечетных классах
+import functools
+totalStudents = functools.reduce(lambda x, y: x+y, studentsInOddClasses)
+
+print("Общее количество учеников в нечетных классах: ", totalStudents)

@@ -1,0 +1,14 @@
+# a)
+a = 6
+if a % 2 == 0 or a % 3 == 0:
+    print(True)
+else:
+    print(False)
+
+# b)
+
+a = 50
+if a % 3 != 0 and a % 10 == 0:
+    print(True)
+else:
+    print(False)

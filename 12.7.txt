@@ -1,0 +1,11 @@
+
+surname1 = input("Введите первую фамилию: ")
+surname2 = input("Введите вторую фамилию: ")
+
+if max(surname1, surname2, key=len) == surname1:
+    print("Первая фамилия длиннее")
+elif max(surname1, surname2, key=len) == surname2:
+    print("Вторая фамилия длиннее")
+else:
+    print("Фамилии равной длины")
+

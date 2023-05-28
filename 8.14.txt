@@ -1,0 +1,8 @@
+def find_number(a, i=1):
+    if 1/i < a:
+        print("Первое число, меньшее введенного: ", 1/i)
+    else:
+        find_number(a, i+1)
+        
+a = float(input("Введите число: "))
+find_number(a)

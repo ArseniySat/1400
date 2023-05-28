@@ -1,0 +1,15 @@
+masses = [80, 75, 110, 90, 95, 115, 87, 105, 130, 98, 70, 102, 120, 85, 88, 92, 98, 115, 100, 110, 75, 85, 112, 104, 92]
+
+overweight_total = sum([mass for mass in masses if mass > 100])
+overweight_count = len([mass for mass in masses if mass > 100])
+normal_total = sum([mass for mass in masses if mass <= 100])
+normal_count = len([mass for mass in masses if mass <= 100])
+total_count = len(masses)
+
+average_overweight = overweight_total / overweight_count
+average_normal = normal_total / normal_count
+average_total = sum(masses) / total_count
+
+print("Average mass of overweight people:", average_overweight)
+print("Average mass of normal people:", average_normal)
+print("Average mass of all people:", average_total)

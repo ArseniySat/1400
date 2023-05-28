@@ -1,0 +1,7 @@
+words = [input("Введите слово: ") for _ in range(3)]
+unique_letters = set("".join(words))
+result = []
+for char in unique_letters:
+  if all(word.count(char) == 1 for word in words):
+    result.append(char)
+print(" ".join(result))

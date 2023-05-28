@@ -1,0 +1,9 @@
+from math import hypot
+
+a = float(input("Введите первый катет: "))
+b = float(input("Введите второй катет: "))
+
+c = hypot(a,b)
+p = a + b + c
+
+print("Периметр треугольника равен:", p)

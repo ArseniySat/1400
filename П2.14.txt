@@ -1,0 +1,7 @@
+s, k = 0, 0
+while True:
+    if s >= 1024:
+        break
+    s += 10
+    k += 1
+print(k)

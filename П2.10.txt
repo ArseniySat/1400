@@ -1,0 +1,16 @@
+
+def calculate_a(a, b):
+    return a - b * 3
+
+def calculate_c(a, b):
+    a = calculate_a(a, b)
+    if a > b:
+        c = a - b
+    else:
+        c = b - a
+    return c
+
+a = 100
+b = 30
+c = calculate_c(a, b)
+print(c)

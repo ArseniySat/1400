@@ -1,0 +1,7 @@
+
+import numpy as np
+
+arr = [1, 5, 3, 6, 2, 9]
+average = (max(arr) + min(arr)) / 2
+result = np.where(np.array(arr) > average)[0]
+print(len(result))

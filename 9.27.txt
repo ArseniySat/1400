@@ -1,0 +1,8 @@
+# анонимная функция для подсчета суммы делителей числа
+div_sum = lambda num: sum(filter(lambda i: num % i == 0, range(1,num+1)))
+
+sums = list(map(div_sum, range(50,71))) # создаем список сумм делителей
+
+# выводим результаты
+for i in range(len(sums)):
+    print("Сумма делителей числа", 50+i, "=", sums[i])

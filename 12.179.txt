@@ -1,0 +1,7 @@
+sentence = input().split()
+result = []
+for word in sentence:
+    if word != "привет":
+        result.append(word)
+print(" ".join(result))
+

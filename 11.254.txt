@@ -1,0 +1,11 @@
+
+lst = [5, -3, 0, 7, -2, 9, -1]
+lst.sort()
+result = []
+for i in lst:
+    if i < 0:
+        result.append(i)
+for i in lst:
+    if i >= 0:
+        result.append(i)
+print(result)

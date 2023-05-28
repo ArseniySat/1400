@@ -1,0 +1,53 @@
+program_scores = [[0,0,0] for _ in range(15)]
+for i in range(15):
+    print("Введите результаты спортсмена", i+1, "в многоборье:")
+    program_scores[i][0] = float(input("Обязательная программа: "))
+    program_scores[i][1] = float(input("Короткая программа: "))
+    program_scores[i][2] = float(input("Произвольная программа: "))
+
+mandatory_scores = [score[0] for score in program_scores]
+short_scores = [score[1] for score in program_scores]
+free_scores = [score[2] for score in program_scores]
+
+max_mandatory = max(mandatory_scores)
+min_mandatory = min(mandatory_scores)
+avg_mandatory = sum(mandatory_scores)/15
+
+max_short = max(short_scores)
+min_short = min(short_scores)
+avg_short = sum(short_scores)/15
+
+max_free = max(free_scores)
+min_free = min(free_scores)
+avg_free = sum(free_scores)/15
+
+print("Максимальный результат по обязательной программе:", max_mandatory)
+print("Минимальный результат по обязательной программе:", min_mandatory)
+print("Средний результат по обязательной программе:", avg_mandatory)
+
+print("Максимальный результат по короткой программе:", max_short)
+print("Минимальный результат по короткой программе:", min_short)
+print("Средний результат по короткой программе:", avg_short)
+
+print("Максимальный результат по произвольной программе:", max_free)
+print("Минимальный результат по произвольной программе:", min_free)
+print("Средний результат по произвольной программе:", avg_free)
+
+results = [[0 for j in range(3)] for i in range(15)]
+
+# ввод данных
+for i in range(15):
+    print("Введите результаты спортсмена", i+1)
+    for j in range(3):
+        results[i][j] = int(input("Введите баллы: "))
+
+# вычисление среднего значения по каждому спортсмену
+for i in range(15):
+    avg_score = sum(map(lambda x: x/3, results[i]))
+    print("Спортсмен", i+1, "средний балл:", avg_score)
+
+# вычисление среднего значения по каждой программе
+for j in range(3):
+    program_results = [results[i][j] for i in range(15)]
+    avg_score = sum(program_results) / len(program_results)
+    print("Программа", j+1, "средний балл:", avg_score)

@@ -1,0 +1,12 @@
+from itertools import tee
+
+def pairwise(iterable):
+    a, b = tee(iterable)
+    next(b, None)
+    return zip(a, b)
+
+numbers = [1, 2, 3, 2, 1, 0, 1, 2, 3, 4, 3, 2, 1]
+
+count = len([b for a, b, c in pairwise(numbers) if b > a and b > c])
+
+print("Количество строгих локальных максимумов:", count)

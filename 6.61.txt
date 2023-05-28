@@ -1,0 +1,25 @@
+number = input("Введите натуральное число: ")
+max1 = max2 = -1
+min1 = min2 = 10
+
+for i in range(len(number)):
+    digit = int(number[i])
+    if digit > max1:
+        max2 = max1
+        max1 = digit
+        index1 = i
+    elif digit > max2:
+        max2 = digit
+        index2 = i
+    if digit < min1:
+        min2 = min1
+        min1 = digit
+        index3 = i
+    elif digit < min2:
+        min2 = digit
+        index4 = i
+        
+print("а) Порядковые номера двух максимальных цифр: от конца -",index1+1,", от начала -",len(number)-index1)
+print("   Порядковые номера двух минимальных цифр: от конца -",index2+1,", от начала -",len(number)-index2)
+print("б) Порядковые номера двух максимальных цифр: от конца -",index3+1,", от начала -",len(number)-index3)
+print("   Порядковые номера двух минимальных цифр: от конца -",index4+1,", от начала -",len(number)-index4)

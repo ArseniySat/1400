@@ -1,0 +1,4 @@
+
+word = input("Введите слово: ")
+result = "{}{}".format(word[2], word[-1])
+print(result)

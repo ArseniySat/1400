@@ -1,0 +1,10 @@
+sentence = input('Введите предложение: ')
+s_index = sentence.rfind('с')
+t_index = sentence.rfind('т')
+if s_index > t_index:
+    print('"с" встречается позже, чем "т"')
+elif s_index < t_index:
+    print('"т" встречается позже, чем "с"')
+else:
+    print('"с" и "т" встречаются на одной позиции')
+

@@ -1,0 +1,11 @@
+from sympy import *
+
+a = Symbol('a')
+b = Symbol('b')
+c = Symbol('c')
+
+eq = Eq(a*x**2 + b*x + c, 0) # уравнение
+
+solutions = solve(eq, x) # решение уравнения
+
+print("Корни уравнения:", solutions)

@@ -1,0 +1,9 @@
+def check_if_number_ascending(number):
+    reversed_number = int(str(number)[::-1])
+    return number == int(''.join(sorted(str(number)))) or number == reversed_number
+
+number = int(input('Введите число: '))
+if check_if_number_ascending(number):
+    print('Положительный ответ')
+else:
+    print('Отрицательный ответ')

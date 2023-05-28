@@ -1,0 +1,6 @@
+import random
+
+dice = random.random()
+dice *= 6
+dice = int(dice) + 1
+print("Выпало число:", dice)

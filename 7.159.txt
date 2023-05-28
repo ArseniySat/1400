@@ -1,0 +1,7 @@
+
+flat_people = {'Flat 1': 5, 'Flat 2': 2, 'Flat 3': 8, 'Flat 4': 6}
+
+max_flat = max(flat_people.items(), key=lambda x: (x[1], x[0]))[0]
+max_people = flat_people[max_flat]
+
+print(f"The flat with the most people is {max_flat} with {max_people} people.")

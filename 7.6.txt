@@ -1,0 +1,12 @@
+
+r_list = []
+
+while True:
+    r = input("Введите сопротивление элемента (или 'exit' для выхода): ")
+    if r == "exit":
+        break
+    r_list.append(float(r))
+
+r_total = sum(r_list)
+
+print("Общее сопротивление цепи составляет", r_total, "Ом")

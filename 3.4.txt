@@ -1,0 +1,16 @@
+n = int(input("Введите количество школьников: "))
+k = int(input("Введите количество яблок: "))
+
+if n <= 0 or k <= 0:
+    print("Ошибка: количество школьников и яблок должно быть положительным числом")
+else:
+    for i in range(n):
+        if k >= n:
+            apples_per_student = k // n
+            k -= apples_per_student
+        else:
+            apples_per_student = 0
+            
+        print("Школьник", i+1, "получит", apples_per_student, "яблок")
+  
+    print("Останется в корзинке", k, "яблок")

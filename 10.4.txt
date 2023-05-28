@@ -1,0 +1,5 @@
+values = [0, 0, 1, 1]
+
+for i in range(50):
+    num = values[randint(0, 3)]
+    print(num)

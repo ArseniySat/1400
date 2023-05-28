@@ -1,0 +1,9 @@
+
+words = input("Введите последовательность слов через пробел: ").split()
+
+first_word = words[0]
+
+output = [word for word in words[1:] if len(word) == len(set(word)) and word == word[::-1]]
+
+print(output)
+

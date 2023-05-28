@@ -1,0 +1,32 @@
+def sieve_of_eratosthenes(n):
+    '''Решето Эратосфена для нахождения простых чисел'''
+    sieve = [True] * (n+1)
+    sieve[0] = sieve[1] = False
+    for i in range(2, int(n**0.5)+1):
+        if sieve[i]:
+            for j in range(i*i, n+1, i):
+                sieve[j] = False
+    primes = []
+    for i in range(2, n+1):
+        if sieve[i]:
+            primes.append(i)
+    return primes
+
+def is_perfect_number(n):
+    '''Функция для проверки совершенности числа'''
+    divisors = [1]
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            divisors.append(i)
+            if i != n//i:
+                divisors.append(n//i)
+    return sum(divisors) == n
+
+primes = sieve_of_eratosthenes(19)
+perfect_numbers = []
+for p in primes:
+    mersenne_number = 2**p - 1
+    if is_perfect_number(mersenne_number * 2**(p-1)):
+        perfect_numbers.append(mersenne_number * 2**(p-1))
+
+print("Список совершенных чисел в диапазоне до 100000:", perfect_numbers)

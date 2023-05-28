@@ -1,0 +1,4 @@
+import numpy as np
+
+sin_arr = np.sin(np.arange(0, 1.6, 0.1))
+print('\n'.join(map(str, sin_arr)))

@@ -1,0 +1,9 @@
+numbers = [1, 5, 6, 8, 2, 10, 4, 7, 9]
+
+index = list(filter(lambda i: numbers[i] % 2 == 0 and numbers[i+1] % 2 == 0, range(len(numbers)-1)))
+last_even_pair_index = index[-1] if index else None
+
+if last_even_pair_index is not None:
+    print(numbers[:last_even_pair_index])
+else:
+    print("No even pairs found")

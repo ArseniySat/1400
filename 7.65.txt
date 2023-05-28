@@ -1,0 +1,9 @@
+teams_wins = [5, 4, 6, 3, 7]
+teams_losses = [3, 4, 2, 5, 1]
+
+count = 0
+for i in range(len(teams_wins)):
+    if teams_wins[i] > teams_losses[i]:
+        count += 1
+
+print('Количество команд с большим количеством выигрышей:', count)

@@ -1,0 +1,8 @@
+rainfalls = [8, 12, 5, 3, 15, 10, 6, 9, 4, 7, 11, 13]
+even = sum(rainfalls[::2])
+odd = sum(rainfalls[1::2])
+
+if even > odd:
+    print("По четным числам выпало больше осадков")
+else:
+    print("По четным числам выпало меньше осадков")

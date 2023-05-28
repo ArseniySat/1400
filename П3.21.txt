@@ -1,0 +1,15 @@
+# a)
+for a in [True, False]:
+    for b in [True, False]:
+        for c in [True, False]:
+            print(not(a or not b and c))
+# б)
+for a in [True, False]:
+    for b in [True, False]:
+        for c in [True, False]:
+            print(a and not(b or not c))
+# в)
+for a in [True, False]:
+    for b in [True, False]:
+        for c in [True, False]:
+            print(not(not a or b and c))

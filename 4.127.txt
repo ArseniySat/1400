@@ -1,0 +1,12 @@
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+c = int(input("Введите третье число: "))
+
+numbers = [a, b, c]
+maximum = max(numbers)
+minimum = min(numbers)
+middle = sum(numbers) - maximum - minimum
+
+print("Самое большое число:", maximum)
+print("Самое маленькое число:", minimum)
+print("Среднее число:", middle)

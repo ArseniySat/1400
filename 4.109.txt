@@ -1,0 +1,13 @@
+a = float(input('Введите первое число: '))
+b = float(input('Введите второе число: '))
+c = float(input('Введите третье число: '))
+
+def check_number(number):
+    if 1.6 <= number <= 3.8:
+        return number
+    else:
+        return None
+
+result = list(filter(lambda x: x is not None, [check_number(a), check_number(b), check_number(c)]))
+
+print(result)

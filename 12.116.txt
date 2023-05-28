@@ -1,0 +1,7 @@
+
+word = "глинянный"
+correct_word = "глиняный"
+if "н" in word:
+    index = word.index("н")
+    correct_word = word[:index] + word[index+1:]
+print(correct_word)

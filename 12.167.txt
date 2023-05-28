@@ -1,0 +1,6 @@
+word = input("Введите слово: ")
+double_letters = []
+for i in range(len(word)):
+  if word.count(word[i]) == 2 and word[i] not in double_letters:
+    double_letters.append(word[i])
+print("Две одинаковые буквы в слове:", double_letters)

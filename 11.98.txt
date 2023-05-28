@@ -1,0 +1,7 @@
+
+lst = [3, 6, 9, 2, 5, 8, 1, 4, 7, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+average = sum(lst) / len(lst)
+count = len([i for i in lst if i < average])
+
+print("Количество видов товара с ценой ниже средней:", count)

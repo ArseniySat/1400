@@ -1,0 +1,13 @@
+def get_squares(a, b):
+    squares = []
+    while a > 0 and b > 0:
+        sq_size = min(a, b)
+        sq_count = max(a, b) // sq_size
+        for i in range(sq_count):
+            squares.append(sq_size)
+        a, b = sq_size, max(a, b) - sq_count * sq_size
+    return squares
+
+a = int(input("Введите ширину прямоугольника: "))
+b = int(input("Введите длину прямоугольника: "))
+print(get_squares(a, b))

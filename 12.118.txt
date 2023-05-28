@@ -1,0 +1,7 @@
+word = "роликон"
+if "о" in word:
+    index = word.index("о")
+    new_word = word[:index] + word[index+1:]
+else:
+    new_word = word
+print(new_word)

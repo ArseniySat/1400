@@ -1,0 +1,29 @@
+m = int(input("Введите месяц: "))
+n = int(input("Введите число: "))
+
+def get_prev_date(m, n):
+    if n == 1 and m == 3:
+        return "28.02"
+    elif (n == 1 and m in [5, 7, 10, 12]) or (n == 1 and m == 2):
+        return "31.%02d" % (m-1)
+    elif n == 1 and m == 1:
+        return "Нет предыдущей даты для 1 января"
+    elif n == 2 and m == 3:
+        return "01.03"
+    else:
+        return "%02d.%02d" % (n-1, m)
+    
+def get_next_date(m, n):
+    if (n == 30 and m in [4, 6, 9, 11]) or (n == 31 and m == 12):
+        return "01.%02d" % (m+1)
+    elif n == 31 and m == 1:
+        return "01.02"
+    elif n == 28 and m == 2:
+        return "01.03"
+    elif n == 31 and m == 3:
+        return "01.04"
+    else:
+        return "%02d.%02d" % (n+1, m)
+    
+print("Предыдущая дата:", get_prev_date(m, n))
+print("Следующая дата:", get_next_date(m, n))

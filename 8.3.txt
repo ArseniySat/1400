@@ -1,0 +1,14 @@
+
+a = float(input("Введите число а: "))
+for n in range(1, 10001):
+    if 1/n >= a:
+        print(1/n)
+
+
+def print_numbers(a, n=1):
+    if 1/n >= a:
+        print(1/n)
+        print_numbers(a, n+1)
+
+a = float(input("Введите число а: "))
+print_numbers(a)

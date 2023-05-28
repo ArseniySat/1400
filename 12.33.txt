@@ -1,0 +1,5 @@
+word = "муха"
+new_word = ''.join(['с' if i=='м' else 'н' if i=='х' else i for i in word])
+print(new_word)
+
+

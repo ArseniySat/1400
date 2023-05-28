@@ -1,0 +1,15 @@
+
+num = int(input("Введите натуральное число: "))
+num_list = list(str(num))
+max_num = max(num_list)
+min_num = min(num_list)
+max_idx_end = num_list[::-1].index(max_num) + 1
+min_idx_end = num_list[::-1].index(min_num) + 1
+max_idx_start = num_list.index(max_num) + 1
+min_idx_start = num_list.index(min_num) + 1
+print("Максимальная цифра: {}".format(max_num))
+print("Порядковый номер максимальной цифры (от конца): {}".format(max_idx_end))
+print("Порядковый номер максимальной цифры (от начала): {}".format(max_idx_start))
+print("Минимальная цифра: {}".format(min_num))
+print("Порядковый номер минимальной цифры (от конца): {}".format(min_idx_end))
+print("Порядковый номер минимальной цифры (от начала): {}".format(min_idx_start))

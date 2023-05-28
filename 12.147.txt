@@ -1,0 +1,9 @@
+
+def is_digit(symbol):
+    if symbol.isdigit():
+        return True
+    else:
+        return False
+
+symbol = input("Введите символ: ")
+print("Это цифра" if is_digit(symbol) else "Это не цифра")

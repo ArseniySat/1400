@@ -1,0 +1,15 @@
+def multiplication_table(start, end):
+    for i in range(start, end+1):
+        for j in range(start, end+1):
+            print(i, "*", j, "=", i*j, end="\t")
+        print()
+
+multiplication_table(1, 9)
+
+def multiplication_table_reversed(start, end):
+    for i in range(start, end+1):
+        for j in range(start, end+1):
+            print(j, "*", i, "=", i*j, end="\t")
+        print()
+
+multiplication_table_reversed(1, 9)

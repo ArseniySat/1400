@@ -1,0 +1,12 @@
+
+sentence = input("Enter a sentence with commas: ")
+first_comma = sentence.find(',')
+if first_comma >= 0:
+    second_comma = sentence.find(',', first_comma+1)
+    if second_comma >= 0:
+        print("Characters between first and second comma:", sentence[first_comma+1:second_comma])
+    else:
+        print("Characters after first comma:", sentence[first_comma+1:])
+else:
+    print("No comma found.")
+

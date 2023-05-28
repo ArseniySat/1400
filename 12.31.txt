@@ -1,0 +1,3 @@
+word = "пробел"
+new_word = ''.join(['д' if i=='б' else 'л' if i=='е' else i for i in word])
+print(new_word)

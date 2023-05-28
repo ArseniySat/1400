@@ -1,0 +1,5 @@
+word = list(input("Введите слово из 12 букв: "))
+word[:3], word[3:6], word[6:9] = word[3:6], word[6:9], word[:3]
+new_word = ''.join(word)
+print(new_word)
+

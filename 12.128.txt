@@ -1,0 +1,10 @@
+word = "абвгде_"
+k = 3
+s = "m"
+correct_word = ""
+for i in range(len(word)):
+    if i == k:
+        correct_word += s
+    correct_word += word[i]
+print(correct_word)
+

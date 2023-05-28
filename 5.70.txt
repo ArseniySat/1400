@@ -1,0 +1,11 @@
+
+factorial = lambda k: 1 if k==1 else k*factorial(k-1)
+
+n = int(input("Введите n: "))
+x = float(input("Введите x: "))
+
+sum = 1
+for i in range(1, n+1):
+    sum += x**i/factorial(i)
+
+print("Сумма =", sum)

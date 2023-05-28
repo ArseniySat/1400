@@ -1,0 +1,17 @@
+import random
+
+# выбираем случайное число от 0 до 27
+rand_int = random.randint(0, 27)
+
+# определяем номер строки и столбца кости в матрице
+row = rand_int // 7
+col = rand_int % 7
+
+# выбираем кость
+if row <= col:
+    random_domino = (row, col)
+else:
+    random_domino = (col, row)
+
+# выводим результат
+print("Выбрана кость {}-{}".format(random_domino[0], random_domino[1]))

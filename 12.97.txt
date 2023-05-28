@@ -1,0 +1,10 @@
+
+string = input("Enter a string: ")
+start_index = int(input("Enter the index of the first character of the substring: "))
+end_index = int(input("Enter the index of the last character of the substring: "))
+substring = string[start_index:end_index+1]
+if substring == '666':
+    print("The substring is equal to 666.")
+else:
+    print("The substring is not equal to 666.")
+

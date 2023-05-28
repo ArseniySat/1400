@@ -1,0 +1,14 @@
+def generate_numbers(p):
+    a1 = 1
+    a2 = 3
+    while a1 <= p:
+        yield a1
+        a1 += a2
+        a2 += 2
+
+# дано число п
+p = 36
+
+# выводим числа, не превышающие заданное число
+for num in generate_numbers(p):
+    print(num)

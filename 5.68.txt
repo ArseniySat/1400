@@ -1,0 +1,9 @@
+n = int(input("Введите n: "))
+factorial = 1
+sum = 0
+i = 1
+while i <= n:
+   factorial = factorial * i
+   sum = sum + factorial
+   i = i + 1
+print("Сумма факториалов от 1! до",n,"! равна",sum)

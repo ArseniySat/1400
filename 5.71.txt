@@ -1,0 +1,6 @@
+from functools import reduce
+
+sqrt_list = range(1,51)
+total = reduce(lambda x, y: math.sqrt(y + x), sqrt_list, math.sqrt(1))
+
+print(total)

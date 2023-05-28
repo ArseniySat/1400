@@ -1,0 +1,6 @@
+scores = [70, 60, 50, 40, 30, 25, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7]
+n = 25
+for index, value in enumerate(scores):
+    if value == n:
+        print("Команда, набравшая", n, "очков, заняла", len(scores) - index, "место")
+        break

@@ -1,0 +1,60 @@
+games = [(2, 1), (1, 1), (0, 2), (3, 2), (2, 0), (1, 3), (1, 0), (2, 2), (0, 1), (2, 3),
+         (0, 2), (1, 0), (1, 1), (3, 0), (2, 1), (1, 1), (0, 3), (2, 0), (1, 2), (3, 1)]
+
+# a) Результаты игр
+for game in games:
+    if game[0] > game[1]:
+        print("Выигрыш")
+    elif game[0] == game[1]:
+        print("Ничья")
+    else:
+        print("Проигрыш")
+
+# б) Количество выигрышей
+wins = 0
+for game in games:
+    if game[0] > game[1]:
+        wins += 1
+print("Количество выигрышей:", wins)
+
+# в) Количество выигрышей и проигрышей
+wins = 0
+losses = 0
+for game in games:
+    if game[0] > game[1]:
+        wins += 1
+    elif game[0] < game[1]:
+        losses += 1
+print("Количество выигрышей:", wins)
+print("Количество проигрышей:", losses)
+
+# г) Количество выигрышей, ничьих и проигрышей
+wins = 0
+draws = 0
+losses = 0
+for game in games:
+    if game[0] > game[1]:
+        wins += 1
+    elif game[0] == game[1]:
+        draws += 1
+    else:
+        losses += 1
+print("Количество выигрышей:", wins)
+print("Количество ничьих:", draws)
+print("Количество проигрышей:", losses)
+
+# д) Количество игр, где разница забитых и пропущенных мячей была больше или равна трем
+count = 0
+for game in games:
+    if abs(game[0] - game[1]) >= 3:
+        count += 1
+print("Количество игр с разницей в три и более мячей:", count)
+
+# е) Общее количество очков
+points = 0
+for game in games:
+    if game[0] > game[1]:
+        points += 3
+    elif game[0] == game[1]:
+        points += 1
+print("Общее количество очков:", points)

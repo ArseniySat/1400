@@ -1,0 +1,14 @@
+from functools import reduce
+
+# результаты первого спортсмена
+sportsman1 = [10, 8, 9, 7, 6]
+# результаты второго спортсмена
+sportsman2 = [7, 9, 6, 8, 10]
+
+# сумма баллов первого спортсмена
+sum1 = reduce(lambda x, y: x + y, sportsman1)
+# сумма баллов второго спортсмена
+sum2 = reduce(lambda x, y: x + y, sportsman2)
+
+print("Сумма баллов первого спортсмена:", sum1)
+print("Сумма баллов второго спортсмена:", sum2)

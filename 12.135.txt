@@ -1,0 +1,3 @@
+word = "иинформаця"
+correct_word = word.replace("и", "", 1).replace("ц", "").replace("я", "ия")
+print(correct_word)

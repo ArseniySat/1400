@@ -1,0 +1,11 @@
+m = int(input("Введите натуральное число m: "))
+p = int(input("Введите целое число p: "))
+a = [int(input("Введите a[" + str(i) + "]: ")) for i in range(m)]
+
+filtered_a = [x for x in a if x > m and x % p == 0]
+count = len(filtered_a)
+
+if count == 0:
+    print("Нет таких чисел a_i, которые больше m и кратны p")
+else:
+    print("Количество таких чисел a_i: ", count)

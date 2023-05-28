@@ -1,0 +1,12 @@
+import math
+from functools import reduce
+
+a = float(input('Введите первое число: '))
+b = float(input('Введите второе число: '))
+
+m_prod = lambda x, y: x*y
+
+if math.sqrt(b) < a:
+    b = reduce(m_prod, [b] * 5)
+
+print(f'Первое число: {a}, второе число: {b}')

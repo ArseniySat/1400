@@ -1,0 +1,21 @@
+def get_sum_of_digits(number):
+    return (number // 10) + (number % 10)
+
+def is_multiple_of_three(number):
+    return get_sum_of_digits(number) % 3 == 0
+
+def is_multiple_of_sum(number):
+    sum_of_digits = get_sum_of_digits(number)
+    return sum_of_digits > 0 and number % sum_of_digits == 0
+
+number = int(input("Введите двузначное число: "))
+
+if is_multiple_of_three(number):
+    print("Сумма его цифр кратна трем")
+else:
+    print("Сумма его цифр не кратна трем")
+    
+if is_multiple_of_sum(number):
+    print("Сумма его цифр кратна числу", int(number/get_sum_of_digits(number)))
+else:
+    print("Сумма его цифр не кратна числу", number)

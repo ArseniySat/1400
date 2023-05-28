@@ -1,0 +1,4 @@
+from functools import reduce
+numbers = [12, 24, 36, 48, 60]
+result = reduce(lambda a,b: gcd(a,b), numbers)
+print(result)

@@ -1,0 +1,8 @@
+people_on_floors = [22, 10, 25, 13, 18, 15, 20, 14, 8, 12, 
+                    7, 16, 11, 5, 9]
+
+min1 = min(people_on_floors)
+people_on_floors.remove(min1)
+min2 = min(people_on_floors)
+
+print("На меньшее всего населенных этажах живут люди:", min1, "и", min2)

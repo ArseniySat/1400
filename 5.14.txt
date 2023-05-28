@@ -1,0 +1,2 @@
+table = map(lambda x: f"9 x {x} = {9 * x}", range(1, 10))
+print('\n'.join(table))

@@ -1,0 +1,5 @@
+
+word = "алигортм"
+correct_word = word[0] + word[2:6] + word[1] + word[6:] + "и"
+print(correct_word)
+

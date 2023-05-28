@@ -1,0 +1,13 @@
+numbers = [1.1, 2.2, 3.3, 4.4, 4.5, 5.6, 6.7, 7.8, 8.9, 9.0, 10.0, 11.1, 12.2, 13.3, 14.4]
+
+def is_sorted(numbers):
+    return all(numbers[i] <= numbers[i+1] for i in range(len(numbers)-1))
+
+if is_sorted(numbers):
+    print("Последовательность упорядочена по возрастанию.")
+else:
+    i = 0
+    while i < len(numbers) - 1 and numbers[i] <= numbers[i+1]:
+        i += 1
+    print("Последовательность не упорядочена по возрастанию.")
+    print("Рядковый номер первого числа, нарушающего такую упорядоченность: ", i+1)

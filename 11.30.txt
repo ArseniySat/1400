@@ -1,0 +1,3 @@
+wins = [2, 5, 1, 3, 4, 0, 2, 1, 6, 2, 3, 0, 1, 2, 4, 5, 1, 0, 3, 2]
+less_than_three = list(filter(lambda x: wins[x] < 3, range(len(wins))))
+print("Команды с меньше трех побед:", list(map(lambda x: x+1, less_than_three)))

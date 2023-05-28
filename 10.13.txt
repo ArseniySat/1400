@@ -1,0 +1,20 @@
+import random
+
+player1_score = 0
+player2_score = 0
+num_rolls = int(input("How many times should the dice be rolled? "))
+
+for i in range(num_rolls):
+    player1_roll = random.randint(1, 6)
+    player2_roll = random.randint(1, 6)
+    if player1_roll > player2_roll:
+        player1_score += 1
+    elif player2_roll > player1_roll:
+        player2_score += 1
+
+if player1_score > player2_score:
+    print("Player 1 wins with", player1_score, "wins!")
+elif player2_score > player1_score:
+    print("Player 2 wins with", player2_score, "wins!")
+else:
+    print("It's a tie with", player1_score, "wins each!")

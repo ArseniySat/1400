@@ -1,0 +1,24 @@
+def trapezium_perimeter(a, b, h):
+    return a + b + 2 * ((a - b) ** 2 + h ** 2) ** 0.5
+
+def trapezium_area(a, b, h):
+    return (a + b) * h / 2
+
+def calculate(trapezium1, trapezium2):
+    a1, b1, h1 = trapezium1
+    a2, b2, h2 = trapezium2
+    p1 = trapezium_perimeter(a1, b1, h1)
+    p2 = trapezium_perimeter(a2, b2, h2)
+    a1 = trapezium_area(a1, b1, h1)
+    a2 = trapezium_area(a2, b2, h2)
+    print("Perimeter of trapezium 1:", p1)
+    print("Perimeter of trapezium 2:", p2)
+    print("Area of trapezium 1:", a1)
+    print("Area of trapezium 2:", a2)
+    print("Total perimeter:", p1 + p2)
+    print("Total area:", a1 + a2)
+
+trapezium1 = (5, 3, 4)
+trapezium2 = (6, 4, 5)
+
+calculate(trapezium1, trapezium2)

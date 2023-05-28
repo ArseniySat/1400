@@ -1,0 +1,9 @@
+R = 6350  # радиус Земли в километрах
+
+height = float(input("Введите высоту точки над Землей в км: "))
+
+angle = math.asin(R / (R + height)) 
+
+distance = (R + height) * math.cos(angle) 
+
+print(f"Расстояние до линии горизонта: {distance:.2f} км")

@@ -1,0 +1,5 @@
+array = [23, 41, 86, 52, 97, 44, 28, 16, 39, 10]
+for i in range(len(array)):
+    if array[i] % 10 == 4:
+        array[i] = array[i] // 2
+print(array)

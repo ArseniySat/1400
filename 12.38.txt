@@ -1,0 +1,6 @@
+word = list(input("Введите слово: "))
+k = int(input("Введите число k: "))
+word = word[k:] + word[:k]
+new_word = ''.join(word)
+print(new_word)
+

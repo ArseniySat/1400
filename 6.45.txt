@@ -1,0 +1,15 @@
+num = input("Введите натуральное число: ")
+
+max_digit = max(num)
+min_digit = min(num)
+
+max_index_from_end = len(num) - num[::-1].index(max_digit)
+max_index_from_begin = num.index(max_digit) + 1
+
+min_index_from_end = len(num) - num[::-1].index(min_digit)
+min_index_from_begin = num.index(min_digit) + 1
+
+print("Порядковый номер максимальной цифры (от конца числа):", max_index_from_end)
+print("Порядковый номер максимальной цифры (от начала числа):", max_index_from_begin)
+print("Порядковый номер минимальной цифры (от конца числа):", min_index_from_end)
+print("Порядковый номер минимальной цифры (от начала числа):", min_index_from_begin)

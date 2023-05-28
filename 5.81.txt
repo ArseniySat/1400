@@ -1,0 +1,20 @@
+a)
+
+```python
+import re
+
+for num in range(100, 1000):
+    square = num**2
+    match = re.search(r"\d{3}", str(square)[-3:])
+    if match and int(match.group()) == num:
+        print(num)
+```
+
+б)
+
+```python
+import re
+
+for num in range(105, 1000, 7):
+    if (sum([int(i) for i in str(num)]) % 7 == 0) and re.match(r"\d*[02468]$", str(num)):
+        print(num)

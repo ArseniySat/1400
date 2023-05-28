@@ -1,0 +1,8 @@
+
+word = "python"
+new_word = ""
+for i in range(0, len(word), 2):
+    new_word += word[i+1]
+    if i+2 < len(word):
+        new_word += word[i]
+print(new_word)

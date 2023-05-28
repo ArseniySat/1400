@@ -1,0 +1,26 @@
+# Определяем функции для изменения значений
+def increase_area(area):
+    return area * 1.05
+
+def increase_yield(yield_per_ha):
+    return yield_per_ha * 1.02
+
+# Задаем начальные значения
+year = 1
+area = 100
+yield_per_ha = 20
+total_yield = 0
+
+# Выполняем цикл, пока не достигнуты условия задачи
+while yield_per_ha <= 22 or area <= 120 or total_yield <= 800:
+    # Применяем изменения за год
+    area = increase_area(area)
+    yield_per_ha = increase_yield(yield_per_ha)
+    total_yield += area * yield_per_ha
+    year += 1
+
+# Выводим ответы
+print("Урожайность превысит 22 ц/га в ", year, " году")
+print("Площадь участка станет больше 120 га в ", year, " году")
+print("Общий урожай превысит 800 ц в ", year, " году")
+

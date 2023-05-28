@@ -1,0 +1,13 @@
+
+sequence = [23, 34, 45, 56, 66, 35, 56, 64, 46, 66, 54, 45, 53, 31, 13, 34, 44, 43, 31, 14]
+
+# проверяем первый случай, где последняя цифра отображает количество точек на правой половине кости домино
+result_1 = all(sequence[i] % 10 == sequence[i+1] // 10 for i in range(len(sequence)-1))
+
+# проверяем второй случай, где каждая цифра может быть использована как количество точек на правой или левой половине кости домино
+available_dominoes = {(i,j) for i in range(7) for j in range(i+1)}
+used_dominoes = {(sequence[i] // 10, sequence[i] % 10) for i in range(len(sequence))}
+result_2 = all((a,b) in used_dominoes or (b,a) in used_dominoes for a,b in available_dominoes)
+
+print("Последовательность соответствует правилам игры по первому случаю:", result_1)
+print("Последовательность соответствует правилам игры по второму случаю:", result_2)

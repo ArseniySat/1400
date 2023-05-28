@@ -1,0 +1,22 @@
+
+a = [1.5, 2.3, 3.7, 4.6, 6.1, 7.8, 8.9, 9.2, 10.0, 11.3, 12.5, 13.7, 14.8, 15.6, 16.9]
+n = 9.5
+
+min_dist = abs(a[0] - n)
+min_idx = 0
+left, right = 0, len(a)-1
+while True:
+    mid = (left + right) // 2
+    dist = abs(a[mid] - n)
+    if dist < min_dist:
+        min_dist = dist
+        min_idx = mid
+    if abs(right - left) <= 1:
+        break
+    if a[mid] < n:
+        left = mid
+    else:
+        right = mid
+
+print("Порядковый номер элемента:", min_idx+1)
+print("Значение элемента:", a[min_idx])

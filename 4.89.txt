@@ -1,0 +1,17 @@
+
+a = int(input("Введите часы прибытия поезда: "))
+b = int(input("Введите минуты прибытия поезда: "))
+c = int(input("Введите часы отправления поезда: "))
+d = int(input("Введите минуты отправления поезда: "))
+n = int(input("Введите часы прихода пассажира на станцию: "))
+m = int(input("Введите минуты прихода пассажира на станцию: "))
+
+train_arrival = datetime.now().replace(hour=a, minute=b, second=0, microsecond=0)
+train_departure = datetime.now().replace(hour=c, minute=d, second=0, microsecond=0).date()
+if train_arrival <= datetime.now():
+    train_arrival += timedelta(days=1)
+passenger_arrival = train_arrival.replace(hour=n, minute=m)
+if passenger_arrival <= train_departure:
+    print("Поезд стоит на платформе")
+else:
+    print("Поезд уже ушел")

@@ -1,0 +1,27 @@
+n = int(input("Введите возраст в месяцах: "))
+years = n // 12
+months = n % 12
+if years == 1 and months == 0:
+    print("1 год")
+elif years == 0 and months == 1:
+    print("1 месяц")
+elif years == 0:
+    print(months, get_month_string(months))
+elif months == 0:
+    print(years, get_year_string(years))
+else:
+    print(years, get_year_string(years), months, get_month_string(months))
+
+def get_year_string(years):
+    if years % 10 in [2, 3, 4] and years not in [12, 13, 14]:
+        return "года"
+    elif years % 10 == 1 and years != 11:
+        return "год"
+    else:
+        return "лет"
+
+def get_month_string(months):
+    if months % 10 in [2, 3, 4] and months not in [12, 13, 14]:
+        return "месяца"
+    else:
+        return "месяцев"

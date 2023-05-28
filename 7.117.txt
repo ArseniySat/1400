@@ -1,0 +1,9 @@
+import numpy as np
+n = int(input("Введите количество учеников: "))
+heights = np.array([int(input("Введите рост ученика: ")) for i in range(n)])
+boys_avg = np.mean(heights[heights < 0])
+girls_avg = np.mean(heights[heights >= 0])
+if boys_avg - girls_avg > 10:
+    print("Средний рост мальчиков превышает средний рост девочек более чем на 10 см")
+else:
+    print("Средний рост мальчиков не превышает средний рост девочек более чем на 10 см")

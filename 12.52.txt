@@ -1,0 +1,4 @@
+sentence = input("Введите предложение: ")
+for s in sentence:
+    if s == 'м' or s == 'н':
+        print(s)

@@ -1,0 +1,17 @@
+# а)
+num = input("Введите натуральное число: ")
+digits = [int(d) for d in num]
+last_digit = digits[-1]
+if last_digit % 2 == 0:
+    print("Число заканчивается четной цифрой")
+else:
+    print("Число не заканчивается четной цифрой")
+
+# б)
+num = input("Введите натуральное число: ")
+digits = [int(d) for d in num]
+last_digit = digits[-1]
+if last_digit % 2 == 1:
+    print("Число заканчивается нечетной цифрой")
+else:
+    print("Число не заканчивается нечетной цифрой")

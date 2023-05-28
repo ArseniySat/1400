@@ -1,0 +1,7 @@
+score = int(input("Введите количество очков: "))
+result = "Проигрыш"
+if score == 3:
+    result = "Выигрыш"
+elif score == 1:
+    result = "Ничья"
+print(result)

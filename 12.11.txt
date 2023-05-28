@@ -1,0 +1,5 @@
+word = "Python"
+for i, char in enumerate(word):
+    if i == 2:
+        print(char)
+        break

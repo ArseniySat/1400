@@ -1,0 +1,11 @@
+s, k, d = 13, -5, None
+d = s + 2
+s = d
+k = 2 * s
+print(s, k)
+
+s, k, d = 0, 15, None
+d = k - 2
+k = 3 * d
+s = k - 50
+print(s, k)

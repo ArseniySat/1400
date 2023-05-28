@@ -1,0 +1,21 @@
+def recursive_fence(a, b):
+    def recursive_spiral(x, y, dx, dy):
+        # проверяем, находимся ли мы на краю лужайки
+        if -a / 2 < x <= a / 2 and -b / 2 < y <= b / 2:
+            matrix[int(x + a / 2)][int(y + b / 2)] = 'x'  # ставим забор
+            return recursive_spiral(x + dx, y + dy, dx, dy) + 1  # рекурсивно вызываем следующую клетку
+        else:
+            return 0  # если достигли края, возвращаем 0
+    fence_length = 0  # переменная для хранения длины ограждения
+    matrix = [['.' for i in range(b)] for j in range(a)]  # создаем матрицу лужайки
+    recursive_spiral(0, 0, 0, -1)  # запускаем рекурсивную функцию движения по спирали
+    # выводим матрицу лужайки
+    for i in range(a):
+        for j in range(b):
+            print(matrix[i][j], end=' ')
+        print()
+    for i in range(a):
+        for j in range(b):
+            if matrix[i][j] == 'x':
+                fence_length += 1  # считаем длину ограждения
+    return fence_length

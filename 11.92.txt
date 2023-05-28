@@ -1,0 +1,13 @@
+
+import numpy as np
+
+heights = np.array([-150, 170, -145, 165, 155, -140, 180, -130, -135, 175, 160, -150, 170, 165, -140, -130, 150, 180, -135, 170, -145, 155, 175])
+
+boys_mask = heights < 0
+girls_mask = heights >= 0
+
+boys_avg_height = np.mean(np.abs(heights[boys_mask]))
+girls_avg_height = np.mean(heights[girls_mask])
+
+print("Average height of boys:", boys_avg_height)
+print("Average height of girls:", girls_avg_height)

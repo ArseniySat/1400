@@ -1,0 +1,18 @@
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+
+board = [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
+         ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'],
+         ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
+         ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'],
+         ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
+         ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'],
+         ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
+         ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B']]
+
+if board[a-1][b-1] == board[c-1][d-1]:
+    print("YES")
+else:
+    print("NO")

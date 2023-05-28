@@ -1,0 +1,14 @@
+def count_digit(n, digit):
+    return str(n).count(str(digit))
+
+a = int(input("Введите цифру a: "))
+b = int(input("Введите цифру b: "))
+n = int(input("Введите натуральное число: "))
+
+count_a = count_digit(n, a)
+count_b = count_digit(n, b)
+
+if count_a < count_b:
+    print("Цифра а встречается реже, чем цифра b")
+else:
+    print("Цифра а не встречается реже, чем цифра b")

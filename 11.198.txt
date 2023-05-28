@@ -1,0 +1,17 @@
+import numpy as np
+
+nums = np.array([12, 7, 18, 13, 24, 5, 6])
+
+# Поиск первого нечетного элемента
+odd_index = np.where(nums % 2 != 0)[0]
+if odd_index.size > 0:
+    print("Первый нечетный элемент находится под индексом", odd_index[0])
+else:
+    print("Нечетных элементов в массиве нет")
+
+# Поиск первого элемента, кратного 13
+multiple_index = np.where(nums % 13 == 0)[0]
+if multiple_index.size > 0:
+    print("Первый элемент, кратный числу 13, находится под индексом", multiple_index[0])
+else:
+    print("Элементов, кратных числу 13, в массиве нет")

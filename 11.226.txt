@@ -1,0 +1,15 @@
+
+areas = [5, 7, 3, 8, 6, 4, 9, 10, 2, 5] # площади районов
+yields = [40, 35, 50, 45, 55, 30, 60, 65, 70, 25] # урожайность районов
+
+total_yield = 0 # общий урожай
+yield_areas = []
+for i in range(len(areas)):
+    yield_areas.append(areas[i] * yields[i])
+    total_yield += yield_areas[i]
+
+average_yield = round(sum(yield_areas) / sum(areas), 2) # средняя урожайность
+
+print(f"Общая площадь пшеницы: {sum(areas)} га")
+print(f"Общий урожай пшеницы: {total_yield} центнеров")
+print(f"Средняя урожайность: {average_yield} ц/га")

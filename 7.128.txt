@@ -1,0 +1,8 @@
+b = [57, 23, 67, 84, 92, 43, 10, 77, 33, 58, 91, 76]
+
+try:
+    number = next(filter(lambda x: x % 10 == 7, b))
+    index = b.index(number) + 1
+    print(f"Число {number} оканчивается на 7 и имеет порядковый номер {index}")
+except StopIteration:
+    print("В последовательности нет чисел, оканчивающихся на 7")

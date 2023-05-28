@@ -1,0 +1,58 @@
+def sum_digits(n):
+    if n < 10:
+        return n
+    else:
+        return n % 10 + sum_digits(n // 10)
+
+def count_digits(n):
+    if n < 10:
+        return 1
+    else:
+        return 1 + count_digits(n // 10)
+
+def prod_digits(n):
+    if n < 10:
+        return n
+    else:
+        return (n % 10) * prod_digits(n // 10)
+
+def avg_digits(n):
+    num_digits = count_digits(n)
+    sum_digits = sum_digits(n)
+    return sum_digits/num_digits
+
+def sum_squares(n):
+    if n < 10:
+        return n**2
+    else:
+        return (n % 10)**2 + sum_squares(n // 10)
+
+def sum_cubes(n):
+    if n < 10:
+        return n**3
+    else:
+        return (n % 10)**3 + sum_cubes(n // 10)
+
+def first_digit(n):
+    if n < 10:
+        return n
+    else:
+        return first_digit(n // 10)
+
+def sum_first_last(n):
+    last_digit = n % 10
+    while(n >= 10):
+        n = n // 10
+    first_digit = n
+    return first_digit + last_digit
+
+number = int(input("Введите число: "))
+
+print("Сумма цифр:", sum_digits(number))
+print("Количество цифр:", count_digits(number))
+print("Произведение цифр:", prod_digits(number))
+print("Среднее арифметическое цифр:", avg_digits(number))
+print("Сумма квадратов цифр:", sum_squares(number))
+print("Сумма кубов цифр:", sum_cubes(number))
+print("Первая цифра:", first_digit(number))
+print("Сумма первой и последней цифр:", sum_first_last(number))

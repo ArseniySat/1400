@@ -1,0 +1,6 @@
+sentence = input().split()
+min_len = len(sentence[0])
+for word in sentence:
+    if len(word) < min_len:
+        min_len = len(word)
+print(min_len)

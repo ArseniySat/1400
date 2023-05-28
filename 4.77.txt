@@ -1,0 +1,62 @@
+def under_attack(figure1,figure2,target): # проверяем, попадает ли целевое поле под удар фигуры на поле figure1
+    a, b = figure1 # координаты белой фигуры
+    c, d = figure2 # координаты черной фигуры
+    e, f = target # координаты целевого поля
+    
+    if a == c or b == d: # проверка для ладьи и ферзя
+        if a == c: # вертикальная линия
+            for i in range(1,9):
+                if i == e and f == b: # нашли нужное поле
+                    return False # поле под ударом не оказалось
+                elif i == e and f != b: # нашли белую фигуру на пути
+                    return True # поле под ударом оказалось
+        else: # горизонтальная линия
+            for i in range(1,9):
+                if i == f and e == a: # нашли нужное поле
+                    return False # поле под ударом не оказалось
+                elif i == f and e != a: # нашли белую фигуру на пути
+                    return True # поле под ударом оказалось
+
+    elif abs(a-c) == abs(b-d): # диагональ
+        for i in range(1,9):
+            for j in range(1,9):
+                if abs(a-i) == abs(b-j): # находим поля, на линии нашей диагонали
+                    if i == e and j == f: # нашли нужное поле
+                        return False # поле под ударом не оказалось
+                    elif i == c and j == d: # черная фигура на нашей диагонали
+                        return True # поле под ударом оказалось
+                    else: # на нашей диагонали есть еще какие-то фигуры
+                        continue
+                else: # не лежат на нашей диагонали
+                    continue
+
+    elif abs(a-c) == 2 and abs(b-d) == 1 or abs(a-c) == 1 and abs(b-d) == 2: # конь
+        return not(abs(e-c) == 2 and abs(f-d) == 1 or abs(e-c) == 1 and abs(f-d) == 2)
+
+    else: # король
+        return not(abs(a-e) <= 1 and abs(b-f) <= 1)
+
+a = int(input('Введите вертикаль белой фигуры: '))
+b = int(input('Введите горизонталь белой фигуры: '))
+c = int(input('Введите вертикаль черной фигуры: '))
+d = int(input('Введите горизонталь черной фигуры: '))
+e = int(input('Введите вертикаль поля, на которое хотите поставить белую фигуру: '))
+f = int(input('Введите горизонталь поля, на которое хотите поставить белую фигуру: '))
+
+figure1 = (a,b) # координаты белой фигуры
+figure2 = (c,d) # координаты черной фигуры
+target = (e,f) # координаты целевого поля
+
+can_move = False # флаг, показывающий, найден подходящий ход или нет
+
+if a == c or b == d: # проверка для ладьи и ферзя
+    if a == c: # вертикальная линия
+        for i in range(1,9):
+            if i != a: # если это не положение белой фигуры
+                if (not under_attack(figure2, figure1, (i,b)) and not under_attack(figure2, figure1, target)): # поле (i,b) и целевое поле не под ударом
+                    can_move = True
+                    break
+            else: # это положение белой фигуры
+                continue
+        if not can_move:
+            print('Белая фигура не может пойти на поле (', e,',',f,'). Под ударом черной

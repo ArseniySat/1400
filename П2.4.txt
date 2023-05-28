@@ -1,0 +1,5 @@
+a = 40
+b = 10
+temp = -a/2 * b
+v = temp + a * 2
+print(v)

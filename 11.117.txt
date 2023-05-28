@@ -1,0 +1,10 @@
+heights = [165, 170, 180, 160, 175, 190, 185, 173, 164, 172, 178, 169, 157, 182, 176, 150, 177, 179, 162, 166, 158, 163, 159, 155, 168]
+
+heights.sort()
+
+max_height = heights[-1]
+min_height = heights[0]
+
+difference = max_height - min_height
+
+print("The difference between the tallest and shortest person is:", difference)

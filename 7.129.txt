@@ -1,0 +1,11 @@
+numbers = []
+number = int(input('Введите число: '))
+while number != -1:
+    numbers.append(number)
+    number = int(input('Введите число: '))
+    
+result = next((i+1 for i, num in enumerate(numbers) if num % 7 == 0), None)
+if result is not None:
+    print('Первое число, кратное 7, находится на позиции', result)
+else:
+    print('Чисел, кратных 7, в последовательности нет')
